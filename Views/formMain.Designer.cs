@@ -29,6 +29,12 @@
         private void InitializeComponent()
         {
             this.pnlTopBar = new System.Windows.Forms.Panel();
+            this.lblMainTitle = new System.Windows.Forms.Label();
+            this.pnlTimeInfo = new System.Windows.Forms.Panel();
+            this.lblTimeAndDate = new System.Windows.Forms.Label();
+            this.pnlUserInfo = new System.Windows.Forms.Panel();
+            this.lblUserName = new System.Windows.Forms.Label();
+            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.picBoxMinimize = new System.Windows.Forms.PictureBox();
             this.picBoxClose = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -40,28 +46,22 @@
             this.radioButton4 = new System.Windows.Forms.RadioButton();
             this.radioButton5 = new System.Windows.Forms.RadioButton();
             this.pnlMainWindow = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.lblMainTitle = new System.Windows.Forms.Label();
-            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.lblUserName = new System.Windows.Forms.Label();
-            this.lblTimeAndDate = new System.Windows.Forms.Label();
             this.pnlTopBar.SuspendLayout();
+            this.pnlTimeInfo.SuspendLayout();
+            this.pnlUserInfo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxMinimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxClose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlTopBar
             // 
             this.pnlTopBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.pnlTopBar.Controls.Add(this.lblMainTitle);
-            this.pnlTopBar.Controls.Add(this.panel2);
-            this.pnlTopBar.Controls.Add(this.panel1);
+            this.pnlTopBar.Controls.Add(this.pnlTimeInfo);
+            this.pnlTopBar.Controls.Add(this.pnlUserInfo);
             this.pnlTopBar.Controls.Add(this.picBoxMinimize);
             this.pnlTopBar.Controls.Add(this.picBoxClose);
             this.pnlTopBar.Controls.Add(this.pictureBox1);
@@ -70,6 +70,66 @@
             this.pnlTopBar.Name = "pnlTopBar";
             this.pnlTopBar.Size = new System.Drawing.Size(1024, 42);
             this.pnlTopBar.TabIndex = 0;
+            // 
+            // lblMainTitle
+            // 
+            this.lblMainTitle.AutoSize = true;
+            this.lblMainTitle.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMainTitle.ForeColor = System.Drawing.Color.White;
+            this.lblMainTitle.Location = new System.Drawing.Point(71, 6);
+            this.lblMainTitle.Name = "lblMainTitle";
+            this.lblMainTitle.Size = new System.Drawing.Size(337, 30);
+            this.lblMainTitle.TabIndex = 5;
+            this.lblMainTitle.Text = "Skills International School (SMS)";
+            // 
+            // pnlTimeInfo
+            // 
+            this.pnlTimeInfo.Controls.Add(this.lblTimeAndDate);
+            this.pnlTimeInfo.Location = new System.Drawing.Point(421, 2);
+            this.pnlTimeInfo.Name = "pnlTimeInfo";
+            this.pnlTimeInfo.Size = new System.Drawing.Size(227, 37);
+            this.pnlTimeInfo.TabIndex = 4;
+            // 
+            // lblTimeAndDate
+            // 
+            this.lblTimeAndDate.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTimeAndDate.ForeColor = System.Drawing.Color.White;
+            this.lblTimeAndDate.Location = new System.Drawing.Point(3, 4);
+            this.lblTimeAndDate.Name = "lblTimeAndDate";
+            this.lblTimeAndDate.Size = new System.Drawing.Size(221, 29);
+            this.lblTimeAndDate.TabIndex = 2;
+            this.lblTimeAndDate.Text = "UserName";
+            this.lblTimeAndDate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pnlUserInfo
+            // 
+            this.pnlUserInfo.Controls.Add(this.lblUserName);
+            this.pnlUserInfo.Controls.Add(this.guna2CirclePictureBox1);
+            this.pnlUserInfo.Location = new System.Drawing.Point(693, 2);
+            this.pnlUserInfo.Name = "pnlUserInfo";
+            this.pnlUserInfo.Size = new System.Drawing.Size(227, 37);
+            this.pnlUserInfo.TabIndex = 3;
+            // 
+            // lblUserName
+            // 
+            this.lblUserName.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUserName.ForeColor = System.Drawing.Color.White;
+            this.lblUserName.Location = new System.Drawing.Point(7, 3);
+            this.lblUserName.Name = "lblUserName";
+            this.lblUserName.Size = new System.Drawing.Size(179, 29);
+            this.lblUserName.TabIndex = 1;
+            this.lblUserName.Text = "UserName";
+            this.lblUserName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // guna2CirclePictureBox1
+            // 
+            this.guna2CirclePictureBox1.ImageRotate = 0F;
+            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(192, 2);
+            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
+            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(32, 32);
+            this.guna2CirclePictureBox1.TabIndex = 0;
+            this.guna2CirclePictureBox1.TabStop = false;
             // 
             // picBoxMinimize
             // 
@@ -252,66 +312,6 @@
             this.pnlMainWindow.Size = new System.Drawing.Size(884, 708);
             this.pnlMainWindow.TabIndex = 2;
             // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.lblUserName);
-            this.panel1.Controls.Add(this.guna2CirclePictureBox1);
-            this.panel1.Location = new System.Drawing.Point(693, 2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(227, 37);
-            this.panel1.TabIndex = 3;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.lblTimeAndDate);
-            this.panel2.Location = new System.Drawing.Point(421, 2);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(227, 37);
-            this.panel2.TabIndex = 4;
-            // 
-            // lblMainTitle
-            // 
-            this.lblMainTitle.AutoSize = true;
-            this.lblMainTitle.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMainTitle.ForeColor = System.Drawing.Color.White;
-            this.lblMainTitle.Location = new System.Drawing.Point(71, 6);
-            this.lblMainTitle.Name = "lblMainTitle";
-            this.lblMainTitle.Size = new System.Drawing.Size(337, 30);
-            this.lblMainTitle.TabIndex = 5;
-            this.lblMainTitle.Text = "Skills International School (SMS)";
-            // 
-            // guna2CirclePictureBox1
-            // 
-            this.guna2CirclePictureBox1.ImageRotate = 0F;
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(192, 2);
-            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
-            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(32, 32);
-            this.guna2CirclePictureBox1.TabIndex = 0;
-            this.guna2CirclePictureBox1.TabStop = false;
-            // 
-            // lblUserName
-            // 
-            this.lblUserName.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUserName.ForeColor = System.Drawing.Color.White;
-            this.lblUserName.Location = new System.Drawing.Point(7, 3);
-            this.lblUserName.Name = "lblUserName";
-            this.lblUserName.Size = new System.Drawing.Size(179, 29);
-            this.lblUserName.TabIndex = 1;
-            this.lblUserName.Text = "UserName";
-            this.lblUserName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lblTimeAndDate
-            // 
-            this.lblTimeAndDate.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTimeAndDate.ForeColor = System.Drawing.Color.White;
-            this.lblTimeAndDate.Location = new System.Drawing.Point(3, 4);
-            this.lblTimeAndDate.Name = "lblTimeAndDate";
-            this.lblTimeAndDate.Size = new System.Drawing.Size(221, 29);
-            this.lblTimeAndDate.TabIndex = 2;
-            this.lblTimeAndDate.Text = "UserName";
-            this.lblTimeAndDate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // formMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -328,13 +328,13 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.pnlTopBar.ResumeLayout(false);
             this.pnlTopBar.PerformLayout();
+            this.pnlTimeInfo.ResumeLayout(false);
+            this.pnlUserInfo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxMinimize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxClose)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -353,8 +353,8 @@
         private System.Windows.Forms.RadioButton radioButton5;
         private System.Windows.Forms.PictureBox picBoxClose;
         private System.Windows.Forms.PictureBox picBoxMinimize;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnlTimeInfo;
+        private System.Windows.Forms.Panel pnlUserInfo;
         private System.Windows.Forms.Label lblMainTitle;
         private System.Windows.Forms.Label lblUserName;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;

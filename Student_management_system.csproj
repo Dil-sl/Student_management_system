@@ -50,6 +50,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Views\Announcements\formAnnouncement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Announcements\formAnnouncement.Designer.cs">
+      <DependentUpon>formAnnouncement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Attendance_Mark\formAttendance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Attendance_Mark\formAttendance.Designer.cs">
+      <DependentUpon>formAttendance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Classes\formClasses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Classes\formClasses.Designer.cs">
+      <DependentUpon>formClasses.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\formDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,6 +88,18 @@
     <Compile Include="Views\formMain.Designer.cs">
       <DependentUpon>formMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Settings\formSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Settings\formSettings.Designer.cs">
+      <DependentUpon>formSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Users\formUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Users\formUsers.Designer.cs">
+      <DependentUpon>formUsers.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -80,6 +110,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Views\Announcements\formAnnouncement.resx">
+      <DependentUpon>formAnnouncement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Attendance_Mark\formAttendance.resx">
+      <DependentUpon>formAttendance.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\formDashboard.resx">
       <DependentUpon>formDashboard.cs</DependentUpon>
     </EmbeddedResource>
@@ -88,6 +124,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\formMain.resx">
       <DependentUpon>formMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Settings\formSettings.resx">
+      <DependentUpon>formSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Users\formUsers.resx">
+      <DependentUpon>formUsers.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
