@@ -153,6 +153,26 @@ namespace Student_management_system.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_asterisk_5 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-asterisk-5", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_asterisk_8 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-asterisk-8", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_attendance_100 {
             get {
                 object obj = ResourceManager.GetObject("icons8-attendance-100", resourceCulture);
