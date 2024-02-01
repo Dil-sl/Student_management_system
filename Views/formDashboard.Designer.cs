@@ -36,42 +36,42 @@
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panel9 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.label11 = new System.Windows.Forms.Label();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.welcomeLabel = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
             this.lblMarkingComplete = new System.Windows.Forms.Label();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.label11 = new System.Windows.Forms.Label();
             this.panel12 = new System.Windows.Forms.Panel();
             this.lblAnnounceCount = new System.Windows.Forms.Label();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
             this.lblAllAttandance = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.lblStudentsCount = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.lblTeachersCount = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblClassCount = new System.Windows.Forms.Label();
+            this.lblPageTitle = new System.Windows.Forms.Label();
             this.pnlDashboardMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.panel9.SuspendLayout();
-            this.panel11.SuspendLayout();
-            this.panel7.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.panel10.SuspendLayout();
+            this.panel11.SuspendLayout();
             this.panel12.SuspendLayout();
+            this.panel7.SuspendLayout();
             this.panel8.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -92,7 +92,7 @@
             this.pnlDashboardMain.Controls.Add(this.panel4);
             this.pnlDashboardMain.Controls.Add(this.panel2);
             this.pnlDashboardMain.Controls.Add(this.panel1);
-            this.pnlDashboardMain.Controls.Add(this.welcomeLabel);
+            this.pnlDashboardMain.Controls.Add(this.lblPageTitle);
             this.pnlDashboardMain.Location = new System.Drawing.Point(0, 12);
             this.pnlDashboardMain.Name = "pnlDashboardMain";
             this.pnlDashboardMain.Size = new System.Drawing.Size(885, 696);
@@ -147,122 +147,6 @@
             this.label9.Text = "Completed Attendace Marking";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // panel11
-            // 
-            this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(35)))), ((int)(((byte)(102)))));
-            this.panel11.Controls.Add(this.label11);
-            this.panel11.Location = new System.Drawing.Point(38, 309);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(193, 28);
-            this.panel11.TabIndex = 12;
-            // 
-            // label11
-            // 
-            this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(3, -1);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(187, 28);
-            this.label11.TabIndex = 6;
-            this.label11.Text = "Annoncement Count";
-            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(35)))), ((int)(((byte)(102)))));
-            this.panel7.Controls.Add(this.label7);
-            this.panel7.Location = new System.Drawing.Point(656, 168);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(193, 28);
-            this.panel7.TabIndex = 10;
-            // 
-            // label7
-            // 
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(3, -1);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(187, 28);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "Attendance";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(35)))), ((int)(((byte)(102)))));
-            this.panel5.Controls.Add(this.label5);
-            this.panel5.Location = new System.Drawing.Point(450, 168);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(193, 28);
-            this.panel5.TabIndex = 8;
-            // 
-            // label5
-            // 
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(3, -1);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(187, 28);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "Students Count";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(35)))), ((int)(((byte)(102)))));
-            this.panel3.Controls.Add(this.label3);
-            this.panel3.Location = new System.Drawing.Point(244, 168);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(193, 28);
-            this.panel3.TabIndex = 6;
-            // 
-            // label3
-            // 
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(3, -1);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(187, 28);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Teachers Count";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(35)))), ((int)(((byte)(102)))));
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Location = new System.Drawing.Point(38, 168);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(193, 28);
-            this.panel2.TabIndex = 4;
-            // 
-            // label2
-            // 
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(3, -1);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(187, 28);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Classes Count";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // welcomeLabel
-            // 
-            this.welcomeLabel.AutoSize = true;
-            this.welcomeLabel.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.welcomeLabel.ForeColor = System.Drawing.Color.Black;
-            this.welcomeLabel.Location = new System.Drawing.Point(12, 9);
-            this.welcomeLabel.Name = "welcomeLabel";
-            this.welcomeLabel.Size = new System.Drawing.Size(157, 37);
-            this.welcomeLabel.TabIndex = 2;
-            this.welcomeLabel.Text = "Dashboard";
-            // 
             // panel10
             // 
             this.panel10.BackColor = System.Drawing.Color.MintCream;
@@ -284,6 +168,27 @@
             this.lblMarkingComplete.TabIndex = 5;
             this.lblMarkingComplete.Text = "{DATA}";
             this.lblMarkingComplete.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel11
+            // 
+            this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(35)))), ((int)(((byte)(102)))));
+            this.panel11.Controls.Add(this.label11);
+            this.panel11.Location = new System.Drawing.Point(38, 309);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(193, 28);
+            this.panel11.TabIndex = 12;
+            // 
+            // label11
+            // 
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.Location = new System.Drawing.Point(3, -1);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(187, 28);
+            this.label11.TabIndex = 6;
+            this.label11.Text = "Annoncement Count";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel12
             // 
@@ -307,6 +212,27 @@
             this.lblAnnounceCount.Text = "{DATA}";
             this.lblAnnounceCount.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(35)))), ((int)(((byte)(102)))));
+            this.panel7.Controls.Add(this.label7);
+            this.panel7.Location = new System.Drawing.Point(656, 168);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(193, 28);
+            this.panel7.TabIndex = 10;
+            // 
+            // label7
+            // 
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(3, -1);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(187, 28);
+            this.label7.TabIndex = 6;
+            this.label7.Text = "Attendance";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.Color.LightCyan;
@@ -328,6 +254,27 @@
             this.lblAllAttandance.TabIndex = 5;
             this.lblAllAttandance.Text = "{DATA}";
             this.lblAllAttandance.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(35)))), ((int)(((byte)(102)))));
+            this.panel5.Controls.Add(this.label5);
+            this.panel5.Location = new System.Drawing.Point(450, 168);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(193, 28);
+            this.panel5.TabIndex = 8;
+            // 
+            // label5
+            // 
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(3, -1);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(187, 28);
+            this.label5.TabIndex = 6;
+            this.label5.Text = "Students Count";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel6
             // 
@@ -351,6 +298,27 @@
             this.lblStudentsCount.Text = "{DATA}";
             this.lblStudentsCount.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(35)))), ((int)(((byte)(102)))));
+            this.panel3.Controls.Add(this.label3);
+            this.panel3.Location = new System.Drawing.Point(244, 168);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(193, 28);
+            this.panel3.TabIndex = 6;
+            // 
+            // label3
+            // 
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(3, -1);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(187, 28);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Teachers Count";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.LightGray;
@@ -372,6 +340,27 @@
             this.lblTeachersCount.TabIndex = 5;
             this.lblTeachersCount.Text = "{DATA}";
             this.lblTeachersCount.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(35)))), ((int)(((byte)(102)))));
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Location = new System.Drawing.Point(38, 168);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(193, 28);
+            this.panel2.TabIndex = 4;
+            // 
+            // label2
+            // 
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(3, -1);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(187, 28);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Classes Count";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel1
             // 
@@ -395,6 +384,17 @@
             this.lblClassCount.Text = "{DATA}";
             this.lblClassCount.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // lblPageTitle
+            // 
+            this.lblPageTitle.AutoSize = true;
+            this.lblPageTitle.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPageTitle.ForeColor = System.Drawing.Color.Black;
+            this.lblPageTitle.Location = new System.Drawing.Point(12, 9);
+            this.lblPageTitle.Name = "lblPageTitle";
+            this.lblPageTitle.Size = new System.Drawing.Size(157, 37);
+            this.lblPageTitle.TabIndex = 2;
+            this.lblPageTitle.Text = "Dashboard";
+            // 
             // formDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -409,16 +409,16 @@
             this.pnlDashboardMain.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.panel9.ResumeLayout(false);
-            this.panel11.ResumeLayout(false);
-            this.panel7.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
             this.panel10.ResumeLayout(false);
+            this.panel11.ResumeLayout(false);
             this.panel12.ResumeLayout(false);
+            this.panel7.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -427,7 +427,7 @@
         #endregion
 
         private System.Windows.Forms.Panel pnlDashboardMain;
-        private System.Windows.Forms.Label welcomeLabel;
+        private System.Windows.Forms.Label lblPageTitle;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label lblClassCount;

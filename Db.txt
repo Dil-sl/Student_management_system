@@ -1,0 +1,79 @@
+﻿USE SMS_SIS;
+GO
+
+-- Create the Users table
+CREATE TABLE Users (
+    UserID INT IDENTITY(1,1) PRIMARY KEY,
+    Username NVARCHAR(50) NOT NULL,
+    Password NVARCHAR(50) NOT NULL,
+    UserType NVARCHAR(20) NOT NULL,
+    FullName NVARCHAR(100) NOT NULL,
+    Email NVARCHAR(100),
+    ContactNumber NVARCHAR(20)
+);
+GO
+
+-- Create the Students table
+CREATE TABLE Students (
+    StudentID INT IDENTITY(1,1) PRIMARY KEY,
+    RegNo NVARCHAR(20),
+    FullName NVARCHAR(100) NOT NULL,
+    Gender NVARCHAR(10),
+    DOB DATE,
+    Address NVARCHAR(255),
+    Contact NVARCHAR(20),
+    Email NVARCHAR(100),
+    GuardianName NVARCHAR(100),
+    GuardianContactNumber NVARCHAR(20),
+    Class NVARCHAR(50),
+    FOREIGN KEY (StudentID) REFERENCES Users(UserID)
+);
+GO
+
+-- Create the Teachers table
+CREATE TABLE Teachers (
+    TeacherID INT IDENTITY(1,1) PRIMARY KEY,
+    FullName NVARCHAR(100) NOT NULL,
+    DOB DATE,
+    ContactNumber NVARCHAR(20),
+    Address NVARCHAR(255),
+    Gender NVARCHAR(10),
+    Email NVARCHAR(100),
+    Subjects NVARCHAR(255),
+    OwnedClass NVARCHAR(50),
+    FOREIGN KEY (TeacherID) REFERENCES Users(UserID)
+);
+GO
+
+-- Create the Classes table
+CREATE TABLE Classes (
+    ClassID INT IDENTITY(1,1) PRIMARY KEY,
+    ClassName NVARCHAR(50),
+    ClassTeacherID INT,
+    FOREIGN KEY (ClassTeacherID) REFERENCES Teachers(TeacherID)
+);
+GO
+
+-- Create the Noticeboard table
+CREATE TABLE Noticeboard (
+    NoticeID INT IDENTITY(1,1) PRIMARY KEY,
+    Title NVARCHAR(100),
+    Description NVARCHAR(MAX),
+    PostedBy INT,
+    PostedDate DATETIME,
+    ExpiredDate DATETIME,
+    FOREIGN KEY (PostedBy) REFERENCES Users(UserID)
+);
+GO
+
+-- Create the Attendance table
+CREATE TABLE Attendance (
+    AttendanceID INT IDENTITY(1,1) PRIMARY KEY,
+    ClassID INT,
+    Date DATE,
+    StudentID INT,
+    Status NVARCHAR(20),
+    FOREIGN KEY (ClassID) REFERENCES Classes(ClassID),
+    FOREIGN KEY (StudentID) REFERENCES Students(StudentID)
+);
+GO

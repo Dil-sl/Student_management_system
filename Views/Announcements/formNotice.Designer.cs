@@ -1,6 +1,6 @@
-﻿namespace Student_management_system.Views.Classes
+﻿namespace Student_management_system.Views.Announcements
 {
-    partial class formClasses
+    partial class formNotice
     {
         /// <summary>
         /// Required designer variable.
@@ -44,7 +44,7 @@
             this.lblPageTitle.Location = new System.Drawing.Point(0, 12);
             this.lblPageTitle.Name = "lblPageTitle";
             this.lblPageTitle.Size = new System.Drawing.Size(885, 696);
-            this.lblPageTitle.TabIndex = 2;
+            this.lblPageTitle.TabIndex = 3;
             // 
             // button1
             // 
@@ -58,7 +58,7 @@
             this.button1.Padding = new System.Windows.Forms.Padding(2);
             this.button1.Size = new System.Drawing.Size(182, 90);
             this.button1.TabIndex = 5;
-            this.button1.Text = "Manage Class";
+            this.button1.Text = "Manage Notice";
             this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.button1.UseVisualStyleBackColor = false;
@@ -75,7 +75,7 @@
             this.button2.Padding = new System.Windows.Forms.Padding(2);
             this.button2.Size = new System.Drawing.Size(182, 90);
             this.button2.TabIndex = 4;
-            this.button2.Text = "Add Class";
+            this.button2.Text = "Add Notice";
             this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.button2.UseVisualStyleBackColor = false;
@@ -87,19 +87,19 @@
             this.welcomeLabel.ForeColor = System.Drawing.Color.Black;
             this.welcomeLabel.Location = new System.Drawing.Point(12, 36);
             this.welcomeLabel.Name = "welcomeLabel";
-            this.welcomeLabel.Size = new System.Drawing.Size(108, 37);
+            this.welcomeLabel.Size = new System.Drawing.Size(186, 37);
             this.welcomeLabel.TabIndex = 2;
-            this.welcomeLabel.Text = "Classes";
+            this.welcomeLabel.Text = "Notice Board";
             // 
-            // formClasses
+            // formNotice
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(884, 708);
             this.Controls.Add(this.lblPageTitle);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "formClasses";
-            this.Text = "formClasses";
+            this.Name = "formNotice";
+            this.Text = "formNotice";
             this.lblPageTitle.ResumeLayout(false);
             this.lblPageTitle.PerformLayout();
             this.ResumeLayout(false);

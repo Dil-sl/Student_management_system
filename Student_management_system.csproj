@@ -12,6 +12,21 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -50,11 +65,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Views\Announcements\formAddAnnoncement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Announcements\formAddAnnoncement.Designer.cs">
+      <DependentUpon>formAddAnnoncement.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Announcements\formAnnouncement.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Views\Announcements\formAnnouncement.Designer.cs">
       <DependentUpon>formAnnouncement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Announcements\formManageAnnouncement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Announcements\formManageAnnouncement.Designer.cs">
+      <DependentUpon>formManageAnnouncement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Attendance_Mark\formAddAttendance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Attendance_Mark\formAddAttendance.Designer.cs">
+      <DependentUpon>formAddAttendance.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Attendance_Mark\formAttendance.cs">
       <SubType>Form</SubType>
@@ -62,11 +95,29 @@
     <Compile Include="Views\Attendance_Mark\formAttendance.Designer.cs">
       <DependentUpon>formAttendance.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Attendance_Mark\formManageAttendance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Attendance_Mark\formManageAttendance.Designer.cs">
+      <DependentUpon>formManageAttendance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Classes\formAddClass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Classes\formAddClass.Designer.cs">
+      <DependentUpon>formAddClass.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Classes\formClasses.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Views\Classes\formClasses.Designer.cs">
       <DependentUpon>formClasses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Classes\formManageClass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Classes\formManageClass.Designer.cs">
+      <DependentUpon>formManageClass.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\formDashboard.cs">
       <SubType>Form</SubType>
@@ -94,6 +145,18 @@
     <Compile Include="Views\Settings\formSettings.Designer.cs">
       <DependentUpon>formSettings.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Users\formAddUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Users\formAddUsers.Designer.cs">
+      <DependentUpon>formAddUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Users\formManageUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Users\formManageUsers.Designer.cs">
+      <DependentUpon>formManageUsers.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Users\formUsers.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,11 +173,32 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Views\Announcements\formAddAnnoncement.resx">
+      <DependentUpon>formAddAnnoncement.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Announcements\formAnnouncement.resx">
       <DependentUpon>formAnnouncement.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\Announcements\formManageAnnouncement.resx">
+      <DependentUpon>formManageAnnouncement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Attendance_Mark\formAddAttendance.resx">
+      <DependentUpon>formAddAttendance.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Attendance_Mark\formAttendance.resx">
       <DependentUpon>formAttendance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Attendance_Mark\formManageAttendance.resx">
+      <DependentUpon>formManageAttendance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Classes\formAddClass.resx">
+      <DependentUpon>formAddClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Classes\formClasses.resx">
+      <DependentUpon>formClasses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Classes\formManageClass.resx">
+      <DependentUpon>formManageClass.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\formDashboard.resx">
       <DependentUpon>formDashboard.cs</DependentUpon>
@@ -127,6 +211,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Settings\formSettings.resx">
       <DependentUpon>formSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Users\formAddUsers.resx">
+      <DependentUpon>formAddUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Users\formManageUsers.resx">
+      <DependentUpon>formManageUsers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Users\formUsers.resx">
       <DependentUpon>formUsers.cs</DependentUpon>
@@ -219,6 +309,39 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-double-tick-100 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-add-male-user-group-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-manage-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-add-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-renew-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.8.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.8.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SMS_SIS.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SMS_SIS_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>SMS_SIS.mdf</DependentUpon>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
