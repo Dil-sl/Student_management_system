@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Student_management_system.Views.Classes
 {
-    public partial class formAddClass : Form
+    public partial class txtClassTeacherName : Form
     {
-        public formAddClass()
+        public txtClassTeacherName()
         {
             InitializeComponent();
         }

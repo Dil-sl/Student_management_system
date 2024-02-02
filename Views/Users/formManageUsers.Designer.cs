@@ -35,31 +35,30 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formManageUsers));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblPageTitle = new System.Windows.Forms.Panel();
+            this.btnSearchUser = new Guna.UI2.WinForms.Guna2Button();
+            this.dgvUsers = new System.Windows.Forms.DataGridView();
             this.txtEPFNo = new Guna.UI2.WinForms.Guna2TextBox();
             this.cmbAutoOpen = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.lblBranch = new System.Windows.Forms.Label();
             this.welcomeLabel = new System.Windows.Forms.Label();
-            this.dgvUsers = new System.Windows.Forms.DataGridView();
-            this.dgvProduct_ProductCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblBranch = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dgvUser_UserCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvProduct_Edit = new System.Windows.Forms.DataGridViewImageColumn();
             this.dgvProduct_Delete = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dgvProduct_ProdName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvProduct_Manufacturer = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvProduct_SupplierName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvProduct_ItemType = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvProduct_CategoryName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvProduct_UnitWeightVolume = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvProduct_ShelfLocation = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvProduct_SubunitWeightVolume = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvProduct_SubUnitsPerUnit = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvProduct_UnitsPerPack = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvProduct_Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvProduct_CreatedBy = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvProduct_CreatedDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvProduct_UpdatedBy = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvProduct_UpdatedDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvUser_FullName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvUser_UserName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvUser_Contact = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvUser_Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvUser_Reg = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvUser_DOB = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvUser_Gname = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvUser_Gcontact = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvUser_Class = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvUser_Gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvUser_Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvUser_Subjects = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvUser_Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvProduct_Index = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnLogin = new Guna.UI2.WinForms.Guna2Button();
             this.lblPageTitle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsers)).BeginInit();
             this.SuspendLayout();
@@ -67,7 +66,8 @@
             // lblPageTitle
             // 
             this.lblPageTitle.BackColor = System.Drawing.Color.White;
-            this.lblPageTitle.Controls.Add(this.btnLogin);
+            this.lblPageTitle.Controls.Add(this.label1);
+            this.lblPageTitle.Controls.Add(this.btnSearchUser);
             this.lblPageTitle.Controls.Add(this.dgvUsers);
             this.lblPageTitle.Controls.Add(this.txtEPFNo);
             this.lblPageTitle.Controls.Add(this.cmbAutoOpen);
@@ -78,69 +78,21 @@
             this.lblPageTitle.Size = new System.Drawing.Size(885, 696);
             this.lblPageTitle.TabIndex = 3;
             // 
-            // txtEPFNo
+            // btnSearchUser
             // 
-            this.txtEPFNo.BorderRadius = 5;
-            this.txtEPFNo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtEPFNo.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtEPFNo.DefaultText = "";
-            this.txtEPFNo.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtEPFNo.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtEPFNo.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtEPFNo.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtEPFNo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtEPFNo.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEPFNo.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtEPFNo.Location = new System.Drawing.Point(373, 85);
-            this.txtEPFNo.Name = "txtEPFNo";
-            this.txtEPFNo.PasswordChar = '\0';
-            this.txtEPFNo.PlaceholderText = "";
-            this.txtEPFNo.SelectedText = "";
-            this.txtEPFNo.Size = new System.Drawing.Size(374, 32);
-            this.txtEPFNo.TabIndex = 172;
-            // 
-            // cmbAutoOpen
-            // 
-            this.cmbAutoOpen.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.cmbAutoOpen.BackColor = System.Drawing.Color.Transparent;
-            this.cmbAutoOpen.BorderRadius = 5;
-            this.cmbAutoOpen.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cmbAutoOpen.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cmbAutoOpen.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbAutoOpen.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmbAutoOpen.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmbAutoOpen.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbAutoOpen.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cmbAutoOpen.ItemHeight = 19;
-            this.cmbAutoOpen.Location = new System.Drawing.Point(170, 92);
-            this.cmbAutoOpen.Name = "cmbAutoOpen";
-            this.cmbAutoOpen.Size = new System.Drawing.Size(176, 25);
-            this.cmbAutoOpen.TabIndex = 171;
-            // 
-            // lblBranch
-            // 
-            this.lblBranch.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblBranch.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBranch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(35)))), ((int)(((byte)(102)))));
-            this.lblBranch.Image = global::Student_management_system.Properties.Resources.icons8_asterisk_8;
-            this.lblBranch.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.lblBranch.Location = new System.Drawing.Point(33, 100);
-            this.lblBranch.Name = "lblBranch";
-            this.lblBranch.Size = new System.Drawing.Size(99, 17);
-            this.lblBranch.TabIndex = 170;
-            this.lblBranch.Text = "User Type";
-            this.lblBranch.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // welcomeLabel
-            // 
-            this.welcomeLabel.AutoSize = true;
-            this.welcomeLabel.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.welcomeLabel.ForeColor = System.Drawing.Color.Black;
-            this.welcomeLabel.Location = new System.Drawing.Point(12, 36);
-            this.welcomeLabel.Name = "welcomeLabel";
-            this.welcomeLabel.Size = new System.Drawing.Size(198, 37);
-            this.welcomeLabel.TabIndex = 2;
-            this.welcomeLabel.Text = "Manage Users";
+            this.btnSearchUser.BorderRadius = 15;
+            this.btnSearchUser.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSearchUser.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSearchUser.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSearchUser.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSearchUser.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(204)))), ((int)(((byte)(113)))));
+            this.btnSearchUser.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearchUser.ForeColor = System.Drawing.Color.White;
+            this.btnSearchUser.Location = new System.Drawing.Point(772, 85);
+            this.btnSearchUser.Name = "btnSearchUser";
+            this.btnSearchUser.Size = new System.Drawing.Size(91, 32);
+            this.btnSearchUser.TabIndex = 175;
+            this.btnSearchUser.Text = "Search";
             // 
             // dgvUsers
             // 
@@ -166,24 +118,22 @@
             this.dgvUsers.ColumnHeadersHeight = 25;
             this.dgvUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvUsers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dgvProduct_ProductCode,
+            this.dgvUser_UserCode,
             this.dgvProduct_Edit,
             this.dgvProduct_Delete,
-            this.dgvProduct_ProdName,
-            this.dgvProduct_Manufacturer,
-            this.dgvProduct_SupplierName,
-            this.dgvProduct_ItemType,
-            this.dgvProduct_CategoryName,
-            this.dgvProduct_UnitWeightVolume,
-            this.dgvProduct_ShelfLocation,
-            this.dgvProduct_SubunitWeightVolume,
-            this.dgvProduct_SubUnitsPerUnit,
-            this.dgvProduct_UnitsPerPack,
-            this.dgvProduct_Status,
-            this.dgvProduct_CreatedBy,
-            this.dgvProduct_CreatedDate,
-            this.dgvProduct_UpdatedBy,
-            this.dgvProduct_UpdatedDate,
+            this.dgvUser_FullName,
+            this.dgvUser_UserName,
+            this.dgvUser_Contact,
+            this.dgvUser_Email,
+            this.dgvUser_Reg,
+            this.dgvUser_DOB,
+            this.dgvUser_Gname,
+            this.dgvUser_Gcontact,
+            this.dgvUser_Class,
+            this.dgvUser_Gender,
+            this.dgvUser_Address,
+            this.dgvUser_Subjects,
+            this.dgvUser_Date,
             this.dgvProduct_Index});
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(236)))), ((int)(((byte)(239)))));
@@ -211,13 +161,89 @@
             this.dgvUsers.Size = new System.Drawing.Size(844, 515);
             this.dgvUsers.TabIndex = 174;
             // 
-            // dgvProduct_ProductCode
+            // txtEPFNo
             // 
-            this.dgvProduct_ProductCode.Frozen = true;
-            this.dgvProduct_ProductCode.HeaderText = "Product #";
-            this.dgvProduct_ProductCode.Name = "dgvProduct_ProductCode";
-            this.dgvProduct_ProductCode.ReadOnly = true;
-            this.dgvProduct_ProductCode.Width = 111;
+            this.txtEPFNo.BorderRadius = 5;
+            this.txtEPFNo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtEPFNo.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtEPFNo.DefaultText = "";
+            this.txtEPFNo.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtEPFNo.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtEPFNo.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtEPFNo.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtEPFNo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtEPFNo.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEPFNo.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtEPFNo.Location = new System.Drawing.Point(418, 85);
+            this.txtEPFNo.Name = "txtEPFNo";
+            this.txtEPFNo.PasswordChar = '\0';
+            this.txtEPFNo.PlaceholderText = "";
+            this.txtEPFNo.SelectedText = "";
+            this.txtEPFNo.Size = new System.Drawing.Size(329, 32);
+            this.txtEPFNo.TabIndex = 172;
+            // 
+            // cmbAutoOpen
+            // 
+            this.cmbAutoOpen.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cmbAutoOpen.BackColor = System.Drawing.Color.Transparent;
+            this.cmbAutoOpen.BorderRadius = 5;
+            this.cmbAutoOpen.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmbAutoOpen.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbAutoOpen.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbAutoOpen.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbAutoOpen.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbAutoOpen.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbAutoOpen.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cmbAutoOpen.ItemHeight = 19;
+            this.cmbAutoOpen.Location = new System.Drawing.Point(126, 92);
+            this.cmbAutoOpen.Name = "cmbAutoOpen";
+            this.cmbAutoOpen.Size = new System.Drawing.Size(159, 25);
+            this.cmbAutoOpen.TabIndex = 171;
+            // 
+            // welcomeLabel
+            // 
+            this.welcomeLabel.AutoSize = true;
+            this.welcomeLabel.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.welcomeLabel.ForeColor = System.Drawing.Color.Black;
+            this.welcomeLabel.Location = new System.Drawing.Point(12, 36);
+            this.welcomeLabel.Name = "welcomeLabel";
+            this.welcomeLabel.Size = new System.Drawing.Size(198, 37);
+            this.welcomeLabel.TabIndex = 2;
+            this.welcomeLabel.Text = "Manage Users";
+            // 
+            // lblBranch
+            // 
+            this.lblBranch.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblBranch.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBranch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(35)))), ((int)(((byte)(102)))));
+            this.lblBranch.ImageAlign = System.Drawing.ContentAlignment.TopRight;
+            this.lblBranch.Location = new System.Drawing.Point(21, 92);
+            this.lblBranch.Name = "lblBranch";
+            this.lblBranch.Size = new System.Drawing.Size(99, 25);
+            this.lblBranch.TabIndex = 170;
+            this.lblBranch.Text = "User Type";
+            this.lblBranch.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(35)))), ((int)(((byte)(102)))));
+            this.label1.ImageAlign = System.Drawing.ContentAlignment.TopRight;
+            this.label1.Location = new System.Drawing.Point(302, 85);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(99, 32);
+            this.label1.TabIndex = 176;
+            this.label1.Text = "User Type";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // dgvUser_UserCode
+            // 
+            this.dgvUser_UserCode.Frozen = true;
+            this.dgvUser_UserCode.HeaderText = "User #";
+            this.dgvUser_UserCode.Name = "dgvUser_UserCode";
+            this.dgvUser_UserCode.ReadOnly = true;
+            this.dgvUser_UserCode.Width = 111;
             // 
             // dgvProduct_Edit
             // 
@@ -243,116 +269,102 @@
             this.dgvProduct_Delete.ReadOnly = true;
             this.dgvProduct_Delete.Width = 25;
             // 
-            // dgvProduct_ProdName
+            // dgvUser_FullName
             // 
-            this.dgvProduct_ProdName.Frozen = true;
-            this.dgvProduct_ProdName.HeaderText = "Product Name";
-            this.dgvProduct_ProdName.Name = "dgvProduct_ProdName";
-            this.dgvProduct_ProdName.ReadOnly = true;
-            this.dgvProduct_ProdName.Width = 300;
+            this.dgvUser_FullName.Frozen = true;
+            this.dgvUser_FullName.HeaderText = "Full Name";
+            this.dgvUser_FullName.Name = "dgvUser_FullName";
+            this.dgvUser_FullName.ReadOnly = true;
+            this.dgvUser_FullName.Width = 300;
             // 
-            // dgvProduct_Manufacturer
+            // dgvUser_UserName
             // 
-            this.dgvProduct_Manufacturer.HeaderText = "Company";
-            this.dgvProduct_Manufacturer.Name = "dgvProduct_Manufacturer";
-            this.dgvProduct_Manufacturer.ReadOnly = true;
-            this.dgvProduct_Manufacturer.Width = 150;
+            this.dgvUser_UserName.HeaderText = "User Name";
+            this.dgvUser_UserName.Name = "dgvUser_UserName";
+            this.dgvUser_UserName.ReadOnly = true;
+            this.dgvUser_UserName.Width = 150;
             // 
-            // dgvProduct_SupplierName
+            // dgvUser_Contact
             // 
-            this.dgvProduct_SupplierName.HeaderText = "Supplier";
-            this.dgvProduct_SupplierName.Name = "dgvProduct_SupplierName";
-            this.dgvProduct_SupplierName.ReadOnly = true;
-            this.dgvProduct_SupplierName.Visible = false;
+            this.dgvUser_Contact.HeaderText = "Contact";
+            this.dgvUser_Contact.Name = "dgvUser_Contact";
+            this.dgvUser_Contact.ReadOnly = true;
+            this.dgvUser_Contact.Visible = false;
             // 
-            // dgvProduct_ItemType
+            // dgvUser_Email
             // 
-            this.dgvProduct_ItemType.HeaderText = "Item Type";
-            this.dgvProduct_ItemType.Name = "dgvProduct_ItemType";
-            this.dgvProduct_ItemType.ReadOnly = true;
-            this.dgvProduct_ItemType.Visible = false;
-            this.dgvProduct_ItemType.Width = 111;
+            this.dgvUser_Email.HeaderText = "Email";
+            this.dgvUser_Email.Name = "dgvUser_Email";
+            this.dgvUser_Email.ReadOnly = true;
+            this.dgvUser_Email.Visible = false;
+            this.dgvUser_Email.Width = 111;
             // 
-            // dgvProduct_CategoryName
+            // dgvUser_Reg
             // 
-            this.dgvProduct_CategoryName.HeaderText = "Category";
-            this.dgvProduct_CategoryName.Name = "dgvProduct_CategoryName";
-            this.dgvProduct_CategoryName.ReadOnly = true;
-            this.dgvProduct_CategoryName.Width = 150;
+            this.dgvUser_Reg.HeaderText = "Reg No.";
+            this.dgvUser_Reg.Name = "dgvUser_Reg";
+            this.dgvUser_Reg.ReadOnly = true;
+            this.dgvUser_Reg.Width = 150;
             // 
-            // dgvProduct_UnitWeightVolume
+            // dgvUser_DOB
             // 
-            this.dgvProduct_UnitWeightVolume.HeaderText = "Unit Vol";
-            this.dgvProduct_UnitWeightVolume.Name = "dgvProduct_UnitWeightVolume";
-            this.dgvProduct_UnitWeightVolume.ReadOnly = true;
+            this.dgvUser_DOB.HeaderText = "Date Of Birth";
+            this.dgvUser_DOB.Name = "dgvUser_DOB";
+            this.dgvUser_DOB.ReadOnly = true;
             // 
-            // dgvProduct_ShelfLocation
+            // dgvUser_Gname
             // 
-            this.dgvProduct_ShelfLocation.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dgvProduct_ShelfLocation.HeaderText = "Shelf Location";
-            this.dgvProduct_ShelfLocation.Name = "dgvProduct_ShelfLocation";
-            this.dgvProduct_ShelfLocation.ReadOnly = true;
-            this.dgvProduct_ShelfLocation.Width = 135;
+            this.dgvUser_Gname.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dgvUser_Gname.HeaderText = "Gurdian Name";
+            this.dgvUser_Gname.Name = "dgvUser_Gname";
+            this.dgvUser_Gname.ReadOnly = true;
+            this.dgvUser_Gname.Width = 135;
             // 
-            // dgvProduct_SubunitWeightVolume
+            // dgvUser_Gcontact
             // 
-            this.dgvProduct_SubunitWeightVolume.HeaderText = "Subunit W/V";
-            this.dgvProduct_SubunitWeightVolume.Name = "dgvProduct_SubunitWeightVolume";
-            this.dgvProduct_SubunitWeightVolume.ReadOnly = true;
-            this.dgvProduct_SubunitWeightVolume.Visible = false;
-            this.dgvProduct_SubunitWeightVolume.Width = 128;
+            this.dgvUser_Gcontact.HeaderText = "Gurdian Contact";
+            this.dgvUser_Gcontact.Name = "dgvUser_Gcontact";
+            this.dgvUser_Gcontact.ReadOnly = true;
+            this.dgvUser_Gcontact.Visible = false;
+            this.dgvUser_Gcontact.Width = 128;
             // 
-            // dgvProduct_SubUnitsPerUnit
+            // dgvUser_Class
             // 
-            this.dgvProduct_SubUnitsPerUnit.HeaderText = "Subunits per unit";
-            this.dgvProduct_SubUnitsPerUnit.Name = "dgvProduct_SubUnitsPerUnit";
-            this.dgvProduct_SubUnitsPerUnit.ReadOnly = true;
-            this.dgvProduct_SubUnitsPerUnit.Visible = false;
-            this.dgvProduct_SubUnitsPerUnit.Width = 156;
+            this.dgvUser_Class.HeaderText = "Class";
+            this.dgvUser_Class.Name = "dgvUser_Class";
+            this.dgvUser_Class.ReadOnly = true;
+            this.dgvUser_Class.Visible = false;
+            this.dgvUser_Class.Width = 156;
             // 
-            // dgvProduct_UnitsPerPack
+            // dgvUser_Gender
             // 
-            this.dgvProduct_UnitsPerPack.HeaderText = "Units Per Pack";
-            this.dgvProduct_UnitsPerPack.Name = "dgvProduct_UnitsPerPack";
-            this.dgvProduct_UnitsPerPack.ReadOnly = true;
-            this.dgvProduct_UnitsPerPack.Visible = false;
-            this.dgvProduct_UnitsPerPack.Width = 138;
+            this.dgvUser_Gender.HeaderText = "Gender";
+            this.dgvUser_Gender.Name = "dgvUser_Gender";
+            this.dgvUser_Gender.ReadOnly = true;
+            this.dgvUser_Gender.Visible = false;
+            this.dgvUser_Gender.Width = 138;
             // 
-            // dgvProduct_Status
+            // dgvUser_Address
             // 
-            this.dgvProduct_Status.FillWeight = 120F;
-            this.dgvProduct_Status.HeaderText = "Status";
-            this.dgvProduct_Status.Name = "dgvProduct_Status";
-            this.dgvProduct_Status.ReadOnly = true;
+            this.dgvUser_Address.FillWeight = 120F;
+            this.dgvUser_Address.HeaderText = "Address";
+            this.dgvUser_Address.Name = "dgvUser_Address";
+            this.dgvUser_Address.ReadOnly = true;
             // 
-            // dgvProduct_CreatedBy
+            // dgvUser_Subjects
             // 
-            this.dgvProduct_CreatedBy.FillWeight = 150F;
-            this.dgvProduct_CreatedBy.HeaderText = "Created By";
-            this.dgvProduct_CreatedBy.Name = "dgvProduct_CreatedBy";
-            this.dgvProduct_CreatedBy.ReadOnly = true;
-            this.dgvProduct_CreatedBy.Width = 150;
+            this.dgvUser_Subjects.FillWeight = 150F;
+            this.dgvUser_Subjects.HeaderText = "Subjects";
+            this.dgvUser_Subjects.Name = "dgvUser_Subjects";
+            this.dgvUser_Subjects.ReadOnly = true;
+            this.dgvUser_Subjects.Width = 150;
             // 
-            // dgvProduct_CreatedDate
+            // dgvUser_Date
             // 
-            this.dgvProduct_CreatedDate.HeaderText = "Created Date";
-            this.dgvProduct_CreatedDate.Name = "dgvProduct_CreatedDate";
-            this.dgvProduct_CreatedDate.ReadOnly = true;
-            this.dgvProduct_CreatedDate.Width = 150;
-            // 
-            // dgvProduct_UpdatedBy
-            // 
-            this.dgvProduct_UpdatedBy.HeaderText = "Updated By";
-            this.dgvProduct_UpdatedBy.Name = "dgvProduct_UpdatedBy";
-            this.dgvProduct_UpdatedBy.ReadOnly = true;
-            this.dgvProduct_UpdatedBy.Width = 150;
-            // 
-            // dgvProduct_UpdatedDate
-            // 
-            this.dgvProduct_UpdatedDate.HeaderText = "Updated Date";
-            this.dgvProduct_UpdatedDate.Name = "dgvProduct_UpdatedDate";
-            this.dgvProduct_UpdatedDate.ReadOnly = true;
-            this.dgvProduct_UpdatedDate.Width = 150;
+            this.dgvUser_Date.HeaderText = "Updated Date";
+            this.dgvUser_Date.Name = "dgvUser_Date";
+            this.dgvUser_Date.ReadOnly = true;
+            this.dgvUser_Date.Width = 150;
             // 
             // dgvProduct_Index
             // 
@@ -361,22 +373,6 @@
             this.dgvProduct_Index.ReadOnly = true;
             this.dgvProduct_Index.Visible = false;
             this.dgvProduct_Index.Width = 37;
-            // 
-            // btnLogin
-            // 
-            this.btnLogin.BorderRadius = 15;
-            this.btnLogin.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnLogin.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnLogin.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnLogin.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnLogin.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(204)))), ((int)(((byte)(113)))));
-            this.btnLogin.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.Location = new System.Drawing.Point(772, 85);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(91, 32);
-            this.btnLogin.TabIndex = 175;
-            this.btnLogin.Text = "Search";
             // 
             // formManageUsers
             // 
@@ -402,25 +398,24 @@
         private System.Windows.Forms.Label lblBranch;
         private System.Windows.Forms.Label welcomeLabel;
         public System.Windows.Forms.DataGridView dgvUsers;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvProduct_ProductCode;
+        private Guna.UI2.WinForms.Guna2Button btnSearchUser;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvUser_UserCode;
         private System.Windows.Forms.DataGridViewImageColumn dgvProduct_Edit;
         private System.Windows.Forms.DataGridViewImageColumn dgvProduct_Delete;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvProduct_ProdName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvProduct_Manufacturer;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvProduct_SupplierName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvProduct_ItemType;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvProduct_CategoryName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvProduct_UnitWeightVolume;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvProduct_ShelfLocation;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvProduct_SubunitWeightVolume;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvProduct_SubUnitsPerUnit;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvProduct_UnitsPerPack;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvProduct_Status;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvProduct_CreatedBy;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvProduct_CreatedDate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvProduct_UpdatedBy;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvProduct_UpdatedDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvUser_FullName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvUser_UserName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvUser_Contact;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvUser_Email;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvUser_Reg;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvUser_DOB;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvUser_Gname;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvUser_Gcontact;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvUser_Class;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvUser_Gender;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvUser_Address;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvUser_Subjects;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvUser_Date;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvProduct_Index;
-        private Guna.UI2.WinForms.Guna2Button btnLogin;
     }
 }
