@@ -183,6 +183,16 @@ namespace Student_management_system.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_back_arrow_32 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-back-arrow-32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_double_tick_100__1_ {
             get {
                 object obj = ResourceManager.GetObject("icons8-double-tick-100 (1)", resourceCulture);

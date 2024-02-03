@@ -39,12 +39,12 @@
             this.picBoxClose = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.rBtnSetup = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
-            this.radioButton5 = new System.Windows.Forms.RadioButton();
+            this.rBtnDashboard = new System.Windows.Forms.RadioButton();
+            this.rBtnUsers = new System.Windows.Forms.RadioButton();
+            this.rBtnAttendance = new System.Windows.Forms.RadioButton();
+            this.rBtnClass = new System.Windows.Forms.RadioButton();
+            this.rBtnAnnounce = new System.Windows.Forms.RadioButton();
+            this.rBtnSettings = new System.Windows.Forms.RadioButton();
             this.pnlMainWindow = new System.Windows.Forms.Panel();
             this.pnlTopBar.SuspendLayout();
             this.pnlTimeInfo.SuspendLayout();
@@ -84,14 +84,18 @@
             // 
             // pnlTimeInfo
             // 
+            this.pnlTimeInfo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlTimeInfo.Controls.Add(this.lblTimeAndDate);
-            this.pnlTimeInfo.Location = new System.Drawing.Point(421, 2);
+            this.pnlTimeInfo.Location = new System.Drawing.Point(455, 2);
             this.pnlTimeInfo.Name = "pnlTimeInfo";
             this.pnlTimeInfo.Size = new System.Drawing.Size(227, 37);
             this.pnlTimeInfo.TabIndex = 4;
             // 
             // lblTimeAndDate
             // 
+            this.lblTimeAndDate.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblTimeAndDate.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTimeAndDate.ForeColor = System.Drawing.Color.White;
             this.lblTimeAndDate.Location = new System.Drawing.Point(3, 4);
@@ -103,6 +107,7 @@
             // 
             // pnlUserInfo
             // 
+            this.pnlUserInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlUserInfo.Controls.Add(this.lblUserName);
             this.pnlUserInfo.Controls.Add(this.guna2CirclePictureBox1);
             this.pnlUserInfo.Location = new System.Drawing.Point(693, 2);
@@ -112,6 +117,7 @@
             // 
             // lblUserName
             // 
+            this.lblUserName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblUserName.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUserName.ForeColor = System.Drawing.Color.White;
             this.lblUserName.Location = new System.Drawing.Point(7, 3);
@@ -133,21 +139,25 @@
             // 
             // picBoxMinimize
             // 
+            this.picBoxMinimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.picBoxMinimize.Image = global::Student_management_system.Properties.Resources.Minimize;
             this.picBoxMinimize.Location = new System.Drawing.Point(942, 5);
             this.picBoxMinimize.Name = "picBoxMinimize";
             this.picBoxMinimize.Size = new System.Drawing.Size(32, 32);
             this.picBoxMinimize.TabIndex = 2;
             this.picBoxMinimize.TabStop = false;
+            this.picBoxMinimize.Click += new System.EventHandler(this.picBoxMinimize_Click);
             // 
             // picBoxClose
             // 
+            this.picBoxClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.picBoxClose.Image = global::Student_management_system.Properties.Resources.close;
             this.picBoxClose.Location = new System.Drawing.Point(980, 5);
             this.picBoxClose.Name = "picBoxClose";
             this.picBoxClose.Size = new System.Drawing.Size(32, 32);
             this.picBoxClose.TabIndex = 1;
             this.picBoxClose.TabStop = false;
+            this.picBoxClose.Click += new System.EventHandler(this.picBoxClose_Click);
             // 
             // pictureBox1
             // 
@@ -162,154 +172,157 @@
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(35)))), ((int)(((byte)(102)))));
-            this.flowLayoutPanel1.Controls.Add(this.rBtnSetup);
-            this.flowLayoutPanel1.Controls.Add(this.radioButton1);
-            this.flowLayoutPanel1.Controls.Add(this.radioButton2);
-            this.flowLayoutPanel1.Controls.Add(this.radioButton3);
-            this.flowLayoutPanel1.Controls.Add(this.radioButton4);
-            this.flowLayoutPanel1.Controls.Add(this.radioButton5);
+            this.flowLayoutPanel1.Controls.Add(this.rBtnDashboard);
+            this.flowLayoutPanel1.Controls.Add(this.rBtnUsers);
+            this.flowLayoutPanel1.Controls.Add(this.rBtnAttendance);
+            this.flowLayoutPanel1.Controls.Add(this.rBtnClass);
+            this.flowLayoutPanel1.Controls.Add(this.rBtnAnnounce);
+            this.flowLayoutPanel1.Controls.Add(this.rBtnSettings);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 42);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(65, 726);
             this.flowLayoutPanel1.TabIndex = 1;
             // 
-            // rBtnSetup
+            // rBtnDashboard
             // 
-            this.rBtnSetup.Appearance = System.Windows.Forms.Appearance.Button;
-            this.rBtnSetup.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(204)))), ((int)(((byte)(255)))));
-            this.rBtnSetup.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.rBtnSetup.Dock = System.Windows.Forms.DockStyle.Top;
-            this.rBtnSetup.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.rBtnSetup.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
-            this.rBtnSetup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rBtnSetup.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rBtnSetup.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(41)))), ((int)(((byte)(69)))));
-            this.rBtnSetup.Image = global::Student_management_system.Properties.Resources.DashBoardBlack;
-            this.rBtnSetup.Location = new System.Drawing.Point(0, 0);
-            this.rBtnSetup.Margin = new System.Windows.Forms.Padding(0);
-            this.rBtnSetup.Name = "rBtnSetup";
-            this.rBtnSetup.Size = new System.Drawing.Size(65, 60);
-            this.rBtnSetup.TabIndex = 7;
-            this.rBtnSetup.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.rBtnSetup.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.rBtnSetup.UseVisualStyleBackColor = false;
+            this.rBtnDashboard.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rBtnDashboard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(204)))), ((int)(((byte)(255)))));
+            this.rBtnDashboard.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.rBtnDashboard.Dock = System.Windows.Forms.DockStyle.Top;
+            this.rBtnDashboard.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.rBtnDashboard.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
+            this.rBtnDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rBtnDashboard.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rBtnDashboard.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(41)))), ((int)(((byte)(69)))));
+            this.rBtnDashboard.Image = global::Student_management_system.Properties.Resources.DashBoardBlack;
+            this.rBtnDashboard.Location = new System.Drawing.Point(0, 0);
+            this.rBtnDashboard.Margin = new System.Windows.Forms.Padding(0);
+            this.rBtnDashboard.Name = "rBtnDashboard";
+            this.rBtnDashboard.Size = new System.Drawing.Size(65, 60);
+            this.rBtnDashboard.TabIndex = 7;
+            this.rBtnDashboard.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.rBtnDashboard.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.rBtnDashboard.UseVisualStyleBackColor = false;
+            this.rBtnDashboard.Click += new System.EventHandler(this.rBtnDashboard_Click);
             // 
-            // radioButton1
+            // rBtnUsers
             // 
-            this.radioButton1.Appearance = System.Windows.Forms.Appearance.Button;
-            this.radioButton1.AutoCheck = false;
-            this.radioButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(204)))), ((int)(((byte)(255)))));
-            this.radioButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.radioButton1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.radioButton1.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.radioButton1.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
-            this.radioButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.radioButton1.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(41)))), ((int)(((byte)(69)))));
-            this.radioButton1.Image = global::Student_management_system.Properties.Resources.Users;
-            this.radioButton1.Location = new System.Drawing.Point(0, 60);
-            this.radioButton1.Margin = new System.Windows.Forms.Padding(0);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(65, 60);
-            this.radioButton1.TabIndex = 8;
-            this.radioButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.radioButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.radioButton1.UseVisualStyleBackColor = false;
+            this.rBtnUsers.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rBtnUsers.AutoCheck = false;
+            this.rBtnUsers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(204)))), ((int)(((byte)(255)))));
+            this.rBtnUsers.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.rBtnUsers.Dock = System.Windows.Forms.DockStyle.Top;
+            this.rBtnUsers.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.rBtnUsers.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
+            this.rBtnUsers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rBtnUsers.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rBtnUsers.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(41)))), ((int)(((byte)(69)))));
+            this.rBtnUsers.Image = global::Student_management_system.Properties.Resources.Users;
+            this.rBtnUsers.Location = new System.Drawing.Point(0, 60);
+            this.rBtnUsers.Margin = new System.Windows.Forms.Padding(0);
+            this.rBtnUsers.Name = "rBtnUsers";
+            this.rBtnUsers.Size = new System.Drawing.Size(65, 60);
+            this.rBtnUsers.TabIndex = 8;
+            this.rBtnUsers.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.rBtnUsers.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.rBtnUsers.UseVisualStyleBackColor = false;
             // 
-            // radioButton2
+            // rBtnAttendance
             // 
-            this.radioButton2.Appearance = System.Windows.Forms.Appearance.Button;
-            this.radioButton2.AutoCheck = false;
-            this.radioButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(204)))), ((int)(((byte)(255)))));
-            this.radioButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.radioButton2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.radioButton2.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.radioButton2.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
-            this.radioButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.radioButton2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(41)))), ((int)(((byte)(69)))));
-            this.radioButton2.Image = global::Student_management_system.Properties.Resources.attendance;
-            this.radioButton2.Location = new System.Drawing.Point(0, 120);
-            this.radioButton2.Margin = new System.Windows.Forms.Padding(0);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(65, 60);
-            this.radioButton2.TabIndex = 9;
-            this.radioButton2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.radioButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.radioButton2.UseVisualStyleBackColor = false;
+            this.rBtnAttendance.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rBtnAttendance.AutoCheck = false;
+            this.rBtnAttendance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(204)))), ((int)(((byte)(255)))));
+            this.rBtnAttendance.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.rBtnAttendance.Dock = System.Windows.Forms.DockStyle.Top;
+            this.rBtnAttendance.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.rBtnAttendance.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
+            this.rBtnAttendance.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rBtnAttendance.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rBtnAttendance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(41)))), ((int)(((byte)(69)))));
+            this.rBtnAttendance.Image = global::Student_management_system.Properties.Resources.attendance;
+            this.rBtnAttendance.Location = new System.Drawing.Point(0, 120);
+            this.rBtnAttendance.Margin = new System.Windows.Forms.Padding(0);
+            this.rBtnAttendance.Name = "rBtnAttendance";
+            this.rBtnAttendance.Size = new System.Drawing.Size(65, 60);
+            this.rBtnAttendance.TabIndex = 9;
+            this.rBtnAttendance.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.rBtnAttendance.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.rBtnAttendance.UseVisualStyleBackColor = false;
             // 
-            // radioButton3
+            // rBtnClass
             // 
-            this.radioButton3.Appearance = System.Windows.Forms.Appearance.Button;
-            this.radioButton3.AutoCheck = false;
-            this.radioButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(204)))), ((int)(((byte)(255)))));
-            this.radioButton3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.radioButton3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.radioButton3.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.radioButton3.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
-            this.radioButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.radioButton3.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(41)))), ((int)(((byte)(69)))));
-            this.radioButton3.Image = global::Student_management_system.Properties.Resources.Class;
-            this.radioButton3.Location = new System.Drawing.Point(0, 180);
-            this.radioButton3.Margin = new System.Windows.Forms.Padding(0);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(65, 60);
-            this.radioButton3.TabIndex = 10;
-            this.radioButton3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.radioButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.radioButton3.UseVisualStyleBackColor = false;
+            this.rBtnClass.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rBtnClass.AutoCheck = false;
+            this.rBtnClass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(204)))), ((int)(((byte)(255)))));
+            this.rBtnClass.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.rBtnClass.Dock = System.Windows.Forms.DockStyle.Top;
+            this.rBtnClass.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.rBtnClass.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
+            this.rBtnClass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rBtnClass.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rBtnClass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(41)))), ((int)(((byte)(69)))));
+            this.rBtnClass.Image = global::Student_management_system.Properties.Resources.Class;
+            this.rBtnClass.Location = new System.Drawing.Point(0, 180);
+            this.rBtnClass.Margin = new System.Windows.Forms.Padding(0);
+            this.rBtnClass.Name = "rBtnClass";
+            this.rBtnClass.Size = new System.Drawing.Size(65, 60);
+            this.rBtnClass.TabIndex = 10;
+            this.rBtnClass.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.rBtnClass.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.rBtnClass.UseVisualStyleBackColor = false;
             // 
-            // radioButton4
+            // rBtnAnnounce
             // 
-            this.radioButton4.Appearance = System.Windows.Forms.Appearance.Button;
-            this.radioButton4.AutoCheck = false;
-            this.radioButton4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(204)))), ((int)(((byte)(255)))));
-            this.radioButton4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.radioButton4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.radioButton4.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.radioButton4.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
-            this.radioButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.radioButton4.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(41)))), ((int)(((byte)(69)))));
-            this.radioButton4.Image = global::Student_management_system.Properties.Resources.announcements;
-            this.radioButton4.Location = new System.Drawing.Point(0, 240);
-            this.radioButton4.Margin = new System.Windows.Forms.Padding(0);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(65, 60);
-            this.radioButton4.TabIndex = 11;
-            this.radioButton4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.radioButton4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.radioButton4.UseVisualStyleBackColor = false;
+            this.rBtnAnnounce.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rBtnAnnounce.AutoCheck = false;
+            this.rBtnAnnounce.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(204)))), ((int)(((byte)(255)))));
+            this.rBtnAnnounce.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.rBtnAnnounce.Dock = System.Windows.Forms.DockStyle.Top;
+            this.rBtnAnnounce.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.rBtnAnnounce.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
+            this.rBtnAnnounce.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rBtnAnnounce.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rBtnAnnounce.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(41)))), ((int)(((byte)(69)))));
+            this.rBtnAnnounce.Image = global::Student_management_system.Properties.Resources.announcements;
+            this.rBtnAnnounce.Location = new System.Drawing.Point(0, 240);
+            this.rBtnAnnounce.Margin = new System.Windows.Forms.Padding(0);
+            this.rBtnAnnounce.Name = "rBtnAnnounce";
+            this.rBtnAnnounce.Size = new System.Drawing.Size(65, 60);
+            this.rBtnAnnounce.TabIndex = 11;
+            this.rBtnAnnounce.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.rBtnAnnounce.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.rBtnAnnounce.UseVisualStyleBackColor = false;
             // 
-            // radioButton5
+            // rBtnSettings
             // 
-            this.radioButton5.Appearance = System.Windows.Forms.Appearance.Button;
-            this.radioButton5.AutoCheck = false;
-            this.radioButton5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(204)))), ((int)(((byte)(255)))));
-            this.radioButton5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.radioButton5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.radioButton5.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.radioButton5.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
-            this.radioButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.radioButton5.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(41)))), ((int)(((byte)(69)))));
-            this.radioButton5.Image = global::Student_management_system.Properties.Resources.Settings;
-            this.radioButton5.Location = new System.Drawing.Point(0, 300);
-            this.radioButton5.Margin = new System.Windows.Forms.Padding(0);
-            this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(65, 60);
-            this.radioButton5.TabIndex = 12;
-            this.radioButton5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.radioButton5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.radioButton5.UseVisualStyleBackColor = false;
+            this.rBtnSettings.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rBtnSettings.AutoCheck = false;
+            this.rBtnSettings.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(204)))), ((int)(((byte)(255)))));
+            this.rBtnSettings.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.rBtnSettings.Dock = System.Windows.Forms.DockStyle.Top;
+            this.rBtnSettings.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.rBtnSettings.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
+            this.rBtnSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rBtnSettings.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rBtnSettings.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(41)))), ((int)(((byte)(69)))));
+            this.rBtnSettings.Image = global::Student_management_system.Properties.Resources.Settings;
+            this.rBtnSettings.Location = new System.Drawing.Point(0, 300);
+            this.rBtnSettings.Margin = new System.Windows.Forms.Padding(0);
+            this.rBtnSettings.Name = "rBtnSettings";
+            this.rBtnSettings.Size = new System.Drawing.Size(65, 60);
+            this.rBtnSettings.TabIndex = 12;
+            this.rBtnSettings.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.rBtnSettings.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.rBtnSettings.UseVisualStyleBackColor = false;
             // 
             // pnlMainWindow
             // 
-            this.pnlMainWindow.Location = new System.Drawing.Point(100, 48);
+            this.pnlMainWindow.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlMainWindow.Location = new System.Drawing.Point(65, 42);
+            this.pnlMainWindow.Margin = new System.Windows.Forms.Padding(10);
             this.pnlMainWindow.Name = "pnlMainWindow";
-            this.pnlMainWindow.Size = new System.Drawing.Size(884, 708);
+            this.pnlMainWindow.Size = new System.Drawing.Size(959, 726);
             this.pnlMainWindow.TabIndex = 2;
             // 
             // formMain
@@ -321,11 +334,11 @@
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.pnlTopBar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.MaximumSize = new System.Drawing.Size(1024, 768);
             this.Name = "formMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "formMain";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.formMain_Load);
             this.pnlTopBar.ResumeLayout(false);
             this.pnlTopBar.PerformLayout();
             this.pnlTimeInfo.ResumeLayout(false);
@@ -345,12 +358,12 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Panel pnlMainWindow;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.RadioButton rBtnSetup;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton4;
-        private System.Windows.Forms.RadioButton radioButton5;
+        private System.Windows.Forms.RadioButton rBtnDashboard;
+        private System.Windows.Forms.RadioButton rBtnUsers;
+        private System.Windows.Forms.RadioButton rBtnAttendance;
+        private System.Windows.Forms.RadioButton rBtnClass;
+        private System.Windows.Forms.RadioButton rBtnAnnounce;
+        private System.Windows.Forms.RadioButton rBtnSettings;
         private System.Windows.Forms.PictureBox picBoxClose;
         private System.Windows.Forms.PictureBox picBoxMinimize;
         private System.Windows.Forms.Panel pnlTimeInfo;

@@ -67,10 +67,12 @@
   <ItemGroup>
     <Compile Include="Models\AttendanceModel.cs" />
     <Compile Include="Models\ClassModel.cs" />
+    <Compile Include="Models\DashboardData.cs" />
     <Compile Include="Models\NoticeboardModel.cs" />
     <Compile Include="Models\StudentModel.cs" />
     <Compile Include="Models\TeacherModel.cs" />
     <Compile Include="Models\UserModel.cs" />
+    <Compile Include="Service\Constants.cs" />
     <Compile Include="Service\DbConnection.cs" />
     <Compile Include="Views\Announcements\formAddAnnoncement.cs">
       <SubType>Form</SubType>
@@ -343,6 +345,7 @@
   <ItemGroup>
     <None Include="Resources\icons8-asterisk-8.png" />
     <None Include="Resources\icons8-asterisk-5.png" />
+    <None Include="Resources\icons8-back-arrow-32.png" />
     <Content Include="SMS_SIS.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

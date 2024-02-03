@@ -17,5 +17,11 @@ namespace Student_management_system.Models
         public string Email { get; set; }
         public string Subjects { get; set; }
         public string OwnedClass { get; set; }
+
+        // for UI needs 
+        public int UserID { get; set; }
+        public string Username { get; set; }
+        public string UserType { get; set; }
+
     }
 }

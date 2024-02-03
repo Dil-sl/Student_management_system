@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Student_management_system.Views;
+using Student_management_system.Views.Users;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +18,7 @@ namespace Student_management_system
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new formLogin());
+            Application.Run(new formManageUsers());
         }
     }
 }

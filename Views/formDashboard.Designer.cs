@@ -405,6 +405,7 @@
             this.Name = "formDashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "formDashboard";
+            this.Load += new System.EventHandler(this.formDashboard_Load);
             this.pnlDashboardMain.ResumeLayout(false);
             this.pnlDashboardMain.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
