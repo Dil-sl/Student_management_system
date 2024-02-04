@@ -77,3 +77,114 @@ CREATE TABLE Attendance (
     FOREIGN KEY (StudentID) REFERENCES Students(StudentID)
 );
 GO
+
+
+SCRIPT DATABASE YourDatabaseName TO 'C:\Path\To\Script.sql';
+
+BACKUP DATABASE YourDatabaseName TO DISK = 'C:\Path\To\YourDatabaseBackup.bak' WITH INIT;
+
+
+-- Insert sample data for Teachers table
+INSERT INTO Teachers (FullName, DOB, ContactNumber, Address, Gender, Email, Subjects, OwnedClass)
+VALUES ('John Doe', '1990-01-15', '123456789', '123 Main St', 'Male', 'john.doe@example.com', 'Math, Physics', 'Class A');
+
+INSERT INTO Teachers (FullName, DOB, ContactNumber, Address, Gender, Email, Subjects, OwnedClass)
+VALUES ('Jane Smith', '1985-08-20', '987654321', '456 Oak St', 'Female', 'jane.smith@example.com', 'Chemistry, Biology', 'Class B');
+
+-- Insert sample data for Classes table
+INSERT INTO Classes (ClassName, ClassTeacherID)
+VALUES ('Class A', 1); -- Assuming Teacher with ID 1 is the teacher for Class A
+
+INSERT INTO Classes (ClassName, ClassTeacherID)
+VALUES ('Class B', 2); -- Assuming Teacher with ID 2 is the teacher for Class B
+
+-- Insert sample data for Users table
+INSERT INTO Users (Username, Password, UserType, FullName, Email, ContactNumber)
+VALUES ('admin', 'admin123', 'Admin', 'Admin User', 'admin@example.com', '123456789');
+
+INSERT INTO Users (Username, Password, UserType, FullName, Email, ContactNumber)
+VALUES ('student1', 'student123', 'Student', 'Student One', 'student1@example.com', '987654321');
+
+INSERT INTO Users (Username, Password, UserType, FullName, Email, ContactNumber)
+VALUES ('teacher1', 'teacher123', 'Teacher', 'Teacher One', 'teacher1@example.com', '555555555');
+
+USE YourDatabaseName; -- Replace with your actual database name
+
+-- Define the backup file path
+DECLARE @BackupPath NVARCHAR(255);
+SET @BackupPath = 'C:\YourBackupDirectory\YourDatabaseName_FullBackup.bak'; -- Replace with your desired backup path and file name
+
+-- Create a full database backup
+BACKUP DATABASE YourDatabaseName -- Replace with your actual database name
+TO DISK = @BackupPath
+WITH FORMAT, -- Use the WITH FORMAT option to overwrite existing backup files
+     MEDIANAME = 'YourMediaName', -- Replace with a media name for the backup set
+     NAME = 'YourBackupSetName'; -- Replace with a name for the backup set
+
+-- Display a success message
+PRINT 'Full backup created successfully.';
+
+=====================
+USE YourDatabaseName; -- Replace with your actual database name
+
+-- Get table names and columns
+SELECT 
+    t.TABLE_NAME, 
+    c.COLUMN_NAME, 
+    c.DATA_TYPE,
+    c.CHARACTER_MAXIMUM_LENGTH,
+    c.IS_NULLABLE
+FROM 
+    INFORMATION_SCHEMA.TABLES t
+JOIN 
+    INFORMATION_SCHEMA.COLUMNS c ON t.TABLE_NAME = c.TABLE_NAME
+WHERE 
+    t.TABLE_TYPE = 'BASE TABLE';
+
+-- Get primary key constraints
+SELECT 
+    kcu.TABLE_NAME, 
+    kcu.COLUMN_NAME
+FROM 
+    INFORMATION_SCHEMA.TABLE_CONSTRAINTS tc
+JOIN 
+    INFORMATION_SCHEMA.KEY_COLUMN_USAGE kcu ON tc.CONSTRAINT_NAME = kcu.CONSTRAINT_NAME
+WHERE 
+    tc.CONSTRAINT_TYPE = 'PRIMARY KEY';
+
+-- Get foreign key constraints
+SELECT 
+    fk.name AS FK_Name,
+    tp.name AS ParentTable,
+    ref.name AS ReferencedTable,
+    cp.name AS ParentColumn,
+    cref.name AS ReferencedColumn
+FROM 
+    sys.foreign_keys AS fk
+INNER JOIN 
+    sys.tables AS tp ON fk.parent_object_id = tp.object_id
+INNER JOIN 
+    sys.tables AS ref ON fk.referenced_object_id = ref.object_id
+INNER JOIN 
+    sys.foreign_key_columns AS fkc ON fk.object_id = fkc.constraint_object_id
+INNER JOIN 
+    sys.columns AS cp ON fkc.parent_column_id = cp.column_id AND fkc.parent_object_id = cp.object_id
+INNER JOIN 
+    sys.columns AS cref ON fkc.referenced_column_id = cref.column_id AND fkc.referenced_object_id = cref.object_id;
+
+-- Get index information
+SELECT 
+    t.name AS TableName,
+    ind.name AS IndexName,
+    col.name AS ColumnName,
+    ind.type_desc AS IndexType
+FROM 
+    sys.indexes ind
+INNER JOIN 
+    sys.tables t ON ind.object_id = t.object_id
+INNER JOIN 
+    sys.index_columns ic ON ind.object_id = ic.object_id AND ind.index_id = ic.index_id
+INNER JOIN 
+    sys.columns col ON ic.object_id = col.object_id AND ic.column_id = col.column_id;
+
+

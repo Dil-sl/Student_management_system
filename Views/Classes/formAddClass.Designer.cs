@@ -33,10 +33,6 @@
             this.pnlTeacherButtonSet = new System.Windows.Forms.Panel();
             this.btnClassSave = new Guna.UI2.WinForms.Guna2Button();
             this.btnClassReset = new Guna.UI2.WinForms.Guna2Button();
-            this.label12 = new System.Windows.Forms.Label();
-            this.txtTeacherName = new Guna.UI2.WinForms.Guna2TextBox();
-            this.cmbClassTeacherID = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.label18 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.txtClassname = new Guna.UI2.WinForms.Guna2TextBox();
             this.pnlStudentForm = new System.Windows.Forms.Panel();
@@ -105,10 +101,6 @@
             // 
             this.pnlTeacherForm.BackColor = System.Drawing.Color.White;
             this.pnlTeacherForm.Controls.Add(this.pnlTeacherButtonSet);
-            this.pnlTeacherForm.Controls.Add(this.label12);
-            this.pnlTeacherForm.Controls.Add(this.txtTeacherName);
-            this.pnlTeacherForm.Controls.Add(this.cmbClassTeacherID);
-            this.pnlTeacherForm.Controls.Add(this.label18);
             this.pnlTeacherForm.Controls.Add(this.label20);
             this.pnlTeacherForm.Controls.Add(this.txtClassname);
             this.pnlTeacherForm.Location = new System.Drawing.Point(0, 92);
@@ -157,75 +149,6 @@
             this.btnClassReset.Size = new System.Drawing.Size(132, 44);
             this.btnClassReset.TabIndex = 208;
             this.btnClassReset.Text = "Reset";
-            // 
-            // label12
-            // 
-            this.label12.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label12.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(35)))), ((int)(((byte)(102)))));
-            this.label12.Image = global::Student_management_system.Properties.Resources.icons8_asterisk_8;
-            this.label12.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.label12.Location = new System.Drawing.Point(48, 127);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(116, 17);
-            this.label12.TabIndex = 209;
-            this.label12.Text = "Teacher Name :";
-            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // txtTeacherName
-            // 
-            this.txtTeacherName.BorderRadius = 5;
-            this.txtTeacherName.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtTeacherName.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtTeacherName.DefaultText = "";
-            this.txtTeacherName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtTeacherName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtTeacherName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtTeacherName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtTeacherName.Enabled = false;
-            this.txtTeacherName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTeacherName.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTeacherName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTeacherName.Location = new System.Drawing.Point(170, 119);
-            this.txtTeacherName.Name = "txtTeacherName";
-            this.txtTeacherName.PasswordChar = '\0';
-            this.txtTeacherName.PlaceholderText = "";
-            this.txtTeacherName.SelectedText = "";
-            this.txtTeacherName.Size = new System.Drawing.Size(250, 25);
-            this.txtTeacherName.TabIndex = 208;
-            // 
-            // cmbClassTeacherID
-            // 
-            this.cmbClassTeacherID.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.cmbClassTeacherID.BackColor = System.Drawing.Color.Transparent;
-            this.cmbClassTeacherID.BorderRadius = 5;
-            this.cmbClassTeacherID.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cmbClassTeacherID.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cmbClassTeacherID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbClassTeacherID.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmbClassTeacherID.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmbClassTeacherID.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbClassTeacherID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cmbClassTeacherID.ItemHeight = 19;
-            this.cmbClassTeacherID.Location = new System.Drawing.Point(170, 78);
-            this.cmbClassTeacherID.Name = "cmbClassTeacherID";
-            this.cmbClassTeacherID.Size = new System.Drawing.Size(159, 25);
-            this.cmbClassTeacherID.TabIndex = 198;
-            this.cmbClassTeacherID.SelectedIndexChanged += new System.EventHandler(this.cmbClassTeacherID_SelectedIndexChanged);
-            // 
-            // label18
-            // 
-            this.label18.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label18.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(35)))), ((int)(((byte)(102)))));
-            this.label18.Image = global::Student_management_system.Properties.Resources.icons8_asterisk_8;
-            this.label18.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.label18.Location = new System.Drawing.Point(48, 86);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(116, 17);
-            this.label18.TabIndex = 197;
-            this.label18.Text = "Class Teacher :";
-            this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label20
             // 
@@ -971,10 +894,6 @@
 
         private System.Windows.Forms.Panel pnlUser;
         private System.Windows.Forms.Panel pnlTeacherForm;
-        private System.Windows.Forms.Label label12;
-        private Guna.UI2.WinForms.Guna2TextBox txtTeacherName;
-        private Guna.UI2.WinForms.Guna2ComboBox cmbClassTeacherID;
-        private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label20;
         private Guna.UI2.WinForms.Guna2TextBox txtClassname;
         private System.Windows.Forms.Panel pnlStudentForm;

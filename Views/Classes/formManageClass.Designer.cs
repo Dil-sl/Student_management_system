@@ -92,6 +92,7 @@
             this.btnSearchClass.Size = new System.Drawing.Size(91, 32);
             this.btnSearchClass.TabIndex = 175;
             this.btnSearchClass.Text = "Search";
+            this.btnSearchClass.Click += new System.EventHandler(this.btnSearchClass_Click);
             // 
             // dgvClass
             // 
@@ -147,8 +148,9 @@
             this.dgvClass.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvClass.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvClass.ShowCellToolTips = false;
-            this.dgvClass.Size = new System.Drawing.Size(601, 515);
+            this.dgvClass.Size = new System.Drawing.Size(627, 515);
             this.dgvClass.TabIndex = 174;
+            this.dgvClass.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvClass_CellContentClick);
             // 
             // txtSearchClass
             // 
@@ -200,6 +202,7 @@
             this.dgvClass_Edit.HeaderText = "";
             this.dgvClass_Edit.Name = "dgvClass_Edit";
             this.dgvClass_Edit.ReadOnly = true;
+            this.dgvClass_Edit.Visible = false;
             this.dgvClass_Edit.Width = 25;
             // 
             // dgvClass_Delete
@@ -216,10 +219,12 @@
             // 
             // dgvClass_ClassName
             // 
+            this.dgvClass_ClassName.FillWeight = 150F;
             this.dgvClass_ClassName.Frozen = true;
             this.dgvClass_ClassName.HeaderText = "Class Name";
             this.dgvClass_ClassName.Name = "dgvClass_ClassName";
             this.dgvClass_ClassName.ReadOnly = true;
+            this.dgvClass_ClassName.Width = 150;
             // 
             // dgvClass_ClassTeacherName
             // 
@@ -252,6 +257,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "formManageClass";
             this.Text = "formManageClass";
+            this.Load += new System.EventHandler(this.formManageClass_Load);
             this.pnlManageClass.ResumeLayout(false);
             this.pnlManageClass.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClass)).EndInit();

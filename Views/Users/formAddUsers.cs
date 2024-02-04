@@ -148,6 +148,14 @@ namespace Student_management_system.Views.Users
                 else
                 {
                     success = UpdateUser(user);
+                    if (success)
+                    {
+                        MessageBox.Show("Class created successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Failed to create class.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
                
             }
@@ -172,6 +180,14 @@ namespace Student_management_system.Views.Users
                 else
                 {
                     success = UpdateStudent(student);
+                    if (success)
+                    {
+                        MessageBox.Show("Class created successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Failed to create class.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
                
             }
@@ -199,11 +215,20 @@ namespace Student_management_system.Views.Users
                 {
                     CreateUser(user);
                     success = CreateTeacher(teacher);
+
                 }
                 else
                 {
                     UpdateUser(user);
                     success = UpdateTeacher(teacher);
+                    if (success)
+                    {
+                        MessageBox.Show("Class created successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Failed to create class.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }            
             }
             else
@@ -426,8 +451,8 @@ namespace Student_management_system.Views.Users
                             int classID = reader.GetInt32(reader.GetOrdinal("ClassID"));
                             string className = reader.GetString(reader.GetOrdinal("ClassName"));
 
-                            cmbTeacherClass.Items.Add(new { ClassName = className });
-                            txtStudentClass.Items.Add(new { ClassName = className });
+                            cmbTeacherClass.Items.Add(className);
+                            txtStudentClass.Items.Add(className);
                         }
                     }
                 }

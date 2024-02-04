@@ -10,6 +10,8 @@ namespace Student_management_system.Models
     {
         public int ClassID { get; set; }
         public string ClassName { get; set; }
-        public int ClassTeacherID { get; set; }
+        //join purpose only
+        public string TeacherName { get; set; }
+        public int? TeacherID { get; set; }
     }
 }

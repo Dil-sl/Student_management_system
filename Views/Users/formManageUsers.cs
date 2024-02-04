@@ -241,7 +241,8 @@ namespace Student_management_system.Views.Users
 
                 // Clear existing rows in the DataGridView
                 dgvUsers.Rows.Clear();
-                resetDgvOriginalMode(false, true, false, true); 
+                resetDgvOriginalMode(false, true, false, true);
+                dgvUsers.Columns["dgvUser_Class"].Visible = true;
                 //dgvUsers.Columns["dgvUsers_Reg"].Visible = false;//
                 //dgvUsers.Columns["dgvUsers_Gname"].Visible = false;//
                 //dgvUsers.Columns["dgvUsers_Gcontact"].Visible = false;//
@@ -422,22 +423,43 @@ namespace Student_management_system.Views.Users
                 int userID = Convert.ToInt32(dgvUsers.Rows[e.RowIndex].Cells["dgvUser_UserCode"].Value);
 
                 {
-                    DialogResult dialogResult = MessageBox.Show("Are you sure you want to delete this product? This cannot be reverted", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
+                    DialogResult dialogResult = MessageBox.Show("Are you sure you want to delete this Record? This cannot be reverted", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
                     if (dialogResult == DialogResult.Yes)
                     {
-                        if (cmbUserType.SelectedIndex==2 && Constants.CurrentUser.UserType=="Admin")
+                        if (cmbUserType.SelectedIndex == 2 && Constants.CurrentUser.UserType == "Admin")
                         {
-                            DeleteTeacher(userID);
+                            if (DeleteTeacher(userID))
+                            {
+                                MessageBox.Show("Teacher deleted successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            }
+                            else
+                            {
+                                MessageBox.Show("Failed to delete teacher.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
                         }
-                        else if(cmbUserType.SelectedIndex == 1 && Constants.CurrentUser.UserType == "Admin")
+                        else if (cmbUserType.SelectedIndex == 1 && Constants.CurrentUser.UserType == "Admin")
                         {
-                            DeleteStudent(userID);
+                            if (DeleteStudent(userID))
+                            {
+                                MessageBox.Show("Student deleted successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            }
+                            else
+                            {
+                                MessageBox.Show("Failed to delete student.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
                         }
-                        else if(cmbUserType.SelectedIndex == 0 && Constants.CurrentUser.UserType == "Admin")
+                        else if (cmbUserType.SelectedIndex == 0 && Constants.CurrentUser.UserType == "Admin")
                         {
-                            DeleteUser(userID);
+                            if (DeleteUser(userID))
+                            {
+                                MessageBox.Show("User deleted successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            }
+                            else
+                            {
+                                MessageBox.Show("Failed to delete user.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
                         }
-                        
+
                     }
                 }
 
