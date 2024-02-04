@@ -110,9 +110,9 @@
             this.pnlUserInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlUserInfo.Controls.Add(this.lblUserName);
             this.pnlUserInfo.Controls.Add(this.picBoxCircleProfile);
-            this.pnlUserInfo.Location = new System.Drawing.Point(693, 2);
+            this.pnlUserInfo.Location = new System.Drawing.Point(702, 2);
             this.pnlUserInfo.Name = "pnlUserInfo";
-            this.pnlUserInfo.Size = new System.Drawing.Size(227, 37);
+            this.pnlUserInfo.Size = new System.Drawing.Size(218, 37);
             this.pnlUserInfo.TabIndex = 3;
             // 
             // lblUserName
@@ -120,20 +120,22 @@
             this.lblUserName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblUserName.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUserName.ForeColor = System.Drawing.Color.White;
-            this.lblUserName.Location = new System.Drawing.Point(7, 3);
+            this.lblUserName.Location = new System.Drawing.Point(8, 3);
             this.lblUserName.Name = "lblUserName";
-            this.lblUserName.Size = new System.Drawing.Size(179, 29);
+            this.lblUserName.Size = new System.Drawing.Size(170, 29);
             this.lblUserName.TabIndex = 1;
             this.lblUserName.Text = "UserName";
             this.lblUserName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // picBoxCircleProfile
             // 
+            this.picBoxCircleProfile.Image = global::Student_management_system.Properties.Resources.icon;
             this.picBoxCircleProfile.ImageRotate = 0F;
             this.picBoxCircleProfile.Location = new System.Drawing.Point(192, 2);
             this.picBoxCircleProfile.Name = "picBoxCircleProfile";
             this.picBoxCircleProfile.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.picBoxCircleProfile.Size = new System.Drawing.Size(32, 32);
+            this.picBoxCircleProfile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picBoxCircleProfile.TabIndex = 0;
             this.picBoxCircleProfile.TabStop = false;
             // 
@@ -323,11 +325,12 @@
             // 
             // pnlMainWindow
             // 
-            this.pnlMainWindow.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlMainWindow.Location = new System.Drawing.Point(65, 42);
+            this.pnlMainWindow.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlMainWindow.Location = new System.Drawing.Point(109, 42);
             this.pnlMainWindow.Margin = new System.Windows.Forms.Padding(10);
             this.pnlMainWindow.Name = "pnlMainWindow";
-            this.pnlMainWindow.Size = new System.Drawing.Size(959, 726);
+            this.pnlMainWindow.Size = new System.Drawing.Size(865, 726);
             this.pnlMainWindow.TabIndex = 2;
             // 
             // formMain

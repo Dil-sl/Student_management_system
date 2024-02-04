@@ -1,4 +1,5 @@
-﻿using Student_management_system.Views.Users;
+﻿using Student_management_system.Views.Classes;
+using Student_management_system.Views.Users;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,6 +15,7 @@ namespace Student_management_system.Views.Announcements
     public partial class formAnnouncement : Form
     {
         private static formAnnouncement _instance;
+        private formMain _formMainIns = formMain.useForm;
 
         public formAnnouncement()
         {
@@ -29,5 +31,23 @@ namespace Student_management_system.Views.Announcements
             }
             set { _instance = value; }
         }
+
+        private void btnAddAnnouMain_Click(object sender, EventArgs e)
+        {
+            formAddAnnoncement.useForm.Dispose();
+            _formMainIns.setPanel(formAddAnnoncement.useForm);
+            this.Dispose();
+        }
+
+        private void btnManageAnnouMain_Click(object sender, EventArgs e)
+        {
+            formManageAnnouncement.useForm.Dispose();
+            _formMainIns.setPanel(formManageAnnouncement.useForm);
+            this.Dispose();
+        }
+
+
+       
+
     }
 }

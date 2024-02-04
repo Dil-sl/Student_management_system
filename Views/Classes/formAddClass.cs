@@ -21,9 +21,6 @@ namespace Student_management_system.Views.Classes
         private readonly SqlConnection connection;
         private string userEnvioronment;
         private bool success;
-        private int teacherID;
-        private string teacherName;
-        private List<(int TeacherID, string FullName)> teacherList = new List<(int TeacherID, string FullName)>();
         public formAddClass()
         {
             InitializeComponent();
@@ -107,7 +104,14 @@ namespace Student_management_system.Views.Classes
 
         private void btnClassSave_Click(object sender, EventArgs e)
         {
-            fillObject();
+            if (!string.IsNullOrWhiteSpace(txtClassname.Text))
+            {
+                fillObject();
+            }
+            else
+            {
+                MessageBox.Show("Please fill in all required fields.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void formAddClass_Load(object sender, EventArgs e)

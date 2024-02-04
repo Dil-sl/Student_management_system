@@ -30,6 +30,8 @@
         {
             this.pnlAnnoucemnet = new System.Windows.Forms.Panel();
             this.pnAnnoucementForm = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.dtpAnnouExpireDate = new System.Windows.Forms.DateTimePicker();
             this.pnlAnnouButtonSet = new System.Windows.Forms.Panel();
             this.btnAnnouSave = new Guna.UI2.WinForms.Guna2Button();
             this.btnAnnouReset = new Guna.UI2.WinForms.Guna2Button();
@@ -78,8 +80,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtAdminUserName = new Guna.UI2.WinForms.Guna2TextBox();
             this.welcomeLabel = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.dtpAnnouExpireDate = new System.Windows.Forms.DateTimePicker();
             this.pnlAnnoucemnet.SuspendLayout();
             this.pnAnnoucementForm.SuspendLayout();
             this.pnlAnnouButtonSet.SuspendLayout();
@@ -116,6 +116,31 @@
             this.pnAnnoucementForm.Size = new System.Drawing.Size(885, 604);
             this.pnAnnoucementForm.TabIndex = 213;
             // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(35)))), ((int)(((byte)(102)))));
+            this.label4.Image = global::Student_management_system.Properties.Resources.icons8_asterisk_8;
+            this.label4.ImageAlign = System.Drawing.ContentAlignment.TopRight;
+            this.label4.Location = new System.Drawing.Point(48, 281);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(116, 17);
+            this.label4.TabIndex = 215;
+            this.label4.Text = "Expire Date :";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // dtpAnnouExpireDate
+            // 
+            this.dtpAnnouExpireDate.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dtpAnnouExpireDate.CustomFormat = "dd/MM/yyyy";
+            this.dtpAnnouExpireDate.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpAnnouExpireDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpAnnouExpireDate.Location = new System.Drawing.Point(170, 273);
+            this.dtpAnnouExpireDate.Name = "dtpAnnouExpireDate";
+            this.dtpAnnouExpireDate.Size = new System.Drawing.Size(159, 25);
+            this.dtpAnnouExpireDate.TabIndex = 214;
+            // 
             // pnlAnnouButtonSet
             // 
             this.pnlAnnouButtonSet.Controls.Add(this.btnAnnouSave);
@@ -140,6 +165,7 @@
             this.btnAnnouSave.Size = new System.Drawing.Size(132, 44);
             this.btnAnnouSave.TabIndex = 209;
             this.btnAnnouSave.Text = "Save";
+            this.btnAnnouSave.Click += new System.EventHandler(this.btnAnnouSave_Click);
             // 
             // btnAnnouReset
             // 
@@ -160,7 +186,6 @@
             // txtAnnoDesc
             // 
             this.txtAnnoDesc.BorderRadius = 5;
-            this.txtAnnoDesc.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtAnnoDesc.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtAnnoDesc.DefaultText = "";
             this.txtAnnoDesc.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -171,11 +196,12 @@
             this.txtAnnoDesc.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAnnoDesc.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtAnnoDesc.Location = new System.Drawing.Point(170, 79);
+            this.txtAnnoDesc.Multiline = true;
             this.txtAnnoDesc.Name = "txtAnnoDesc";
             this.txtAnnoDesc.PasswordChar = '\0';
             this.txtAnnoDesc.PlaceholderText = "";
             this.txtAnnoDesc.SelectedText = "";
-            this.txtAnnoDesc.Size = new System.Drawing.Size(250, 63);
+            this.txtAnnoDesc.Size = new System.Drawing.Size(458, 169);
             this.txtAnnoDesc.TabIndex = 200;
             // 
             // label19
@@ -224,7 +250,7 @@
             this.txtAnnouTitle.PasswordChar = '\0';
             this.txtAnnouTitle.PlaceholderText = "";
             this.txtAnnouTitle.SelectedText = "";
-            this.txtAnnouTitle.Size = new System.Drawing.Size(250, 25);
+            this.txtAnnouTitle.Size = new System.Drawing.Size(458, 25);
             this.txtAnnouTitle.TabIndex = 192;
             // 
             // pnlStudentForm
@@ -909,31 +935,6 @@
             this.welcomeLabel.Size = new System.Drawing.Size(284, 37);
             this.welcomeLabel.TabIndex = 2;
             this.welcomeLabel.Text = "Add Announcements";
-            // 
-            // label4
-            // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(35)))), ((int)(((byte)(102)))));
-            this.label4.Image = global::Student_management_system.Properties.Resources.icons8_asterisk_8;
-            this.label4.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.label4.Location = new System.Drawing.Point(48, 169);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(116, 17);
-            this.label4.TabIndex = 215;
-            this.label4.Text = "Expire Date :";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // dtpAnnouExpireDate
-            // 
-            this.dtpAnnouExpireDate.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dtpAnnouExpireDate.CustomFormat = "dd/MM/yyyy";
-            this.dtpAnnouExpireDate.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpAnnouExpireDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpAnnouExpireDate.Location = new System.Drawing.Point(170, 161);
-            this.dtpAnnouExpireDate.Name = "dtpAnnouExpireDate";
-            this.dtpAnnouExpireDate.Size = new System.Drawing.Size(159, 25);
-            this.dtpAnnouExpireDate.TabIndex = 214;
             // 
             // formAddAnnoncement
             // 

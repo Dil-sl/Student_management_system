@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.lblPageTitle = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnManageAnnouMain = new System.Windows.Forms.Button();
+            this.btnAddAnnouMain = new System.Windows.Forms.Button();
             this.welcomeLabel = new System.Windows.Forms.Label();
             this.lblPageTitle.SuspendLayout();
             this.SuspendLayout();
@@ -38,47 +38,49 @@
             // lblPageTitle
             // 
             this.lblPageTitle.BackColor = System.Drawing.Color.White;
-            this.lblPageTitle.Controls.Add(this.button1);
-            this.lblPageTitle.Controls.Add(this.button2);
+            this.lblPageTitle.Controls.Add(this.btnManageAnnouMain);
+            this.lblPageTitle.Controls.Add(this.btnAddAnnouMain);
             this.lblPageTitle.Controls.Add(this.welcomeLabel);
             this.lblPageTitle.Location = new System.Drawing.Point(0, 12);
             this.lblPageTitle.Name = "lblPageTitle";
             this.lblPageTitle.Size = new System.Drawing.Size(885, 696);
             this.lblPageTitle.TabIndex = 4;
             // 
-            // button1
+            // btnManageAnnouMain
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(35)))), ((int)(((byte)(102)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Image = global::Student_management_system.Properties.Resources.icons8_renew_50;
-            this.button1.Location = new System.Drawing.Point(226, 90);
-            this.button1.Name = "button1";
-            this.button1.Padding = new System.Windows.Forms.Padding(2);
-            this.button1.Size = new System.Drawing.Size(182, 90);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Announcements";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnManageAnnouMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(35)))), ((int)(((byte)(102)))));
+            this.btnManageAnnouMain.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnManageAnnouMain.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnManageAnnouMain.ForeColor = System.Drawing.Color.White;
+            this.btnManageAnnouMain.Image = global::Student_management_system.Properties.Resources.icons8_renew_50;
+            this.btnManageAnnouMain.Location = new System.Drawing.Point(226, 90);
+            this.btnManageAnnouMain.Name = "btnManageAnnouMain";
+            this.btnManageAnnouMain.Padding = new System.Windows.Forms.Padding(2);
+            this.btnManageAnnouMain.Size = new System.Drawing.Size(182, 90);
+            this.btnManageAnnouMain.TabIndex = 5;
+            this.btnManageAnnouMain.Text = "Announcements";
+            this.btnManageAnnouMain.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnManageAnnouMain.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnManageAnnouMain.UseVisualStyleBackColor = false;
+            this.btnManageAnnouMain.Click += new System.EventHandler(this.btnManageAnnouMain_Click);
             // 
-            // button2
+            // btnAddAnnouMain
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(35)))), ((int)(((byte)(102)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Image = global::Student_management_system.Properties.Resources.icons8_add_50;
-            this.button2.Location = new System.Drawing.Point(38, 90);
-            this.button2.Name = "button2";
-            this.button2.Padding = new System.Windows.Forms.Padding(2);
-            this.button2.Size = new System.Drawing.Size(182, 90);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Add Announcements";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnAddAnnouMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(35)))), ((int)(((byte)(102)))));
+            this.btnAddAnnouMain.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddAnnouMain.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddAnnouMain.ForeColor = System.Drawing.Color.White;
+            this.btnAddAnnouMain.Image = global::Student_management_system.Properties.Resources.icons8_add_50;
+            this.btnAddAnnouMain.Location = new System.Drawing.Point(38, 90);
+            this.btnAddAnnouMain.Name = "btnAddAnnouMain";
+            this.btnAddAnnouMain.Padding = new System.Windows.Forms.Padding(2);
+            this.btnAddAnnouMain.Size = new System.Drawing.Size(182, 90);
+            this.btnAddAnnouMain.TabIndex = 4;
+            this.btnAddAnnouMain.Text = "Add Announcements";
+            this.btnAddAnnouMain.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnAddAnnouMain.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnAddAnnouMain.UseVisualStyleBackColor = false;
+            this.btnAddAnnouMain.Click += new System.EventHandler(this.btnAddAnnouMain_Click);
             // 
             // welcomeLabel
             // 
@@ -109,8 +111,8 @@
         #endregion
 
         private System.Windows.Forms.Panel lblPageTitle;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnManageAnnouMain;
+        private System.Windows.Forms.Button btnAddAnnouMain;
         private System.Windows.Forms.Label welcomeLabel;
     }
 }
