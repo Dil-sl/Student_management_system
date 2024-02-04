@@ -34,7 +34,7 @@
             this.lblTimeAndDate = new System.Windows.Forms.Label();
             this.pnlUserInfo = new System.Windows.Forms.Panel();
             this.lblUserName = new System.Windows.Forms.Label();
-            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.picBoxCircleProfile = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.picBoxMinimize = new System.Windows.Forms.PictureBox();
             this.picBoxClose = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -49,7 +49,7 @@
             this.pnlTopBar.SuspendLayout();
             this.pnlTimeInfo.SuspendLayout();
             this.pnlUserInfo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxCircleProfile)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxMinimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxClose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -109,7 +109,7 @@
             // 
             this.pnlUserInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlUserInfo.Controls.Add(this.lblUserName);
-            this.pnlUserInfo.Controls.Add(this.guna2CirclePictureBox1);
+            this.pnlUserInfo.Controls.Add(this.picBoxCircleProfile);
             this.pnlUserInfo.Location = new System.Drawing.Point(693, 2);
             this.pnlUserInfo.Name = "pnlUserInfo";
             this.pnlUserInfo.Size = new System.Drawing.Size(227, 37);
@@ -127,15 +127,15 @@
             this.lblUserName.Text = "UserName";
             this.lblUserName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // guna2CirclePictureBox1
+            // picBoxCircleProfile
             // 
-            this.guna2CirclePictureBox1.ImageRotate = 0F;
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(192, 2);
-            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
-            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(32, 32);
-            this.guna2CirclePictureBox1.TabIndex = 0;
-            this.guna2CirclePictureBox1.TabStop = false;
+            this.picBoxCircleProfile.ImageRotate = 0F;
+            this.picBoxCircleProfile.Location = new System.Drawing.Point(192, 2);
+            this.picBoxCircleProfile.Name = "picBoxCircleProfile";
+            this.picBoxCircleProfile.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.picBoxCircleProfile.Size = new System.Drawing.Size(32, 32);
+            this.picBoxCircleProfile.TabIndex = 0;
+            this.picBoxCircleProfile.TabStop = false;
             // 
             // picBoxMinimize
             // 
@@ -227,6 +227,7 @@
             this.rBtnUsers.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.rBtnUsers.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.rBtnUsers.UseVisualStyleBackColor = false;
+            this.rBtnUsers.Click += new System.EventHandler(this.rBtnUsers_Click);
             // 
             // rBtnAttendance
             // 
@@ -249,6 +250,7 @@
             this.rBtnAttendance.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.rBtnAttendance.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.rBtnAttendance.UseVisualStyleBackColor = false;
+            this.rBtnAttendance.Click += new System.EventHandler(this.rBtnAttendance_Click);
             // 
             // rBtnClass
             // 
@@ -271,6 +273,7 @@
             this.rBtnClass.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.rBtnClass.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.rBtnClass.UseVisualStyleBackColor = false;
+            this.rBtnClass.Click += new System.EventHandler(this.rBtnClass_Click);
             // 
             // rBtnAnnounce
             // 
@@ -293,6 +296,7 @@
             this.rBtnAnnounce.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.rBtnAnnounce.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.rBtnAnnounce.UseVisualStyleBackColor = false;
+            this.rBtnAnnounce.Click += new System.EventHandler(this.rBtnAnnounce_Click);
             // 
             // rBtnSettings
             // 
@@ -315,6 +319,7 @@
             this.rBtnSettings.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.rBtnSettings.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.rBtnSettings.UseVisualStyleBackColor = false;
+            this.rBtnSettings.Click += new System.EventHandler(this.rBtnSettings_Click);
             // 
             // pnlMainWindow
             // 
@@ -343,7 +348,7 @@
             this.pnlTopBar.PerformLayout();
             this.pnlTimeInfo.ResumeLayout(false);
             this.pnlUserInfo.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxCircleProfile)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxMinimize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxClose)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -370,7 +375,7 @@
         private System.Windows.Forms.Panel pnlUserInfo;
         private System.Windows.Forms.Label lblMainTitle;
         private System.Windows.Forms.Label lblUserName;
-        private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox picBoxCircleProfile;
         private System.Windows.Forms.Label lblTimeAndDate;
     }
 }

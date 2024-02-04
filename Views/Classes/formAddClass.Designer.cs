@@ -1,6 +1,6 @@
 ﻿namespace Student_management_system.Views.Classes
 {
-    partial class txtClassTeacherName
+    partial class formAddClass
     {
         /// <summary>
         /// Required designer variable.
@@ -30,12 +30,15 @@
         {
             this.pnlUser = new System.Windows.Forms.Panel();
             this.pnlTeacherForm = new System.Windows.Forms.Panel();
+            this.pnlTeacherButtonSet = new System.Windows.Forms.Panel();
+            this.btnClassSave = new Guna.UI2.WinForms.Guna2Button();
+            this.btnClassReset = new Guna.UI2.WinForms.Guna2Button();
             this.label12 = new System.Windows.Forms.Label();
-            this.txtTeacherPassword = new Guna.UI2.WinForms.Guna2TextBox();
-            this.cmbTeacherGender = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.txtTeacherName = new Guna.UI2.WinForms.Guna2TextBox();
+            this.cmbClassTeacherID = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label18 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
-            this.txtTeacherFullname = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtClassname = new Guna.UI2.WinForms.Guna2TextBox();
             this.pnlStudentForm = new System.Windows.Forms.Panel();
             this.pnlStudentButtonSet = new System.Windows.Forms.Panel();
             this.btnStudentSave = new Guna.UI2.WinForms.Guna2Button();
@@ -77,16 +80,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtAdminUserName = new Guna.UI2.WinForms.Guna2TextBox();
             this.welcomeLabel = new System.Windows.Forms.Label();
-            this.pnlTeacherButtonSet = new System.Windows.Forms.Panel();
-            this.btnTeacherSave = new Guna.UI2.WinForms.Guna2Button();
-            this.btnTeacherReset = new Guna.UI2.WinForms.Guna2Button();
             this.pnlUser.SuspendLayout();
             this.pnlTeacherForm.SuspendLayout();
+            this.pnlTeacherButtonSet.SuspendLayout();
             this.pnlStudentForm.SuspendLayout();
             this.pnlStudentButtonSet.SuspendLayout();
             this.pnlAdminForm.SuspendLayout();
             this.pnlAdminButtonSet.SuspendLayout();
-            this.pnlTeacherButtonSet.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlUser
@@ -106,15 +106,57 @@
             this.pnlTeacherForm.BackColor = System.Drawing.Color.White;
             this.pnlTeacherForm.Controls.Add(this.pnlTeacherButtonSet);
             this.pnlTeacherForm.Controls.Add(this.label12);
-            this.pnlTeacherForm.Controls.Add(this.txtTeacherPassword);
-            this.pnlTeacherForm.Controls.Add(this.cmbTeacherGender);
+            this.pnlTeacherForm.Controls.Add(this.txtTeacherName);
+            this.pnlTeacherForm.Controls.Add(this.cmbClassTeacherID);
             this.pnlTeacherForm.Controls.Add(this.label18);
             this.pnlTeacherForm.Controls.Add(this.label20);
-            this.pnlTeacherForm.Controls.Add(this.txtTeacherFullname);
+            this.pnlTeacherForm.Controls.Add(this.txtClassname);
             this.pnlTeacherForm.Location = new System.Drawing.Point(0, 92);
             this.pnlTeacherForm.Name = "pnlTeacherForm";
             this.pnlTeacherForm.Size = new System.Drawing.Size(885, 603);
             this.pnlTeacherForm.TabIndex = 213;
+            // 
+            // pnlTeacherButtonSet
+            // 
+            this.pnlTeacherButtonSet.Controls.Add(this.btnClassSave);
+            this.pnlTeacherButtonSet.Controls.Add(this.btnClassReset);
+            this.pnlTeacherButtonSet.Location = new System.Drawing.Point(576, 449);
+            this.pnlTeacherButtonSet.Name = "pnlTeacherButtonSet";
+            this.pnlTeacherButtonSet.Size = new System.Drawing.Size(276, 72);
+            this.pnlTeacherButtonSet.TabIndex = 214;
+            // 
+            // btnClassSave
+            // 
+            this.btnClassSave.BorderRadius = 5;
+            this.btnClassSave.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnClassSave.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnClassSave.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnClassSave.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnClassSave.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(204)))), ((int)(((byte)(113)))));
+            this.btnClassSave.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClassSave.ForeColor = System.Drawing.Color.White;
+            this.btnClassSave.Location = new System.Drawing.Point(141, 13);
+            this.btnClassSave.Name = "btnClassSave";
+            this.btnClassSave.Size = new System.Drawing.Size(132, 44);
+            this.btnClassSave.TabIndex = 209;
+            this.btnClassSave.Text = "Save";
+            this.btnClassSave.Click += new System.EventHandler(this.btnClassSave_Click);
+            // 
+            // btnClassReset
+            // 
+            this.btnClassReset.BorderRadius = 5;
+            this.btnClassReset.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnClassReset.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnClassReset.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnClassReset.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnClassReset.FillColor = System.Drawing.Color.Red;
+            this.btnClassReset.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClassReset.ForeColor = System.Drawing.Color.White;
+            this.btnClassReset.Location = new System.Drawing.Point(3, 13);
+            this.btnClassReset.Name = "btnClassReset";
+            this.btnClassReset.Size = new System.Drawing.Size(132, 44);
+            this.btnClassReset.TabIndex = 208;
+            this.btnClassReset.Text = "Reset";
             // 
             // label12
             // 
@@ -130,45 +172,46 @@
             this.label12.Text = "Teacher Name :";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // txtTeacherPassword
+            // txtTeacherName
             // 
-            this.txtTeacherPassword.BorderRadius = 5;
-            this.txtTeacherPassword.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtTeacherPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtTeacherPassword.DefaultText = "";
-            this.txtTeacherPassword.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtTeacherPassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtTeacherPassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtTeacherPassword.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtTeacherPassword.Enabled = false;
-            this.txtTeacherPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTeacherPassword.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTeacherPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTeacherPassword.Location = new System.Drawing.Point(170, 119);
-            this.txtTeacherPassword.Name = "txtTeacherPassword";
-            this.txtTeacherPassword.PasswordChar = '\0';
-            this.txtTeacherPassword.PlaceholderText = "";
-            this.txtTeacherPassword.SelectedText = "";
-            this.txtTeacherPassword.Size = new System.Drawing.Size(250, 25);
-            this.txtTeacherPassword.TabIndex = 208;
+            this.txtTeacherName.BorderRadius = 5;
+            this.txtTeacherName.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtTeacherName.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTeacherName.DefaultText = "";
+            this.txtTeacherName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtTeacherName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtTeacherName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTeacherName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTeacherName.Enabled = false;
+            this.txtTeacherName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTeacherName.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTeacherName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTeacherName.Location = new System.Drawing.Point(170, 119);
+            this.txtTeacherName.Name = "txtTeacherName";
+            this.txtTeacherName.PasswordChar = '\0';
+            this.txtTeacherName.PlaceholderText = "";
+            this.txtTeacherName.SelectedText = "";
+            this.txtTeacherName.Size = new System.Drawing.Size(250, 25);
+            this.txtTeacherName.TabIndex = 208;
             // 
-            // cmbTeacherGender
+            // cmbClassTeacherID
             // 
-            this.cmbTeacherGender.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.cmbTeacherGender.BackColor = System.Drawing.Color.Transparent;
-            this.cmbTeacherGender.BorderRadius = 5;
-            this.cmbTeacherGender.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cmbTeacherGender.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cmbTeacherGender.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbTeacherGender.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmbTeacherGender.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmbTeacherGender.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbTeacherGender.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cmbTeacherGender.ItemHeight = 19;
-            this.cmbTeacherGender.Location = new System.Drawing.Point(170, 78);
-            this.cmbTeacherGender.Name = "cmbTeacherGender";
-            this.cmbTeacherGender.Size = new System.Drawing.Size(159, 25);
-            this.cmbTeacherGender.TabIndex = 198;
+            this.cmbClassTeacherID.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cmbClassTeacherID.BackColor = System.Drawing.Color.Transparent;
+            this.cmbClassTeacherID.BorderRadius = 5;
+            this.cmbClassTeacherID.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmbClassTeacherID.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbClassTeacherID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbClassTeacherID.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbClassTeacherID.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbClassTeacherID.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbClassTeacherID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cmbClassTeacherID.ItemHeight = 19;
+            this.cmbClassTeacherID.Location = new System.Drawing.Point(170, 78);
+            this.cmbClassTeacherID.Name = "cmbClassTeacherID";
+            this.cmbClassTeacherID.Size = new System.Drawing.Size(159, 25);
+            this.cmbClassTeacherID.TabIndex = 198;
+            this.cmbClassTeacherID.SelectedIndexChanged += new System.EventHandler(this.cmbClassTeacherID_SelectedIndexChanged);
             // 
             // label18
             // 
@@ -198,26 +241,26 @@
             this.label20.Text = "Class Name :";
             this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // txtTeacherFullname
+            // txtClassname
             // 
-            this.txtTeacherFullname.BorderRadius = 5;
-            this.txtTeacherFullname.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtTeacherFullname.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtTeacherFullname.DefaultText = "";
-            this.txtTeacherFullname.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtTeacherFullname.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtTeacherFullname.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtTeacherFullname.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtTeacherFullname.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTeacherFullname.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTeacherFullname.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTeacherFullname.Location = new System.Drawing.Point(170, 39);
-            this.txtTeacherFullname.Name = "txtTeacherFullname";
-            this.txtTeacherFullname.PasswordChar = '\0';
-            this.txtTeacherFullname.PlaceholderText = "";
-            this.txtTeacherFullname.SelectedText = "";
-            this.txtTeacherFullname.Size = new System.Drawing.Size(250, 25);
-            this.txtTeacherFullname.TabIndex = 192;
+            this.txtClassname.BorderRadius = 5;
+            this.txtClassname.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtClassname.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtClassname.DefaultText = "";
+            this.txtClassname.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtClassname.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtClassname.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtClassname.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtClassname.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtClassname.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtClassname.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtClassname.Location = new System.Drawing.Point(170, 39);
+            this.txtClassname.Name = "txtClassname";
+            this.txtClassname.PasswordChar = '\0';
+            this.txtClassname.PlaceholderText = "";
+            this.txtClassname.SelectedText = "";
+            this.txtClassname.Size = new System.Drawing.Size(250, 25);
+            this.txtClassname.TabIndex = 192;
             // 
             // pnlStudentForm
             // 
@@ -902,64 +945,24 @@
             this.welcomeLabel.TabIndex = 2;
             this.welcomeLabel.Text = "Add User";
             // 
-            // pnlTeacherButtonSet
-            // 
-            this.pnlTeacherButtonSet.Controls.Add(this.btnTeacherSave);
-            this.pnlTeacherButtonSet.Controls.Add(this.btnTeacherReset);
-            this.pnlTeacherButtonSet.Location = new System.Drawing.Point(576, 449);
-            this.pnlTeacherButtonSet.Name = "pnlTeacherButtonSet";
-            this.pnlTeacherButtonSet.Size = new System.Drawing.Size(276, 72);
-            this.pnlTeacherButtonSet.TabIndex = 214;
-            // 
-            // btnTeacherSave
-            // 
-            this.btnTeacherSave.BorderRadius = 5;
-            this.btnTeacherSave.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnTeacherSave.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnTeacherSave.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnTeacherSave.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnTeacherSave.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(204)))), ((int)(((byte)(113)))));
-            this.btnTeacherSave.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTeacherSave.ForeColor = System.Drawing.Color.White;
-            this.btnTeacherSave.Location = new System.Drawing.Point(141, 13);
-            this.btnTeacherSave.Name = "btnTeacherSave";
-            this.btnTeacherSave.Size = new System.Drawing.Size(132, 44);
-            this.btnTeacherSave.TabIndex = 209;
-            this.btnTeacherSave.Text = "Save";
-            // 
-            // btnTeacherReset
-            // 
-            this.btnTeacherReset.BorderRadius = 5;
-            this.btnTeacherReset.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnTeacherReset.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnTeacherReset.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnTeacherReset.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnTeacherReset.FillColor = System.Drawing.Color.Red;
-            this.btnTeacherReset.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTeacherReset.ForeColor = System.Drawing.Color.White;
-            this.btnTeacherReset.Location = new System.Drawing.Point(3, 13);
-            this.btnTeacherReset.Name = "btnTeacherReset";
-            this.btnTeacherReset.Size = new System.Drawing.Size(132, 44);
-            this.btnTeacherReset.TabIndex = 208;
-            this.btnTeacherReset.Text = "Reset";
-            // 
-            // txtClassTeacherName
+            // formAddClass
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(884, 708);
             this.Controls.Add(this.pnlUser);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "txtClassTeacherName";
+            this.Name = "formAddClass";
             this.Text = "formAddClass";
+            this.Load += new System.EventHandler(this.formAddClass_Load);
             this.pnlUser.ResumeLayout(false);
             this.pnlUser.PerformLayout();
             this.pnlTeacherForm.ResumeLayout(false);
+            this.pnlTeacherButtonSet.ResumeLayout(false);
             this.pnlStudentForm.ResumeLayout(false);
             this.pnlStudentButtonSet.ResumeLayout(false);
             this.pnlAdminForm.ResumeLayout(false);
             this.pnlAdminButtonSet.ResumeLayout(false);
-            this.pnlTeacherButtonSet.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -969,11 +972,11 @@
         private System.Windows.Forms.Panel pnlUser;
         private System.Windows.Forms.Panel pnlTeacherForm;
         private System.Windows.Forms.Label label12;
-        private Guna.UI2.WinForms.Guna2TextBox txtTeacherPassword;
-        private Guna.UI2.WinForms.Guna2ComboBox cmbTeacherGender;
+        private Guna.UI2.WinForms.Guna2TextBox txtTeacherName;
+        private Guna.UI2.WinForms.Guna2ComboBox cmbClassTeacherID;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label20;
-        private Guna.UI2.WinForms.Guna2TextBox txtTeacherFullname;
+        private Guna.UI2.WinForms.Guna2TextBox txtClassname;
         private System.Windows.Forms.Panel pnlStudentForm;
         private System.Windows.Forms.Panel pnlStudentButtonSet;
         private Guna.UI2.WinForms.Guna2Button btnStudentSave;
@@ -1016,7 +1019,7 @@
         private Guna.UI2.WinForms.Guna2TextBox txtAdminUserName;
         private System.Windows.Forms.Label welcomeLabel;
         private System.Windows.Forms.Panel pnlTeacherButtonSet;
-        private Guna.UI2.WinForms.Guna2Button btnTeacherSave;
-        private Guna.UI2.WinForms.Guna2Button btnTeacherReset;
+        private Guna.UI2.WinForms.Guna2Button btnClassSave;
+        private Guna.UI2.WinForms.Guna2Button btnClassReset;
     }
 }

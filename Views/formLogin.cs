@@ -67,6 +67,11 @@ namespace Student_management_system
                             user = new UserModel
                             {
                                 UserID = Convert.ToInt32(reader["UserID"]),
+                                Username = Convert.ToString(reader["Username"]),
+                                UserType = Convert.ToString(reader["UserType"]),
+                                FullName = Convert.ToString(reader["FullName"]),
+                                Email = Convert.ToString(reader["Email"]),
+                                ContactNumber = Convert.ToString(reader["ContactNumber"])
                                 // Include other properties as needed
                             };
 

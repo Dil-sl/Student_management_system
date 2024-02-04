@@ -21,6 +21,7 @@ namespace Student_management_system.Views.Users
         private readonly SqlConnection connection;
         public string userMode;
         public string userEnvioronment;
+        public int userId;
         bool success;
         public formAddUsers()
         {
@@ -40,18 +41,22 @@ namespace Student_management_system.Views.Users
 
         private void formAddUsers_Load(object sender, EventArgs e)
         {
-            UIchange(false,false, false);
-            LoadClassesIntoComboBox();
+            if (userEnvioronment!="Edit")
+            {
+                UIchange(false, false, false);
+                LoadClassesIntoComboBox();
+            }
+            else
+            {
+                cmbUserType.Enabled = false;
+                LoadClassesIntoComboBox();
+            }
         }
         private void UIchange(bool isAdminUI,bool isStudentuI,bool isTeacherUI)
         {
             pnlAdminForm.Visible = isAdminUI;
             pnlStudentForm.Visible = isStudentuI; 
             pnlTeacherForm.Visible = isTeacherUI;
-            if(isAdminUI||isStudentuI||isTeacherUI)
-            {
-
-            }
         }
 
         private void cmbUserType_SelectedIndexChanged(object sender, EventArgs e)
@@ -76,6 +81,7 @@ namespace Student_management_system.Views.Users
                 UIchange(false, false, false);
             }
         }
+
         //Db Calling 
     
         public void OpenConnection()
@@ -135,7 +141,15 @@ namespace Student_management_system.Views.Users
                 user.FullName = txtAdminFullName.Text;
                 user.Email = txtAdminEmail.Text;
                 user.ContactNumber = txtAdminContact.Text;
-                success = CreateUser(user);
+                if(userEnvioronment!="Edit")
+                {
+                    success = CreateUser(user);
+                }
+                else
+                {
+                    success = UpdateUser(user);
+                }
+               
             }
             else if(userMode == "Student")
             {
@@ -151,8 +165,15 @@ namespace Student_management_system.Views.Users
                student.GuardianName=txtStudentGname.Text;
                student.GuardianContactNumber=txtStudentGcontact.Text;
                student.Class=txtStudentClass.SelectedItem.ToString();
-               success = CreateStudent(student);
-
+                if (userEnvioronment != "Edit")
+                {
+                    success = CreateStudent(student);
+                }
+                else
+                {
+                    success = UpdateStudent(student);
+                }
+               
             }
             else if(userMode == "Teacher")
             {
@@ -174,9 +195,16 @@ namespace Student_management_system.Views.Users
                 user.FullName = txtTeacherFullname.Text;
                 user.Email = txtTeacherEmail.Text;
                 user.ContactNumber = txtTeacherContact.Text;
-                CreateUser(user);
-                success = CreateTeacher(teacher);  
-
+                if (userEnvioronment != "Edit")
+                {
+                    CreateUser(user);
+                    success = CreateTeacher(teacher);
+                }
+                else
+                {
+                    UpdateUser(user);
+                    success = UpdateTeacher(teacher);
+                }            
             }
             else
             {
@@ -370,7 +398,7 @@ namespace Student_management_system.Views.Users
 
         private void btnStudentSave_Click(object sender, EventArgs e)
         {
-            if(ValidateFormFill())
+            if (ValidateFormFill())
             {
                 DynamicVarivbles();
             }
@@ -428,6 +456,351 @@ namespace Student_management_system.Views.Users
             {
                 DynamicVarivbles();
             }
+        }
+        public void setToEdit(string userMode,string userEnvionment,int ID,int index)
+        {
+            btnAdminSave.Text = "Update";
+            btnStudentSave.Text = "Update";
+            btnTeacherSave.Text = "Update";
+            welcomeLabel.Text = "Update User";
+            this.userId = ID;
+            this.userMode = userMode;
+            this.userEnvioronment = userEnvionment;
+            cmbUserType.SelectedIndex = index;
+            if(userMode=="Teacher")
+            {
+                TeacherModel teacherModel = GetTeacherByID(ID);
+                UserModel userModel = GetUserByID(ID);
+                FillObject(teacherModel,null,userModel);
+            }
+            else if(userMode=="Student")
+            {
+                StudentModel studentModel = GetStudentByID(ID);
+                FillObject(null, studentModel, null);
+            }
+            else if(userMode=="Admin")
+            {
+                UserModel userModel = GetUserByID(ID);
+                FillObject(null, null, userModel);
+            }          
+        }
+        private void FillObject(TeacherModel teacherModel,StudentModel studentModel, UserModel userModel)
+        {
+            if (userMode == "Admin")
+            {
+                // Load details for Admin
+                txtAdminUserName.Text = userModel.Username;
+                txtAdminPassword.Text = userModel.Password; // Assuming you have a password textbox
+                cmbUserType.Text = userModel.UserType;
+                txtAdminFullName.Text = userModel.FullName;
+                txtAdminEmail.Text = userModel.Email;
+                txtAdminContact.Text = userModel.ContactNumber;
+                UIchange(true, false, false);
+            }
+            else if (userMode == "Student")
+            {
+                // Load details for Student
+                txtStudentFullName.Text = studentModel.FullName;
+                txtStudentEmail.Text = studentModel.Email;
+                txtStudentContact.Text = studentModel.Contact;
+                txtStudentRegisterNo.Text = studentModel.RegNo;
+                cmbStudeentGender.Text = studentModel.Gender;
+                dtpStudentBirthDay.Value = studentModel.DOB;
+                txtStudentAddress.Text = studentModel.Address;
+                txtStudentGname.Text = studentModel.GuardianName;
+                txtStudentGcontact.Text = studentModel.GuardianContactNumber;
+                txtStudentClass.SelectedValue = studentModel.Class;
+                UIchange(true, true, false);
+
+            }
+            else if (userMode == "Teacher")
+            {
+                // Load details for Teacher
+                txtTeacherFullname.Text = teacherModel.FullName;
+                txtTeacherEmail.Text = teacherModel.Email;
+                txtTeacherContact.Text = teacherModel.ContactNumber;
+                cmbTeacherGender.Text = teacherModel.Gender;
+                dtpTeacherDob.Value = teacherModel.DOB;
+                txtTeacherAddress.Text = teacherModel.Address;
+                txtTeacherSubject.Text = teacherModel.Subjects;
+                cmbTeacherClass.Text = teacherModel.OwnedClass;
+                txtTeacherUserName.Text = userModel.Username;
+                UIchange(true, true, true);
+            }
+            else
+            {
+                UIchange(false, false, false);
+            }
+        }
+        //update details
+        public bool UpdateTeacher(TeacherModel teacher)
+        {
+            try
+            {
+                OpenConnection();
+
+                string query = "UPDATE Teachers SET FullName = @FullName, DOB = @DOB, ContactNumber = @ContactNumber, " +
+                               "Address = @Address, Gender = @Gender, Email = @Email, Subjects = @Subjects, OwnedClass = @OwnedClass " +
+                               "WHERE TeacherID = @TeacherID";
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@TeacherID", userId);
+                    command.Parameters.AddWithValue("@FullName", teacher.FullName);
+                    command.Parameters.AddWithValue("@DOB", teacher.DOB);
+                    command.Parameters.AddWithValue("@ContactNumber", teacher.ContactNumber);
+                    command.Parameters.AddWithValue("@Address", teacher.Address);
+                    command.Parameters.AddWithValue("@Gender", teacher.Gender);
+                    command.Parameters.AddWithValue("@Email", teacher.Email);
+                    command.Parameters.AddWithValue("@Subjects", teacher.Subjects);
+                    command.Parameters.AddWithValue("@OwnedClass", teacher.OwnedClass);
+
+                    int rowsAffected = command.ExecuteNonQuery();
+
+                    return rowsAffected > 0;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error Occured: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            finally
+            {
+                CloseConnection();
+            }
+        }
+        public bool UpdateStudent(StudentModel student)
+        {
+            try
+            {
+                OpenConnection();
+
+                string query = "UPDATE Students SET RegNo = @RegNo, FullName = @FullName, Gender = @Gender, " +
+                               "DOB = @DOB, Address = @Address, Contact = @Contact, Email = @Email, " +
+                               "GuardianName = @GuardianName, GuardianContactNumber = @GuardianContactNumber, " +
+                               "Class = @Class WHERE StudentID = @StudentID";
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@StudentID", userId);
+                    command.Parameters.AddWithValue("@RegNo", student.RegNo);
+                    command.Parameters.AddWithValue("@FullName", student.FullName);
+                    command.Parameters.AddWithValue("@Gender", student.Gender);
+                    command.Parameters.AddWithValue("@DOB", student.DOB);
+                    command.Parameters.AddWithValue("@Address", student.Address);
+                    command.Parameters.AddWithValue("@Contact", student.Contact);
+                    command.Parameters.AddWithValue("@Email", student.Email);
+                    command.Parameters.AddWithValue("@GuardianName", student.GuardianName);
+                    command.Parameters.AddWithValue("@GuardianContactNumber", student.GuardianContactNumber);
+                    command.Parameters.AddWithValue("@Class", student.Class);
+
+                    int rowsAffected = command.ExecuteNonQuery();
+
+                    return rowsAffected > 0;
+                }
+            }
+            catch (Exception ex)
+            {
+                // Handle exceptions
+                MessageBox.Show($"Error Occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            finally
+            {
+                CloseConnection();
+            }
+        }
+        public bool UpdateUser(UserModel user)
+        {
+            try
+            {
+                OpenConnection();
+
+                string query = "UPDATE Users SET Username = @Username, Password = @Password, " +
+                               "UserType = @UserType, FullName = @FullName, Email = @Email, " +
+                               "ContactNumber = @ContactNumber WHERE UserID = @UserID";
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@UserID", userId);
+                    command.Parameters.AddWithValue("@Username", user.Username);
+                    command.Parameters.AddWithValue("@Password", user.Password);
+                    command.Parameters.AddWithValue("@UserType", user.UserType);
+                    command.Parameters.AddWithValue("@FullName", user.FullName);
+                    command.Parameters.AddWithValue("@Email", user.Email);
+                    command.Parameters.AddWithValue("@ContactNumber", user.ContactNumber);
+
+                    int rowsAffected = command.ExecuteNonQuery();
+
+                    return rowsAffected > 0;
+                }
+            }
+            catch (Exception ex)
+            {
+                // Handle exceptions
+                MessageBox.Show($"Error Occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            finally
+            {
+                CloseConnection();
+            }
+        }
+        //get Data
+            public TeacherModel GetTeacherByID(int teacherID)
+        {
+            try
+            {
+                OpenConnection();
+
+                string query = "SELECT * FROM Teachers WHERE TeacherID = @TeacherID";
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@TeacherID", teacherID);
+
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            // Create a new TeacherModel and populate it with data from the reader
+                            TeacherModel teacher = new TeacherModel
+                            {
+                                TeacherID = (int)reader["TeacherID"],
+                                FullName = reader["FullName"].ToString(),
+                                DOB = (DateTime)reader["DOB"],
+                                ContactNumber = reader["ContactNumber"].ToString(),
+                                Address = reader["Address"].ToString(),
+                                Gender = reader["Gender"].ToString(),
+                                Email = reader["Email"].ToString(),
+                                Subjects = reader["Subjects"].ToString(),
+                                OwnedClass = reader["OwnedClass"].ToString()
+                                // Add other properties as needed
+                            };
+
+                            return teacher;
+                        }
+                    }
+                }
+
+                return null; // Return null if the teacher with the specified ID is not found
+            }
+            catch (Exception ex)
+            {
+                // Handle exceptions
+                MessageBox.Show($"Error Occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+            finally
+            {
+                CloseConnection();
+            }
+        }
+        public StudentModel GetStudentByID(int studentID)
+        {
+            try
+            {
+                OpenConnection();
+
+                string query = "SELECT * FROM Students WHERE StudentID = @StudentID";
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@StudentID", studentID);
+
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            // Create a new StudentModel and populate it with data from the reader
+                            StudentModel student = new StudentModel
+                            {
+                                StudentID = (int)reader["StudentID"],
+                                RegNo = reader["RegNo"].ToString(),
+                                FullName = reader["FullName"].ToString(),
+                                Gender = reader["Gender"].ToString(),
+                                DOB = (DateTime)reader["DOB"],
+                                Address = reader["Address"].ToString(),
+                                Contact = reader["Contact"].ToString(),
+                                Email = reader["Email"].ToString(),
+                                GuardianName = reader["GuardianName"].ToString(),
+                                GuardianContactNumber = reader["GuardianContactNumber"].ToString(),
+                                Class = reader["Class"].ToString()
+                                // Add other properties as needed
+                            };
+
+                            return student;
+                        }
+                    }
+                }
+
+                return null; // Return null if the student with the specified ID is not found
+            }
+            catch (Exception ex)
+            {
+                // Handle exceptions
+                MessageBox.Show($"Error Occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+            finally
+            {
+                CloseConnection();
+            }
+        }
+        public UserModel GetUserByID(int userID)
+        {
+            try
+            {
+                OpenConnection();
+
+                string query = "SELECT * FROM Users WHERE UserID = @UserID";
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@UserID", userID);
+
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            // Create a new UserModel and populate it with data from the reader
+                            UserModel user = new UserModel
+                            {
+                                UserID = (int)reader["UserID"],
+                                Username = reader["Username"].ToString(),
+                                Password = reader["Password"].ToString(),
+                                UserType = reader["UserType"].ToString(),
+                                FullName = reader["FullName"].ToString(),
+                                Email = reader["Email"].ToString(),
+                                ContactNumber = reader["ContactNumber"].ToString()
+                                // Add other properties as needed
+                            };
+
+                            return user;
+                        }
+                    }
+                }
+
+                return null; // Return null if the user with the specified ID is not found
+            }
+            catch (Exception ex)
+            {
+                // Handle exceptions
+                MessageBox.Show($"Error Occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+            finally
+            {
+                CloseConnection();
+            }
+        }
+
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            formMain.useForm.setPanel(formUsers.useForm);
         }
     }
 }

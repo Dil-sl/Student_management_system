@@ -14,6 +14,7 @@ namespace Student_management_system.Views.Classes
     public partial class formClasses : Form
     {
         private static formClasses _instance;
+        private formMain _formMainIns = formMain.useForm;
         public formClasses()
         {
             InitializeComponent();
@@ -27,6 +28,20 @@ namespace Student_management_system.Views.Classes
                 return _instance;
             }
             set { _instance = value; }
+        }
+
+        private void btnAddMainClass_Click(object sender, EventArgs e)
+        {
+            formAddClass.useForm.Dispose();
+            _formMainIns.setPanel(formAddClass.useForm);
+            this.Dispose();
+        }
+
+        private void btnMainManageClass_Click(object sender, EventArgs e)
+        {
+            formManageClass.useForm.Dispose();
+            _formMainIns.setPanel(formManageClass.useForm);
+            this.Dispose();
         }
     }
 }

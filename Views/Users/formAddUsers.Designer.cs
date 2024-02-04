@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.pnlUser = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnBack = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.pnlAdminForm = new System.Windows.Forms.Panel();
             this.pnlStudentForm = new System.Windows.Forms.Panel();
@@ -99,7 +99,7 @@
             this.lblBranch = new System.Windows.Forms.Label();
             this.welcomeLabel = new System.Windows.Forms.Label();
             this.pnlUser.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnBack)).BeginInit();
             this.pnlAdminForm.SuspendLayout();
             this.pnlStudentForm.SuspendLayout();
             this.pnlStudentButtonSet.SuspendLayout();
@@ -111,7 +111,7 @@
             // pnlUser
             // 
             this.pnlUser.BackColor = System.Drawing.Color.White;
-            this.pnlUser.Controls.Add(this.pictureBox1);
+            this.pnlUser.Controls.Add(this.btnBack);
             this.pnlUser.Controls.Add(this.label4);
             this.pnlUser.Controls.Add(this.pnlAdminForm);
             this.pnlUser.Controls.Add(this.cmbUserType);
@@ -122,15 +122,16 @@
             this.pnlUser.Size = new System.Drawing.Size(885, 696);
             this.pnlUser.TabIndex = 2;
             // 
-            // pictureBox1
+            // btnBack
             // 
-            this.pictureBox1.Image = global::Student_management_system.Properties.Resources.icons8_back_arrow_32;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 9);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(26, 24);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 174;
-            this.pictureBox1.TabStop = false;
+            this.btnBack.Image = global::Student_management_system.Properties.Resources.icons8_back_arrow_32;
+            this.btnBack.Location = new System.Drawing.Point(12, 9);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(26, 24);
+            this.btnBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnBack.TabIndex = 174;
+            this.btnBack.TabStop = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // label4
             // 
@@ -1303,7 +1304,7 @@
             this.Load += new System.EventHandler(this.formAddUsers_Load);
             this.pnlUser.ResumeLayout(false);
             this.pnlUser.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnBack)).EndInit();
             this.pnlAdminForm.ResumeLayout(false);
             this.pnlStudentForm.ResumeLayout(false);
             this.pnlStudentButtonSet.ResumeLayout(false);
@@ -1385,6 +1386,6 @@
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.DateTimePicker dtpTeacherDob;
         private Guna.UI2.WinForms.Guna2TextBox txtTeacherFullname;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox btnBack;
     }
 }

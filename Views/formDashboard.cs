@@ -114,8 +114,7 @@ namespace Student_management_system.Views
             lblTeachersCount.Text = adminDashboardData.TotalTeachers.ToString();
             lblAllAttandance.Text = adminDashboardData.TodayAttendance.ToString();
             lblAnnounceCount.Text = adminDashboardData.TotalAnnouncements.ToString();
-            lblMarkingComplete.Text = adminDashboardData.ClassesWithAttendance.ToString()+ " / " + adminDashboardData.TotalClasses.ToString();
-            
+            lblMarkingComplete.Text = adminDashboardData.ClassesWithAttendance.ToString()+ " / " + adminDashboardData.TotalClasses.ToString();    
         }
     }
 }

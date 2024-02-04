@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.lblPageTitle = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnMainManageClass = new System.Windows.Forms.Button();
+            this.btnAddMainClass = new System.Windows.Forms.Button();
             this.welcomeLabel = new System.Windows.Forms.Label();
             this.lblPageTitle.SuspendLayout();
             this.SuspendLayout();
@@ -38,47 +38,49 @@
             // lblPageTitle
             // 
             this.lblPageTitle.BackColor = System.Drawing.Color.White;
-            this.lblPageTitle.Controls.Add(this.button1);
-            this.lblPageTitle.Controls.Add(this.button2);
+            this.lblPageTitle.Controls.Add(this.btnMainManageClass);
+            this.lblPageTitle.Controls.Add(this.btnAddMainClass);
             this.lblPageTitle.Controls.Add(this.welcomeLabel);
             this.lblPageTitle.Location = new System.Drawing.Point(0, 12);
             this.lblPageTitle.Name = "lblPageTitle";
             this.lblPageTitle.Size = new System.Drawing.Size(885, 696);
             this.lblPageTitle.TabIndex = 2;
             // 
-            // button1
+            // btnMainManageClass
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(35)))), ((int)(((byte)(102)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Image = global::Student_management_system.Properties.Resources.icons8_renew_50;
-            this.button1.Location = new System.Drawing.Point(226, 90);
-            this.button1.Name = "button1";
-            this.button1.Padding = new System.Windows.Forms.Padding(2);
-            this.button1.Size = new System.Drawing.Size(182, 90);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Manage Class";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnMainManageClass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(35)))), ((int)(((byte)(102)))));
+            this.btnMainManageClass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMainManageClass.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMainManageClass.ForeColor = System.Drawing.Color.White;
+            this.btnMainManageClass.Image = global::Student_management_system.Properties.Resources.icons8_renew_50;
+            this.btnMainManageClass.Location = new System.Drawing.Point(226, 90);
+            this.btnMainManageClass.Name = "btnMainManageClass";
+            this.btnMainManageClass.Padding = new System.Windows.Forms.Padding(2);
+            this.btnMainManageClass.Size = new System.Drawing.Size(182, 90);
+            this.btnMainManageClass.TabIndex = 5;
+            this.btnMainManageClass.Text = "Manage Class";
+            this.btnMainManageClass.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnMainManageClass.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnMainManageClass.UseVisualStyleBackColor = false;
+            this.btnMainManageClass.Click += new System.EventHandler(this.btnMainManageClass_Click);
             // 
-            // button2
+            // btnAddMainClass
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(35)))), ((int)(((byte)(102)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Image = global::Student_management_system.Properties.Resources.icons8_add_50;
-            this.button2.Location = new System.Drawing.Point(38, 90);
-            this.button2.Name = "button2";
-            this.button2.Padding = new System.Windows.Forms.Padding(2);
-            this.button2.Size = new System.Drawing.Size(182, 90);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Add Class";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnAddMainClass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(35)))), ((int)(((byte)(102)))));
+            this.btnAddMainClass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddMainClass.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddMainClass.ForeColor = System.Drawing.Color.White;
+            this.btnAddMainClass.Image = global::Student_management_system.Properties.Resources.icons8_add_50;
+            this.btnAddMainClass.Location = new System.Drawing.Point(38, 90);
+            this.btnAddMainClass.Name = "btnAddMainClass";
+            this.btnAddMainClass.Padding = new System.Windows.Forms.Padding(2);
+            this.btnAddMainClass.Size = new System.Drawing.Size(182, 90);
+            this.btnAddMainClass.TabIndex = 4;
+            this.btnAddMainClass.Text = "Add Class";
+            this.btnAddMainClass.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnAddMainClass.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnAddMainClass.UseVisualStyleBackColor = false;
+            this.btnAddMainClass.Click += new System.EventHandler(this.btnAddMainClass_Click);
             // 
             // welcomeLabel
             // 
@@ -109,8 +111,8 @@
         #endregion
 
         private System.Windows.Forms.Panel lblPageTitle;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnMainManageClass;
+        private System.Windows.Forms.Button btnAddMainClass;
         private System.Windows.Forms.Label welcomeLabel;
     }
 }
