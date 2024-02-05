@@ -11,6 +11,7 @@ using Student_management_system.Models;
 using Student_management_system.Service;
 using Student_management_system.Views;
 using System.Windows.Forms;
+using Student_management_system.Views.Users;
 
 namespace Student_management_system.Views.Announcements
 {
@@ -130,5 +131,10 @@ namespace Student_management_system.Views.Announcements
             return true;
         }
 
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            formMain.useForm.setPanel(formAnnouncement.useForm);
+        }
     }
 }

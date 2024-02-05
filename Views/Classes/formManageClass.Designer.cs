@@ -28,18 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formManageClass));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlManageClass = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.btnSearchClass = new Guna.UI2.WinForms.Guna2Button();
             this.dgvClass = new System.Windows.Forms.DataGridView();
-            this.txtSearchClass = new Guna.UI2.WinForms.Guna2TextBox();
-            this.welcomeLabel = new System.Windows.Forms.Label();
             this.dgvClass_ClassCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvClass_Edit = new System.Windows.Forms.DataGridViewImageColumn();
             this.dgvClass_Delete = new System.Windows.Forms.DataGridViewImageColumn();
@@ -47,13 +45,18 @@
             this.dgvClass_ClassTeacherName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvClass_ClassTeacherID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvClass_Index = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtSearchClass = new Guna.UI2.WinForms.Guna2TextBox();
+            this.welcomeLabel = new System.Windows.Forms.Label();
+            this.btnBack = new System.Windows.Forms.PictureBox();
             this.pnlManageClass.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClass)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnBack)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlManageClass
             // 
             this.pnlManageClass.BackColor = System.Drawing.Color.White;
+            this.pnlManageClass.Controls.Add(this.btnBack);
             this.pnlManageClass.Controls.Add(this.label1);
             this.pnlManageClass.Controls.Add(this.btnSearchClass);
             this.pnlManageClass.Controls.Add(this.dgvClass);
@@ -99,22 +102,22 @@
             this.dgvClass.AllowUserToAddRows = false;
             this.dgvClass.AllowUserToDeleteRows = false;
             this.dgvClass.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dgvClass.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            this.dgvClass.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvClass.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.dgvClass.BackgroundColor = System.Drawing.Color.White;
             this.dgvClass.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvClass.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgvClass.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(204)))), ((int)(((byte)(113)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Lime;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvClass.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(204)))), ((int)(((byte)(113)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.Lime;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvClass.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dgvClass.ColumnHeadersHeight = 25;
             this.dgvClass.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvClass.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -125,15 +128,15 @@
             this.dgvClass_ClassTeacherName,
             this.dgvClass_ClassTeacherID,
             this.dgvClass_Index});
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(236)))), ((int)(((byte)(239)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvClass.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(236)))), ((int)(((byte)(239)))));
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle10.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvClass.DefaultCellStyle = dataGridViewCellStyle10;
             this.dgvClass.EnableHeadersVisualStyles = false;
             this.dgvClass.Location = new System.Drawing.Point(19, 151);
             this.dgvClass.Name = "dgvClass";
@@ -152,38 +155,6 @@
             this.dgvClass.TabIndex = 174;
             this.dgvClass.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvClass_CellContentClick);
             // 
-            // txtSearchClass
-            // 
-            this.txtSearchClass.BorderRadius = 5;
-            this.txtSearchClass.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtSearchClass.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtSearchClass.DefaultText = "";
-            this.txtSearchClass.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtSearchClass.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtSearchClass.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtSearchClass.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtSearchClass.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSearchClass.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearchClass.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSearchClass.Location = new System.Drawing.Point(129, 96);
-            this.txtSearchClass.Name = "txtSearchClass";
-            this.txtSearchClass.PasswordChar = '\0';
-            this.txtSearchClass.PlaceholderText = "";
-            this.txtSearchClass.SelectedText = "";
-            this.txtSearchClass.Size = new System.Drawing.Size(324, 32);
-            this.txtSearchClass.TabIndex = 172;
-            // 
-            // welcomeLabel
-            // 
-            this.welcomeLabel.AutoSize = true;
-            this.welcomeLabel.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.welcomeLabel.ForeColor = System.Drawing.Color.Black;
-            this.welcomeLabel.Location = new System.Drawing.Point(12, 36);
-            this.welcomeLabel.Name = "welcomeLabel";
-            this.welcomeLabel.Size = new System.Drawing.Size(177, 37);
-            this.welcomeLabel.TabIndex = 2;
-            this.welcomeLabel.Text = "Mange Class";
-            // 
             // dgvClass_ClassCode
             // 
             this.dgvClass_ClassCode.Frozen = true;
@@ -194,10 +165,10 @@
             // 
             // dgvClass_Edit
             // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle3.NullValue")));
-            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(0, 0, 1, 0);
-            this.dgvClass_Edit.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle8.NullValue")));
+            dataGridViewCellStyle8.Padding = new System.Windows.Forms.Padding(0, 0, 1, 0);
+            this.dgvClass_Edit.DefaultCellStyle = dataGridViewCellStyle8;
             this.dgvClass_Edit.Frozen = true;
             this.dgvClass_Edit.HeaderText = "";
             this.dgvClass_Edit.Name = "dgvClass_Edit";
@@ -207,10 +178,10 @@
             // 
             // dgvClass_Delete
             // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle4.NullValue")));
-            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(0, 0, 1, 0);
-            this.dgvClass_Delete.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle9.NullValue")));
+            dataGridViewCellStyle9.Padding = new System.Windows.Forms.Padding(0, 0, 1, 0);
+            this.dgvClass_Delete.DefaultCellStyle = dataGridViewCellStyle9;
             this.dgvClass_Delete.Frozen = true;
             this.dgvClass_Delete.HeaderText = "";
             this.dgvClass_Delete.Name = "dgvClass_Delete";
@@ -248,6 +219,49 @@
             this.dgvClass_Index.Visible = false;
             this.dgvClass_Index.Width = 37;
             // 
+            // txtSearchClass
+            // 
+            this.txtSearchClass.BorderRadius = 5;
+            this.txtSearchClass.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtSearchClass.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSearchClass.DefaultText = "";
+            this.txtSearchClass.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtSearchClass.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtSearchClass.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSearchClass.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSearchClass.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSearchClass.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearchClass.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSearchClass.Location = new System.Drawing.Point(129, 96);
+            this.txtSearchClass.Name = "txtSearchClass";
+            this.txtSearchClass.PasswordChar = '\0';
+            this.txtSearchClass.PlaceholderText = "";
+            this.txtSearchClass.SelectedText = "";
+            this.txtSearchClass.Size = new System.Drawing.Size(324, 32);
+            this.txtSearchClass.TabIndex = 172;
+            // 
+            // welcomeLabel
+            // 
+            this.welcomeLabel.AutoSize = true;
+            this.welcomeLabel.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.welcomeLabel.ForeColor = System.Drawing.Color.Black;
+            this.welcomeLabel.Location = new System.Drawing.Point(12, 36);
+            this.welcomeLabel.Name = "welcomeLabel";
+            this.welcomeLabel.Size = new System.Drawing.Size(177, 37);
+            this.welcomeLabel.TabIndex = 2;
+            this.welcomeLabel.Text = "Mange Class";
+            // 
+            // btnBack
+            // 
+            this.btnBack.Image = global::Student_management_system.Properties.Resources.icons8_back_arrow_32;
+            this.btnBack.Location = new System.Drawing.Point(12, 9);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(26, 24);
+            this.btnBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnBack.TabIndex = 177;
+            this.btnBack.TabStop = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
             // formManageClass
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -261,6 +275,7 @@
             this.pnlManageClass.ResumeLayout(false);
             this.pnlManageClass.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClass)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnBack)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -280,5 +295,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvClass_ClassTeacherName;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvClass_ClassTeacherID;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvClass_Index;
+        private System.Windows.Forms.PictureBox btnBack;
     }
 }

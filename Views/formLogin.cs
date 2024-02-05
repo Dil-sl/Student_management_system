@@ -111,6 +111,9 @@ namespace Student_management_system
             this.Close();
         }
 
-   
+        private void formLogin_Load(object sender, EventArgs e)
+        {
+            txtUserName.Focus();
+        }
     }
 }

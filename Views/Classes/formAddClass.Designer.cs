@@ -76,6 +76,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtAdminUserName = new Guna.UI2.WinForms.Guna2TextBox();
             this.welcomeLabel = new System.Windows.Forms.Label();
+            this.btnBack = new System.Windows.Forms.PictureBox();
             this.pnlUser.SuspendLayout();
             this.pnlTeacherForm.SuspendLayout();
             this.pnlTeacherButtonSet.SuspendLayout();
@@ -83,11 +84,13 @@
             this.pnlStudentButtonSet.SuspendLayout();
             this.pnlAdminForm.SuspendLayout();
             this.pnlAdminButtonSet.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnBack)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlUser
             // 
             this.pnlUser.BackColor = System.Drawing.Color.White;
+            this.pnlUser.Controls.Add(this.btnBack);
             this.pnlUser.Controls.Add(this.pnlTeacherForm);
             this.pnlUser.Controls.Add(this.pnlStudentForm);
             this.pnlUser.Controls.Add(this.pnlAdminForm);
@@ -868,6 +871,16 @@
             this.welcomeLabel.TabIndex = 2;
             this.welcomeLabel.Text = "Add User";
             // 
+            // btnBack
+            // 
+            this.btnBack.Image = global::Student_management_system.Properties.Resources.icons8_back_arrow_32;
+            this.btnBack.Location = new System.Drawing.Point(12, 9);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(26, 24);
+            this.btnBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnBack.TabIndex = 214;
+            this.btnBack.TabStop = false;
+            // 
             // formAddClass
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -886,6 +899,7 @@
             this.pnlStudentButtonSet.ResumeLayout(false);
             this.pnlAdminForm.ResumeLayout(false);
             this.pnlAdminButtonSet.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnBack)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -940,5 +954,6 @@
         private System.Windows.Forms.Panel pnlTeacherButtonSet;
         private Guna.UI2.WinForms.Guna2Button btnClassSave;
         private Guna.UI2.WinForms.Guna2Button btnClassReset;
+        private System.Windows.Forms.PictureBox btnBack;
     }
 }

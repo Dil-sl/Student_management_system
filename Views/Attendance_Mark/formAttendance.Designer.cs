@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.lblPageTitle = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnManageAttandance = new System.Windows.Forms.Button();
+            this.btnAddAttandance = new System.Windows.Forms.Button();
             this.welcomeLabel = new System.Windows.Forms.Label();
             this.lblPageTitle.SuspendLayout();
             this.SuspendLayout();
@@ -38,47 +38,49 @@
             // lblPageTitle
             // 
             this.lblPageTitle.BackColor = System.Drawing.Color.White;
-            this.lblPageTitle.Controls.Add(this.button1);
-            this.lblPageTitle.Controls.Add(this.button2);
+            this.lblPageTitle.Controls.Add(this.btnManageAttandance);
+            this.lblPageTitle.Controls.Add(this.btnAddAttandance);
             this.lblPageTitle.Controls.Add(this.welcomeLabel);
             this.lblPageTitle.Location = new System.Drawing.Point(0, 12);
             this.lblPageTitle.Name = "lblPageTitle";
             this.lblPageTitle.Size = new System.Drawing.Size(885, 696);
             this.lblPageTitle.TabIndex = 3;
             // 
-            // button1
+            // btnManageAttandance
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(35)))), ((int)(((byte)(102)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Image = global::Student_management_system.Properties.Resources.icons8_renew_50;
-            this.button1.Location = new System.Drawing.Point(226, 90);
-            this.button1.Name = "button1";
-            this.button1.Padding = new System.Windows.Forms.Padding(2);
-            this.button1.Size = new System.Drawing.Size(182, 90);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Manage Attandance";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnManageAttandance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(35)))), ((int)(((byte)(102)))));
+            this.btnManageAttandance.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnManageAttandance.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnManageAttandance.ForeColor = System.Drawing.Color.White;
+            this.btnManageAttandance.Image = global::Student_management_system.Properties.Resources.icons8_renew_50;
+            this.btnManageAttandance.Location = new System.Drawing.Point(226, 90);
+            this.btnManageAttandance.Name = "btnManageAttandance";
+            this.btnManageAttandance.Padding = new System.Windows.Forms.Padding(2);
+            this.btnManageAttandance.Size = new System.Drawing.Size(182, 90);
+            this.btnManageAttandance.TabIndex = 5;
+            this.btnManageAttandance.Text = "Manage Attandance";
+            this.btnManageAttandance.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnManageAttandance.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnManageAttandance.UseVisualStyleBackColor = false;
+            this.btnManageAttandance.Click += new System.EventHandler(this.btnManageAttandance_Click);
             // 
-            // button2
+            // btnAddAttandance
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(35)))), ((int)(((byte)(102)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Image = global::Student_management_system.Properties.Resources.icons8_add_50;
-            this.button2.Location = new System.Drawing.Point(38, 90);
-            this.button2.Name = "button2";
-            this.button2.Padding = new System.Windows.Forms.Padding(2);
-            this.button2.Size = new System.Drawing.Size(182, 90);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Add Attandance";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnAddAttandance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(35)))), ((int)(((byte)(102)))));
+            this.btnAddAttandance.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddAttandance.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddAttandance.ForeColor = System.Drawing.Color.White;
+            this.btnAddAttandance.Image = global::Student_management_system.Properties.Resources.icons8_add_50;
+            this.btnAddAttandance.Location = new System.Drawing.Point(38, 90);
+            this.btnAddAttandance.Name = "btnAddAttandance";
+            this.btnAddAttandance.Padding = new System.Windows.Forms.Padding(2);
+            this.btnAddAttandance.Size = new System.Drawing.Size(182, 90);
+            this.btnAddAttandance.TabIndex = 4;
+            this.btnAddAttandance.Text = "Add Attandance";
+            this.btnAddAttandance.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnAddAttandance.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnAddAttandance.UseVisualStyleBackColor = false;
+            this.btnAddAttandance.Click += new System.EventHandler(this.btnAddAttandance_Click);
             // 
             // welcomeLabel
             // 
@@ -109,8 +111,8 @@
         #endregion
 
         private System.Windows.Forms.Panel lblPageTitle;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnManageAttandance;
+        private System.Windows.Forms.Button btnAddAttandance;
         private System.Windows.Forms.Label welcomeLabel;
     }
 }

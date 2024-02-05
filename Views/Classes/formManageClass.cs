@@ -202,5 +202,11 @@ namespace Student_management_system.Views.Classes
                 PopulateClassDataGridView(txtSearchClass.Text);
             }
         }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            formMain.useForm.setPanel(formClasses.useForm);
+        }
     }
 }

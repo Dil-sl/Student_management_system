@@ -40,6 +40,17 @@ namespace Student_management_system.Views
         private void formMain_Load(object sender, EventArgs e)
         {
             lblUserName.Text = Constants.CurrentUser.Username;
+            rBtnDashboard.Checked = true;
+            rBtnUsers.Checked = false;
+            rBtnAnnounce.Checked = false;
+            rBtnAttendance.Checked = false;
+            rBtnClass.Checked = false;
+            rBtnSettings.Checked = false;
+            if (rBtnDashboard.Checked)
+            {
+                formDashboard.useForm.Close();
+                setPanel(formDashboard.useForm);
+            }
         }
         public void setPanel(Form obj)
         {
@@ -129,28 +140,13 @@ namespace Student_management_system.Views
             rBtnAnnounce.Checked = true;
             rBtnAttendance.Checked = false;
             rBtnClass.Checked = false;
-            rBtnSettings.Checked = false;
             if (rBtnAnnounce.Checked)
             {
                 formAnnouncement.useForm.Close();
                 setPanel(formAnnouncement.useForm);
             }
         }
-
-        private void rBtnSettings_Click(object sender, EventArgs e)
-        {
-            rBtnDashboard.Checked = false;
-            rBtnUsers.Checked = false;
-            rBtnAnnounce.Checked = false;
-            rBtnAttendance.Checked = false;
-            rBtnClass.Checked = false;
-            rBtnSettings.Checked = true;
-            if (rBtnSettings.Checked)
-            {
-                formSettings.useForm.Close();
-                setPanel(formSettings.useForm);
-            }
-        }
+ 
 
     }
 }

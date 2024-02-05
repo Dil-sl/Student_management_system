@@ -36,7 +36,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblPageTitle = new System.Windows.Forms.Panel();
             this.dgvAnnou = new System.Windows.Forms.DataGridView();
-            this.welcomeLabel = new System.Windows.Forms.Label();
             this.dgvAnnou_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvAnnou_Edit = new System.Windows.Forms.DataGridViewImageColumn();
             this.dgvAnnou_Delete = new System.Windows.Forms.DataGridViewImageColumn();
@@ -46,13 +45,17 @@
             this.dgvAnnou_PubDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvAnnou_ExpireDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvAnnou_Index = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.welcomeLabel = new System.Windows.Forms.Label();
+            this.btnBack = new System.Windows.Forms.PictureBox();
             this.lblPageTitle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAnnou)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnBack)).BeginInit();
             this.SuspendLayout();
             // 
             // lblPageTitle
             // 
             this.lblPageTitle.BackColor = System.Drawing.Color.White;
+            this.lblPageTitle.Controls.Add(this.btnBack);
             this.lblPageTitle.Controls.Add(this.dgvAnnou);
             this.lblPageTitle.Controls.Add(this.welcomeLabel);
             this.lblPageTitle.Location = new System.Drawing.Point(0, 12);
@@ -120,17 +123,6 @@
             this.dgvAnnou.TabIndex = 174;
             this.dgvAnnou.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAnnou_CellContentClick);
             // 
-            // welcomeLabel
-            // 
-            this.welcomeLabel.AutoSize = true;
-            this.welcomeLabel.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.welcomeLabel.ForeColor = System.Drawing.Color.Black;
-            this.welcomeLabel.Location = new System.Drawing.Point(12, 36);
-            this.welcomeLabel.Name = "welcomeLabel";
-            this.welcomeLabel.Size = new System.Drawing.Size(319, 37);
-            this.welcomeLabel.TabIndex = 2;
-            this.welcomeLabel.Text = "Manage Annoncements";
-            // 
             // dgvAnnou_ID
             // 
             this.dgvAnnou_ID.Frozen = true;
@@ -149,6 +141,7 @@
             this.dgvAnnou_Edit.HeaderText = "";
             this.dgvAnnou_Edit.Name = "dgvAnnou_Edit";
             this.dgvAnnou_Edit.ReadOnly = true;
+            this.dgvAnnou_Edit.Visible = false;
             this.dgvAnnou_Edit.Width = 25;
             // 
             // dgvAnnou_Delete
@@ -208,6 +201,28 @@
             this.dgvAnnou_Index.Visible = false;
             this.dgvAnnou_Index.Width = 37;
             // 
+            // welcomeLabel
+            // 
+            this.welcomeLabel.AutoSize = true;
+            this.welcomeLabel.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.welcomeLabel.ForeColor = System.Drawing.Color.Black;
+            this.welcomeLabel.Location = new System.Drawing.Point(12, 36);
+            this.welcomeLabel.Name = "welcomeLabel";
+            this.welcomeLabel.Size = new System.Drawing.Size(319, 37);
+            this.welcomeLabel.TabIndex = 2;
+            this.welcomeLabel.Text = "Manage Annoncements";
+            // 
+            // btnBack
+            // 
+            this.btnBack.Image = global::Student_management_system.Properties.Resources.icons8_back_arrow_32;
+            this.btnBack.Location = new System.Drawing.Point(12, 9);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(26, 24);
+            this.btnBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnBack.TabIndex = 215;
+            this.btnBack.TabStop = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
             // formManageAnnouncement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -221,6 +236,7 @@
             this.lblPageTitle.ResumeLayout(false);
             this.lblPageTitle.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAnnou)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnBack)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -239,5 +255,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvAnnou_PubDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvAnnou_ExpireDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvAnnou_Index;
+        private System.Windows.Forms.PictureBox btnBack;
     }
 }

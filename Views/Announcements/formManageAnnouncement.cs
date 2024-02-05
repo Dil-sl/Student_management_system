@@ -192,5 +192,11 @@ namespace Student_management_system.Views.Announcements
         {
             PopulateNoticeboardDataGridView();
         }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            formMain.useForm.setPanel(formAnnouncement.useForm);
+        }
     }
 }

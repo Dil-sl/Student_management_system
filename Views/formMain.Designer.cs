@@ -44,7 +44,6 @@
             this.rBtnAttendance = new System.Windows.Forms.RadioButton();
             this.rBtnClass = new System.Windows.Forms.RadioButton();
             this.rBtnAnnounce = new System.Windows.Forms.RadioButton();
-            this.rBtnSettings = new System.Windows.Forms.RadioButton();
             this.pnlMainWindow = new System.Windows.Forms.Panel();
             this.pnlTopBar.SuspendLayout();
             this.pnlTimeInfo.SuspendLayout();
@@ -179,7 +178,6 @@
             this.flowLayoutPanel1.Controls.Add(this.rBtnAttendance);
             this.flowLayoutPanel1.Controls.Add(this.rBtnClass);
             this.flowLayoutPanel1.Controls.Add(this.rBtnAnnounce);
-            this.flowLayoutPanel1.Controls.Add(this.rBtnSettings);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 42);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
@@ -300,29 +298,6 @@
             this.rBtnAnnounce.UseVisualStyleBackColor = false;
             this.rBtnAnnounce.Click += new System.EventHandler(this.rBtnAnnounce_Click);
             // 
-            // rBtnSettings
-            // 
-            this.rBtnSettings.Appearance = System.Windows.Forms.Appearance.Button;
-            this.rBtnSettings.AutoCheck = false;
-            this.rBtnSettings.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(204)))), ((int)(((byte)(255)))));
-            this.rBtnSettings.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.rBtnSettings.Dock = System.Windows.Forms.DockStyle.Top;
-            this.rBtnSettings.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.rBtnSettings.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
-            this.rBtnSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rBtnSettings.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rBtnSettings.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(41)))), ((int)(((byte)(69)))));
-            this.rBtnSettings.Image = global::Student_management_system.Properties.Resources.Settings;
-            this.rBtnSettings.Location = new System.Drawing.Point(0, 300);
-            this.rBtnSettings.Margin = new System.Windows.Forms.Padding(0);
-            this.rBtnSettings.Name = "rBtnSettings";
-            this.rBtnSettings.Size = new System.Drawing.Size(65, 60);
-            this.rBtnSettings.TabIndex = 12;
-            this.rBtnSettings.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.rBtnSettings.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.rBtnSettings.UseVisualStyleBackColor = false;
-            this.rBtnSettings.Click += new System.EventHandler(this.rBtnSettings_Click);
-            // 
             // pnlMainWindow
             // 
             this.pnlMainWindow.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -371,7 +346,6 @@
         private System.Windows.Forms.RadioButton rBtnAttendance;
         private System.Windows.Forms.RadioButton rBtnClass;
         private System.Windows.Forms.RadioButton rBtnAnnounce;
-        private System.Windows.Forms.RadioButton rBtnSettings;
         private System.Windows.Forms.PictureBox picBoxClose;
         private System.Windows.Forms.PictureBox picBoxMinimize;
         private System.Windows.Forms.Panel pnlTimeInfo;

@@ -28,13 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formAddAttendance));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlClass = new System.Windows.Forms.Panel();
+            this.btnBack = new System.Windows.Forms.PictureBox();
             this.label17 = new System.Windows.Forms.Label();
             this.dtpAttDate = new System.Windows.Forms.DateTimePicker();
             this.cmbClassName = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -45,13 +46,14 @@
             this.btnAttSave = new Guna.UI2.WinForms.Guna2Button();
             this.btnAttReset = new Guna.UI2.WinForms.Guna2Button();
             this.welcomeLabel = new System.Windows.Forms.Label();
-            this.dgvProduct_Index = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvUser_Contact = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.dgvUser_FullName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvProduct_Delete = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dgvProduct_Edit = new System.Windows.Forms.DataGridViewImageColumn();
             this.dgvUser_UserCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvProduct_Edit = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dgvProduct_Delete = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dgvUser_FullName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvUser_Contact = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.dgvProduct_Index = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlClass.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnBack)).BeginInit();
             this.pnlClassForm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsers)).BeginInit();
             this.pnlAttButtonSet.SuspendLayout();
@@ -60,6 +62,7 @@
             // pnlClass
             // 
             this.pnlClass.BackColor = System.Drawing.Color.White;
+            this.pnlClass.Controls.Add(this.btnBack);
             this.pnlClass.Controls.Add(this.label17);
             this.pnlClass.Controls.Add(this.dtpAttDate);
             this.pnlClass.Controls.Add(this.cmbClassName);
@@ -70,6 +73,17 @@
             this.pnlClass.Name = "pnlClass";
             this.pnlClass.Size = new System.Drawing.Size(885, 696);
             this.pnlClass.TabIndex = 4;
+            // 
+            // btnBack
+            // 
+            this.btnBack.Image = global::Student_management_system.Properties.Resources.icons8_back_arrow_32;
+            this.btnBack.Location = new System.Drawing.Point(12, 9);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(26, 24);
+            this.btnBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnBack.TabIndex = 218;
+            this.btnBack.TabStop = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // label17
             // 
@@ -88,6 +102,7 @@
             // 
             this.dtpAttDate.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dtpAttDate.CustomFormat = "dd/MM/yyyy";
+            this.dtpAttDate.Enabled = false;
             this.dtpAttDate.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpAttDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpAttDate.Location = new System.Drawing.Point(378, 92);
@@ -143,22 +158,22 @@
             this.dgvUsers.AllowUserToAddRows = false;
             this.dgvUsers.AllowUserToDeleteRows = false;
             this.dgvUsers.AllowUserToResizeRows = false;
-            dataGridViewCellStyle21.BackColor = System.Drawing.Color.White;
-            this.dgvUsers.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dgvUsers.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvUsers.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.dgvUsers.BackgroundColor = System.Drawing.Color.White;
             this.dgvUsers.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvUsers.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgvUsers.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(204)))), ((int)(((byte)(113)))));
-            dataGridViewCellStyle22.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle22.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle22.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.Color.Lime;
-            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvUsers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle22;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(204)))), ((int)(((byte)(113)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Lime;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvUsers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvUsers.ColumnHeadersHeight = 25;
             this.dgvUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvUsers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -168,15 +183,15 @@
             this.dgvUser_FullName,
             this.dgvUser_Contact,
             this.dgvProduct_Index});
-            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(236)))), ((int)(((byte)(239)))));
-            dataGridViewCellStyle25.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle25.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle25.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            dataGridViewCellStyle25.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle25.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle25.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvUsers.DefaultCellStyle = dataGridViewCellStyle25;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(236)))), ((int)(((byte)(239)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvUsers.DefaultCellStyle = dataGridViewCellStyle5;
             this.dgvUsers.EnableHeadersVisualStyles = false;
             this.dgvUsers.Location = new System.Drawing.Point(20, 24);
             this.dgvUsers.Name = "dgvUsers";
@@ -193,6 +208,8 @@
             this.dgvUsers.ShowCellToolTips = false;
             this.dgvUsers.Size = new System.Drawing.Size(564, 399);
             this.dgvUsers.TabIndex = 214;
+            this.dgvUsers.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUsers_CellContentClick);
+            this.dgvUsers.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUsers_CellContentDoubleClick);
             // 
             // pnlAttButtonSet
             // 
@@ -247,13 +264,45 @@
             this.welcomeLabel.TabIndex = 2;
             this.welcomeLabel.Text = "Add Attendance";
             // 
-            // dgvProduct_Index
+            // dgvUser_UserCode
             // 
-            this.dgvProduct_Index.HeaderText = "";
-            this.dgvProduct_Index.Name = "dgvProduct_Index";
-            this.dgvProduct_Index.ReadOnly = true;
-            this.dgvProduct_Index.Visible = false;
-            this.dgvProduct_Index.Width = 37;
+            this.dgvUser_UserCode.HeaderText = "Studuent #";
+            this.dgvUser_UserCode.Name = "dgvUser_UserCode";
+            this.dgvUser_UserCode.ReadOnly = true;
+            this.dgvUser_UserCode.Visible = false;
+            this.dgvUser_UserCode.Width = 111;
+            // 
+            // dgvProduct_Edit
+            // 
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle3.NullValue")));
+            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(0, 0, 1, 0);
+            this.dgvProduct_Edit.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvProduct_Edit.HeaderText = "";
+            this.dgvProduct_Edit.Name = "dgvProduct_Edit";
+            this.dgvProduct_Edit.ReadOnly = true;
+            this.dgvProduct_Edit.Visible = false;
+            this.dgvProduct_Edit.Width = 25;
+            // 
+            // dgvProduct_Delete
+            // 
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle4.NullValue")));
+            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(0, 0, 1, 0);
+            this.dgvProduct_Delete.DefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvProduct_Delete.HeaderText = "";
+            this.dgvProduct_Delete.Name = "dgvProduct_Delete";
+            this.dgvProduct_Delete.ReadOnly = true;
+            this.dgvProduct_Delete.Visible = false;
+            this.dgvProduct_Delete.Width = 25;
+            // 
+            // dgvUser_FullName
+            // 
+            this.dgvUser_FullName.HeaderText = "Student Name";
+            this.dgvUser_FullName.Name = "dgvUser_FullName";
+            this.dgvUser_FullName.ReadOnly = true;
+            this.dgvUser_FullName.Visible = false;
+            this.dgvUser_FullName.Width = 300;
             // 
             // dgvUser_Contact
             // 
@@ -262,46 +311,15 @@
             this.dgvUser_Contact.ReadOnly = true;
             this.dgvUser_Contact.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvUser_Contact.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dgvUser_Contact.Visible = false;
             // 
-            // dgvUser_FullName
+            // dgvProduct_Index
             // 
-            this.dgvUser_FullName.Frozen = true;
-            this.dgvUser_FullName.HeaderText = "Student Name";
-            this.dgvUser_FullName.Name = "dgvUser_FullName";
-            this.dgvUser_FullName.ReadOnly = true;
-            this.dgvUser_FullName.Width = 300;
-            // 
-            // dgvProduct_Delete
-            // 
-            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle24.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle24.NullValue")));
-            dataGridViewCellStyle24.Padding = new System.Windows.Forms.Padding(0, 0, 1, 0);
-            this.dgvProduct_Delete.DefaultCellStyle = dataGridViewCellStyle24;
-            this.dgvProduct_Delete.Frozen = true;
-            this.dgvProduct_Delete.HeaderText = "";
-            this.dgvProduct_Delete.Name = "dgvProduct_Delete";
-            this.dgvProduct_Delete.ReadOnly = true;
-            this.dgvProduct_Delete.Width = 25;
-            // 
-            // dgvProduct_Edit
-            // 
-            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle23.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle23.NullValue")));
-            dataGridViewCellStyle23.Padding = new System.Windows.Forms.Padding(0, 0, 1, 0);
-            this.dgvProduct_Edit.DefaultCellStyle = dataGridViewCellStyle23;
-            this.dgvProduct_Edit.Frozen = true;
-            this.dgvProduct_Edit.HeaderText = "";
-            this.dgvProduct_Edit.Name = "dgvProduct_Edit";
-            this.dgvProduct_Edit.ReadOnly = true;
-            this.dgvProduct_Edit.Width = 25;
-            // 
-            // dgvUser_UserCode
-            // 
-            this.dgvUser_UserCode.Frozen = true;
-            this.dgvUser_UserCode.HeaderText = "Studuent #";
-            this.dgvUser_UserCode.Name = "dgvUser_UserCode";
-            this.dgvUser_UserCode.ReadOnly = true;
-            this.dgvUser_UserCode.Width = 111;
+            this.dgvProduct_Index.HeaderText = "";
+            this.dgvProduct_Index.Name = "dgvProduct_Index";
+            this.dgvProduct_Index.ReadOnly = true;
+            this.dgvProduct_Index.Visible = false;
+            this.dgvProduct_Index.Width = 37;
             // 
             // formAddAttendance
             // 
@@ -315,6 +333,7 @@
             this.Load += new System.EventHandler(this.formAddAttendance_Load);
             this.pnlClass.ResumeLayout(false);
             this.pnlClass.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnBack)).EndInit();
             this.pnlClassForm.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsers)).EndInit();
             this.pnlAttButtonSet.ResumeLayout(false);
@@ -335,6 +354,7 @@
         private Guna.UI2.WinForms.Guna2Button btnAttSave;
         private Guna.UI2.WinForms.Guna2Button btnAttReset;
         private System.Windows.Forms.Label welcomeLabel;
+        private System.Windows.Forms.PictureBox btnBack;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvUser_UserCode;
         private System.Windows.Forms.DataGridViewImageColumn dgvProduct_Edit;
         private System.Windows.Forms.DataGridViewImageColumn dgvProduct_Delete;

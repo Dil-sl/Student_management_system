@@ -80,6 +80,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtAdminUserName = new Guna.UI2.WinForms.Guna2TextBox();
             this.welcomeLabel = new System.Windows.Forms.Label();
+            this.btnBack = new System.Windows.Forms.PictureBox();
             this.pnlAnnoucemnet.SuspendLayout();
             this.pnAnnoucementForm.SuspendLayout();
             this.pnlAnnouButtonSet.SuspendLayout();
@@ -87,11 +88,13 @@
             this.pnlStudentButtonSet.SuspendLayout();
             this.pnlAdminForm.SuspendLayout();
             this.pnlAdminButtonSet.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnBack)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlAnnoucemnet
             // 
             this.pnlAnnoucemnet.BackColor = System.Drawing.Color.White;
+            this.pnlAnnoucemnet.Controls.Add(this.btnBack);
             this.pnlAnnoucemnet.Controls.Add(this.pnAnnoucementForm);
             this.pnlAnnoucemnet.Controls.Add(this.pnlStudentForm);
             this.pnlAnnoucemnet.Controls.Add(this.pnlAdminForm);
@@ -936,6 +939,17 @@
             this.welcomeLabel.TabIndex = 2;
             this.welcomeLabel.Text = "Add Announcements";
             // 
+            // btnBack
+            // 
+            this.btnBack.Image = global::Student_management_system.Properties.Resources.icons8_back_arrow_32;
+            this.btnBack.Location = new System.Drawing.Point(12, 9);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(26, 24);
+            this.btnBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnBack.TabIndex = 215;
+            this.btnBack.TabStop = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
             // formAddAnnoncement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -953,6 +967,7 @@
             this.pnlStudentButtonSet.ResumeLayout(false);
             this.pnlAdminForm.ResumeLayout(false);
             this.pnlAdminButtonSet.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnBack)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1011,5 +1026,6 @@
         private System.Windows.Forms.Label welcomeLabel;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DateTimePicker dtpAnnouExpireDate;
+        private System.Windows.Forms.PictureBox btnBack;
     }
 }
