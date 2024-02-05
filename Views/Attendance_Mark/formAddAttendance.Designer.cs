@@ -42,16 +42,15 @@
             this.lblBranch = new System.Windows.Forms.Label();
             this.pnlClassForm = new System.Windows.Forms.Panel();
             this.dgvUsers = new System.Windows.Forms.DataGridView();
-            this.pnlAttButtonSet = new System.Windows.Forms.Panel();
-            this.btnAttSave = new Guna.UI2.WinForms.Guna2Button();
-            this.btnAttReset = new Guna.UI2.WinForms.Guna2Button();
-            this.welcomeLabel = new System.Windows.Forms.Label();
             this.dgvUser_UserCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvProduct_Edit = new System.Windows.Forms.DataGridViewImageColumn();
             this.dgvProduct_Delete = new System.Windows.Forms.DataGridViewImageColumn();
             this.dgvUser_FullName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvUser_Contact = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.dgvProduct_Index = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pnlAttButtonSet = new System.Windows.Forms.Panel();
+            this.btnAttSave = new Guna.UI2.WinForms.Guna2Button();
+            this.welcomeLabel = new System.Windows.Forms.Label();
             this.pnlClass.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnBack)).BeginInit();
             this.pnlClassForm.SuspendLayout();
@@ -211,59 +210,6 @@
             this.dgvUsers.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUsers_CellContentClick);
             this.dgvUsers.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUsers_CellContentDoubleClick);
             // 
-            // pnlAttButtonSet
-            // 
-            this.pnlAttButtonSet.Controls.Add(this.btnAttSave);
-            this.pnlAttButtonSet.Controls.Add(this.btnAttReset);
-            this.pnlAttButtonSet.Location = new System.Drawing.Point(576, 449);
-            this.pnlAttButtonSet.Name = "pnlAttButtonSet";
-            this.pnlAttButtonSet.Size = new System.Drawing.Size(276, 72);
-            this.pnlAttButtonSet.TabIndex = 213;
-            // 
-            // btnAttSave
-            // 
-            this.btnAttSave.BorderRadius = 5;
-            this.btnAttSave.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnAttSave.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnAttSave.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnAttSave.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnAttSave.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(204)))), ((int)(((byte)(113)))));
-            this.btnAttSave.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAttSave.ForeColor = System.Drawing.Color.White;
-            this.btnAttSave.Location = new System.Drawing.Point(141, 13);
-            this.btnAttSave.Name = "btnAttSave";
-            this.btnAttSave.Size = new System.Drawing.Size(132, 44);
-            this.btnAttSave.TabIndex = 209;
-            this.btnAttSave.Text = "Save";
-            this.btnAttSave.Click += new System.EventHandler(this.btnAttSave_Click);
-            // 
-            // btnAttReset
-            // 
-            this.btnAttReset.BorderRadius = 5;
-            this.btnAttReset.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnAttReset.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnAttReset.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnAttReset.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnAttReset.FillColor = System.Drawing.Color.Red;
-            this.btnAttReset.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAttReset.ForeColor = System.Drawing.Color.White;
-            this.btnAttReset.Location = new System.Drawing.Point(3, 13);
-            this.btnAttReset.Name = "btnAttReset";
-            this.btnAttReset.Size = new System.Drawing.Size(132, 44);
-            this.btnAttReset.TabIndex = 208;
-            this.btnAttReset.Text = "Reset";
-            // 
-            // welcomeLabel
-            // 
-            this.welcomeLabel.AutoSize = true;
-            this.welcomeLabel.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.welcomeLabel.ForeColor = System.Drawing.Color.Black;
-            this.welcomeLabel.Location = new System.Drawing.Point(12, 36);
-            this.welcomeLabel.Name = "welcomeLabel";
-            this.welcomeLabel.Size = new System.Drawing.Size(224, 37);
-            this.welcomeLabel.TabIndex = 2;
-            this.welcomeLabel.Text = "Add Attendance";
-            // 
             // dgvUser_UserCode
             // 
             this.dgvUser_UserCode.HeaderText = "Studuent #";
@@ -321,6 +267,42 @@
             this.dgvProduct_Index.Visible = false;
             this.dgvProduct_Index.Width = 37;
             // 
+            // pnlAttButtonSet
+            // 
+            this.pnlAttButtonSet.Controls.Add(this.btnAttSave);
+            this.pnlAttButtonSet.Location = new System.Drawing.Point(576, 449);
+            this.pnlAttButtonSet.Name = "pnlAttButtonSet";
+            this.pnlAttButtonSet.Size = new System.Drawing.Size(276, 72);
+            this.pnlAttButtonSet.TabIndex = 213;
+            // 
+            // btnAttSave
+            // 
+            this.btnAttSave.BorderRadius = 5;
+            this.btnAttSave.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAttSave.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAttSave.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAttSave.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAttSave.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(204)))), ((int)(((byte)(113)))));
+            this.btnAttSave.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAttSave.ForeColor = System.Drawing.Color.White;
+            this.btnAttSave.Location = new System.Drawing.Point(141, 13);
+            this.btnAttSave.Name = "btnAttSave";
+            this.btnAttSave.Size = new System.Drawing.Size(132, 44);
+            this.btnAttSave.TabIndex = 209;
+            this.btnAttSave.Text = "Save";
+            this.btnAttSave.Click += new System.EventHandler(this.btnAttSave_Click);
+            // 
+            // welcomeLabel
+            // 
+            this.welcomeLabel.AutoSize = true;
+            this.welcomeLabel.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.welcomeLabel.ForeColor = System.Drawing.Color.Black;
+            this.welcomeLabel.Location = new System.Drawing.Point(12, 36);
+            this.welcomeLabel.Name = "welcomeLabel";
+            this.welcomeLabel.Size = new System.Drawing.Size(224, 37);
+            this.welcomeLabel.TabIndex = 2;
+            this.welcomeLabel.Text = "Add Attendance";
+            // 
             // formAddAttendance
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -352,7 +334,6 @@
         public System.Windows.Forms.DataGridView dgvUsers;
         private System.Windows.Forms.Panel pnlAttButtonSet;
         private Guna.UI2.WinForms.Guna2Button btnAttSave;
-        private Guna.UI2.WinForms.Guna2Button btnAttReset;
         private System.Windows.Forms.Label welcomeLabel;
         private System.Windows.Forms.PictureBox btnBack;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvUser_UserCode;

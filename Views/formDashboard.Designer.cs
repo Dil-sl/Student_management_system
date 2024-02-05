@@ -28,12 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.pnlDashboardMain = new System.Windows.Forms.Panel();
-            this.label13 = new System.Windows.Forms.Label();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panel9 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
@@ -60,7 +55,6 @@
             this.lblClassCount = new System.Windows.Forms.Label();
             this.lblPageTitle = new System.Windows.Forms.Label();
             this.pnlDashboardMain.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.panel9.SuspendLayout();
             this.panel10.SuspendLayout();
             this.panel11.SuspendLayout();
@@ -78,8 +72,6 @@
             // pnlDashboardMain
             // 
             this.pnlDashboardMain.BackColor = System.Drawing.Color.White;
-            this.pnlDashboardMain.Controls.Add(this.label13);
-            this.pnlDashboardMain.Controls.Add(this.chart1);
             this.pnlDashboardMain.Controls.Add(this.panel9);
             this.pnlDashboardMain.Controls.Add(this.panel10);
             this.pnlDashboardMain.Controls.Add(this.panel11);
@@ -97,34 +89,6 @@
             this.pnlDashboardMain.Name = "pnlDashboardMain";
             this.pnlDashboardMain.Size = new System.Drawing.Size(885, 696);
             this.pnlDashboardMain.TabIndex = 0;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.Black;
-            this.label13.Location = new System.Drawing.Point(33, 362);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(182, 30);
-            this.label13.TabIndex = 16;
-            this.label13.Text = "Attendance Chart";
-            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // chart1
-            // 
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(38, 395);
-            this.chart1.Name = "chart1";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(789, 278);
-            this.chart1.TabIndex = 15;
-            this.chart1.Text = "chart1";
             // 
             // panel9
             // 
@@ -408,7 +372,6 @@
             this.Load += new System.EventHandler(this.formDashboard_Load);
             this.pnlDashboardMain.ResumeLayout(false);
             this.pnlDashboardMain.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.panel9.ResumeLayout(false);
             this.panel10.ResumeLayout(false);
             this.panel11.ResumeLayout(false);
@@ -453,7 +416,5 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label lblTeachersCount;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
-        private System.Windows.Forms.Label label13;
     }
 }

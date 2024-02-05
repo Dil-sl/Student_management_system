@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.lblPageTitle = new System.Windows.Forms.Panel();
-            this.btnManageAttandance = new System.Windows.Forms.Button();
             this.btnAddAttandance = new System.Windows.Forms.Button();
             this.welcomeLabel = new System.Windows.Forms.Label();
             this.lblPageTitle.SuspendLayout();
@@ -38,31 +37,12 @@
             // lblPageTitle
             // 
             this.lblPageTitle.BackColor = System.Drawing.Color.White;
-            this.lblPageTitle.Controls.Add(this.btnManageAttandance);
             this.lblPageTitle.Controls.Add(this.btnAddAttandance);
             this.lblPageTitle.Controls.Add(this.welcomeLabel);
             this.lblPageTitle.Location = new System.Drawing.Point(0, 12);
             this.lblPageTitle.Name = "lblPageTitle";
             this.lblPageTitle.Size = new System.Drawing.Size(885, 696);
             this.lblPageTitle.TabIndex = 3;
-            // 
-            // btnManageAttandance
-            // 
-            this.btnManageAttandance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(35)))), ((int)(((byte)(102)))));
-            this.btnManageAttandance.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnManageAttandance.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnManageAttandance.ForeColor = System.Drawing.Color.White;
-            this.btnManageAttandance.Image = global::Student_management_system.Properties.Resources.icons8_renew_50;
-            this.btnManageAttandance.Location = new System.Drawing.Point(226, 90);
-            this.btnManageAttandance.Name = "btnManageAttandance";
-            this.btnManageAttandance.Padding = new System.Windows.Forms.Padding(2);
-            this.btnManageAttandance.Size = new System.Drawing.Size(182, 90);
-            this.btnManageAttandance.TabIndex = 5;
-            this.btnManageAttandance.Text = "Manage Attandance";
-            this.btnManageAttandance.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnManageAttandance.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnManageAttandance.UseVisualStyleBackColor = false;
-            this.btnManageAttandance.Click += new System.EventHandler(this.btnManageAttandance_Click);
             // 
             // btnAddAttandance
             // 
@@ -111,7 +91,6 @@
         #endregion
 
         private System.Windows.Forms.Panel lblPageTitle;
-        private System.Windows.Forms.Button btnManageAttandance;
         private System.Windows.Forms.Button btnAddAttandance;
         private System.Windows.Forms.Label welcomeLabel;
     }

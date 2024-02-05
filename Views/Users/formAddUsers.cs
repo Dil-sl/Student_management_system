@@ -41,6 +41,9 @@ namespace Student_management_system.Views.Users
 
         private void formAddUsers_Load(object sender, EventArgs e)
         {
+            btnAdminReset.Visible = false;
+            btnStudentReset.Visible = false;    
+            btnTeacherReset.Visible = false;
             if (userEnvioronment!="Edit")
             {
                 UIchange(false, false, false);

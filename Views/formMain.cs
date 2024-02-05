@@ -41,6 +41,7 @@ namespace Student_management_system.Views
 
         private void formMain_Load(object sender, EventArgs e)
         {
+                lblUserName.Text = Constants.CurrentUser.Username.ToString();
                 rbtnCheckedState(true,false,false,false,false);
                 formDashboard.useForm.Close();
                 setPanel(formDashboard.useForm);

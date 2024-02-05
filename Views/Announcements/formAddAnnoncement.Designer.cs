@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.pnlAnnoucemnet = new System.Windows.Forms.Panel();
+            this.btnBack = new System.Windows.Forms.PictureBox();
             this.pnAnnoucementForm = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.dtpAnnouExpireDate = new System.Windows.Forms.DateTimePicker();
             this.pnlAnnouButtonSet = new System.Windows.Forms.Panel();
             this.btnAnnouSave = new Guna.UI2.WinForms.Guna2Button();
-            this.btnAnnouReset = new Guna.UI2.WinForms.Guna2Button();
             this.txtAnnoDesc = new Guna.UI2.WinForms.Guna2TextBox();
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
@@ -80,15 +80,14 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtAdminUserName = new Guna.UI2.WinForms.Guna2TextBox();
             this.welcomeLabel = new System.Windows.Forms.Label();
-            this.btnBack = new System.Windows.Forms.PictureBox();
             this.pnlAnnoucemnet.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnBack)).BeginInit();
             this.pnAnnoucementForm.SuspendLayout();
             this.pnlAnnouButtonSet.SuspendLayout();
             this.pnlStudentForm.SuspendLayout();
             this.pnlStudentButtonSet.SuspendLayout();
             this.pnlAdminForm.SuspendLayout();
             this.pnlAdminButtonSet.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnBack)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlAnnoucemnet
@@ -103,6 +102,17 @@
             this.pnlAnnoucemnet.Name = "pnlAnnoucemnet";
             this.pnlAnnoucemnet.Size = new System.Drawing.Size(885, 696);
             this.pnlAnnoucemnet.TabIndex = 3;
+            // 
+            // btnBack
+            // 
+            this.btnBack.Image = global::Student_management_system.Properties.Resources.icons8_back_arrow_32;
+            this.btnBack.Location = new System.Drawing.Point(12, 9);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(26, 24);
+            this.btnBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnBack.TabIndex = 215;
+            this.btnBack.TabStop = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // pnAnnoucementForm
             // 
@@ -147,7 +157,6 @@
             // pnlAnnouButtonSet
             // 
             this.pnlAnnouButtonSet.Controls.Add(this.btnAnnouSave);
-            this.pnlAnnouButtonSet.Controls.Add(this.btnAnnouReset);
             this.pnlAnnouButtonSet.Location = new System.Drawing.Point(576, 449);
             this.pnlAnnouButtonSet.Name = "pnlAnnouButtonSet";
             this.pnlAnnouButtonSet.Size = new System.Drawing.Size(276, 72);
@@ -169,22 +178,6 @@
             this.btnAnnouSave.TabIndex = 209;
             this.btnAnnouSave.Text = "Save";
             this.btnAnnouSave.Click += new System.EventHandler(this.btnAnnouSave_Click);
-            // 
-            // btnAnnouReset
-            // 
-            this.btnAnnouReset.BorderRadius = 5;
-            this.btnAnnouReset.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnAnnouReset.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnAnnouReset.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnAnnouReset.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnAnnouReset.FillColor = System.Drawing.Color.Red;
-            this.btnAnnouReset.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAnnouReset.ForeColor = System.Drawing.Color.White;
-            this.btnAnnouReset.Location = new System.Drawing.Point(3, 13);
-            this.btnAnnouReset.Name = "btnAnnouReset";
-            this.btnAnnouReset.Size = new System.Drawing.Size(132, 44);
-            this.btnAnnouReset.TabIndex = 208;
-            this.btnAnnouReset.Text = "Reset";
             // 
             // txtAnnoDesc
             // 
@@ -939,17 +932,6 @@
             this.welcomeLabel.TabIndex = 2;
             this.welcomeLabel.Text = "Add Announcements";
             // 
-            // btnBack
-            // 
-            this.btnBack.Image = global::Student_management_system.Properties.Resources.icons8_back_arrow_32;
-            this.btnBack.Location = new System.Drawing.Point(12, 9);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(26, 24);
-            this.btnBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnBack.TabIndex = 215;
-            this.btnBack.TabStop = false;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
-            // 
             // formAddAnnoncement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -961,13 +943,13 @@
             this.Text = "formAddAnnoncement";
             this.pnlAnnoucemnet.ResumeLayout(false);
             this.pnlAnnoucemnet.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnBack)).EndInit();
             this.pnAnnoucementForm.ResumeLayout(false);
             this.pnlAnnouButtonSet.ResumeLayout(false);
             this.pnlStudentForm.ResumeLayout(false);
             this.pnlStudentButtonSet.ResumeLayout(false);
             this.pnlAdminForm.ResumeLayout(false);
             this.pnlAdminButtonSet.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.btnBack)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -978,7 +960,6 @@
         private System.Windows.Forms.Panel pnAnnoucementForm;
         private System.Windows.Forms.Panel pnlAnnouButtonSet;
         private Guna.UI2.WinForms.Guna2Button btnAnnouSave;
-        private Guna.UI2.WinForms.Guna2Button btnAnnouReset;
         private Guna.UI2.WinForms.Guna2TextBox txtAnnoDesc;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label20;

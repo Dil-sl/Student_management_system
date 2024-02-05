@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.pnlUser = new System.Windows.Forms.Panel();
+            this.btnBack = new System.Windows.Forms.PictureBox();
             this.pnlTeacherForm = new System.Windows.Forms.Panel();
             this.pnlTeacherButtonSet = new System.Windows.Forms.Panel();
             this.btnClassSave = new Guna.UI2.WinForms.Guna2Button();
-            this.btnClassReset = new Guna.UI2.WinForms.Guna2Button();
             this.label20 = new System.Windows.Forms.Label();
             this.txtClassname = new Guna.UI2.WinForms.Guna2TextBox();
             this.pnlStudentForm = new System.Windows.Forms.Panel();
@@ -76,15 +76,14 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtAdminUserName = new Guna.UI2.WinForms.Guna2TextBox();
             this.welcomeLabel = new System.Windows.Forms.Label();
-            this.btnBack = new System.Windows.Forms.PictureBox();
             this.pnlUser.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnBack)).BeginInit();
             this.pnlTeacherForm.SuspendLayout();
             this.pnlTeacherButtonSet.SuspendLayout();
             this.pnlStudentForm.SuspendLayout();
             this.pnlStudentButtonSet.SuspendLayout();
             this.pnlAdminForm.SuspendLayout();
             this.pnlAdminButtonSet.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnBack)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlUser
@@ -100,6 +99,16 @@
             this.pnlUser.Size = new System.Drawing.Size(885, 696);
             this.pnlUser.TabIndex = 3;
             // 
+            // btnBack
+            // 
+            this.btnBack.Image = global::Student_management_system.Properties.Resources.icons8_back_arrow_32;
+            this.btnBack.Location = new System.Drawing.Point(12, 9);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(26, 24);
+            this.btnBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnBack.TabIndex = 214;
+            this.btnBack.TabStop = false;
+            // 
             // pnlTeacherForm
             // 
             this.pnlTeacherForm.BackColor = System.Drawing.Color.White;
@@ -114,7 +123,6 @@
             // pnlTeacherButtonSet
             // 
             this.pnlTeacherButtonSet.Controls.Add(this.btnClassSave);
-            this.pnlTeacherButtonSet.Controls.Add(this.btnClassReset);
             this.pnlTeacherButtonSet.Location = new System.Drawing.Point(576, 449);
             this.pnlTeacherButtonSet.Name = "pnlTeacherButtonSet";
             this.pnlTeacherButtonSet.Size = new System.Drawing.Size(276, 72);
@@ -136,22 +144,6 @@
             this.btnClassSave.TabIndex = 209;
             this.btnClassSave.Text = "Save";
             this.btnClassSave.Click += new System.EventHandler(this.btnClassSave_Click);
-            // 
-            // btnClassReset
-            // 
-            this.btnClassReset.BorderRadius = 5;
-            this.btnClassReset.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnClassReset.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnClassReset.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnClassReset.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnClassReset.FillColor = System.Drawing.Color.Red;
-            this.btnClassReset.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClassReset.ForeColor = System.Drawing.Color.White;
-            this.btnClassReset.Location = new System.Drawing.Point(3, 13);
-            this.btnClassReset.Name = "btnClassReset";
-            this.btnClassReset.Size = new System.Drawing.Size(132, 44);
-            this.btnClassReset.TabIndex = 208;
-            this.btnClassReset.Text = "Reset";
             // 
             // label20
             // 
@@ -871,16 +863,6 @@
             this.welcomeLabel.TabIndex = 2;
             this.welcomeLabel.Text = "Add User";
             // 
-            // btnBack
-            // 
-            this.btnBack.Image = global::Student_management_system.Properties.Resources.icons8_back_arrow_32;
-            this.btnBack.Location = new System.Drawing.Point(12, 9);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(26, 24);
-            this.btnBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnBack.TabIndex = 214;
-            this.btnBack.TabStop = false;
-            // 
             // formAddClass
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -893,13 +875,13 @@
             this.Load += new System.EventHandler(this.formAddClass_Load);
             this.pnlUser.ResumeLayout(false);
             this.pnlUser.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnBack)).EndInit();
             this.pnlTeacherForm.ResumeLayout(false);
             this.pnlTeacherButtonSet.ResumeLayout(false);
             this.pnlStudentForm.ResumeLayout(false);
             this.pnlStudentButtonSet.ResumeLayout(false);
             this.pnlAdminForm.ResumeLayout(false);
             this.pnlAdminButtonSet.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.btnBack)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -953,7 +935,6 @@
         private System.Windows.Forms.Label welcomeLabel;
         private System.Windows.Forms.Panel pnlTeacherButtonSet;
         private Guna.UI2.WinForms.Guna2Button btnClassSave;
-        private Guna.UI2.WinForms.Guna2Button btnClassReset;
         private System.Windows.Forms.PictureBox btnBack;
     }
 }
