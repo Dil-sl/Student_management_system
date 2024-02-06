@@ -40,9 +40,8 @@ namespace Student_management_system.Views.Attendance_Mark
 
         private void btnManageAttandance_Click(object sender, EventArgs e)
         {
-            formManageAttendance.useForm.Dispose();
-            _formMainIns.setPanel(formManageAttendance.useForm);
-            this.Dispose();
+           
+           
         }
     }
 }

@@ -859,9 +859,9 @@
             this.welcomeLabel.ForeColor = System.Drawing.Color.Black;
             this.welcomeLabel.Location = new System.Drawing.Point(12, 36);
             this.welcomeLabel.Name = "welcomeLabel";
-            this.welcomeLabel.Size = new System.Drawing.Size(135, 37);
+            this.welcomeLabel.Size = new System.Drawing.Size(141, 37);
             this.welcomeLabel.TabIndex = 2;
-            this.welcomeLabel.Text = "Add User";
+            this.welcomeLabel.Text = "Add Class";
             // 
             // formAddClass
             // 

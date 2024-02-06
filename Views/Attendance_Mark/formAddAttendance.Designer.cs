@@ -32,8 +32,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formAddAttendance));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formAddAttendance));
             this.pnlClass = new System.Windows.Forms.Panel();
             this.btnBack = new System.Windows.Forms.PictureBox();
             this.label17 = new System.Windows.Forms.Label();
@@ -51,6 +51,7 @@
             this.pnlAttButtonSet = new System.Windows.Forms.Panel();
             this.btnAttSave = new Guna.UI2.WinForms.Guna2Button();
             this.welcomeLabel = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.pnlClass.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnBack)).BeginInit();
             this.pnlClassForm.SuspendLayout();
@@ -61,6 +62,7 @@
             // pnlClass
             // 
             this.pnlClass.BackColor = System.Drawing.Color.White;
+            this.pnlClass.Controls.Add(this.label4);
             this.pnlClass.Controls.Add(this.btnBack);
             this.pnlClass.Controls.Add(this.label17);
             this.pnlClass.Controls.Add(this.dtpAttDate);
@@ -303,6 +305,21 @@
             this.welcomeLabel.TabIndex = 2;
             this.welcomeLabel.Text = "Add Attendance";
             // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label4.BackColor = System.Drawing.Color.LightGray;
+            this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Red;
+            this.label4.ImageAlign = System.Drawing.ContentAlignment.TopRight;
+            this.label4.Location = new System.Drawing.Point(543, 36);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(329, 95);
+            this.label4.TabIndex = 219;
+            this.label4.Text = resources.GetString("label4.Text");
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // formAddAttendance
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -342,5 +359,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvUser_FullName;
         private System.Windows.Forms.DataGridViewCheckBoxColumn dgvUser_Contact;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvProduct_Index;
+        private System.Windows.Forms.Label label4;
     }
 }

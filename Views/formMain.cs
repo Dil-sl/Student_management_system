@@ -143,5 +143,10 @@ namespace Student_management_system.Views
         {
             clockTimer.Stop();
         }
+
+        private void rBtnDashboard_MouseHover(object sender, EventArgs e)
+        {
+
+        }
     }
 }

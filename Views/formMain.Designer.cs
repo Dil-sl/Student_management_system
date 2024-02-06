@@ -38,7 +38,7 @@
             this.picBoxMinimize = new System.Windows.Forms.PictureBox();
             this.picBoxClose = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.pnlAllRbtn = new System.Windows.Forms.FlowLayoutPanel();
             this.rBtnDashboard = new System.Windows.Forms.RadioButton();
             this.rBtnUsers = new System.Windows.Forms.RadioButton();
             this.rBtnAttendance = new System.Windows.Forms.RadioButton();
@@ -52,7 +52,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.picBoxMinimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxClose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.flowLayoutPanel1.SuspendLayout();
+            this.pnlAllRbtn.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlTopBar
@@ -75,7 +75,7 @@
             this.lblMainTitle.AutoSize = true;
             this.lblMainTitle.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMainTitle.ForeColor = System.Drawing.Color.White;
-            this.lblMainTitle.Location = new System.Drawing.Point(71, 6);
+            this.lblMainTitle.Location = new System.Drawing.Point(150, 6);
             this.lblMainTitle.Name = "lblMainTitle";
             this.lblMainTitle.Size = new System.Drawing.Size(337, 30);
             this.lblMainTitle.TabIndex = 5;
@@ -86,7 +86,7 @@
             this.pnlTimeInfo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlTimeInfo.Controls.Add(this.lblTimeAndDate);
-            this.pnlTimeInfo.Location = new System.Drawing.Point(455, 2);
+            this.pnlTimeInfo.Location = new System.Drawing.Point(499, 3);
             this.pnlTimeInfo.Name = "pnlTimeInfo";
             this.pnlTimeInfo.Size = new System.Drawing.Size(227, 37);
             this.pnlTimeInfo.TabIndex = 4;
@@ -109,9 +109,9 @@
             this.pnlUserInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlUserInfo.Controls.Add(this.lblUserName);
             this.pnlUserInfo.Controls.Add(this.picBoxCircleProfile);
-            this.pnlUserInfo.Location = new System.Drawing.Point(702, 2);
+            this.pnlUserInfo.Location = new System.Drawing.Point(744, 3);
             this.pnlUserInfo.Name = "pnlUserInfo";
-            this.pnlUserInfo.Size = new System.Drawing.Size(218, 37);
+            this.pnlUserInfo.Size = new System.Drawing.Size(189, 37);
             this.pnlUserInfo.TabIndex = 3;
             // 
             // lblUserName
@@ -119,9 +119,9 @@
             this.lblUserName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblUserName.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUserName.ForeColor = System.Drawing.Color.White;
-            this.lblUserName.Location = new System.Drawing.Point(8, 3);
+            this.lblUserName.Location = new System.Drawing.Point(6, 3);
             this.lblUserName.Name = "lblUserName";
-            this.lblUserName.Size = new System.Drawing.Size(170, 29);
+            this.lblUserName.Size = new System.Drawing.Size(141, 29);
             this.lblUserName.TabIndex = 1;
             this.lblUserName.Text = "UserName";
             this.lblUserName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -165,24 +165,24 @@
             this.pictureBox1.Image = global::Student_management_system.Properties.Resources.icon;
             this.pictureBox1.Location = new System.Drawing.Point(0, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(64, 39);
+            this.pictureBox1.Size = new System.Drawing.Size(123, 39);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // flowLayoutPanel1
+            // pnlAllRbtn
             // 
-            this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(35)))), ((int)(((byte)(102)))));
-            this.flowLayoutPanel1.Controls.Add(this.rBtnDashboard);
-            this.flowLayoutPanel1.Controls.Add(this.rBtnUsers);
-            this.flowLayoutPanel1.Controls.Add(this.rBtnAttendance);
-            this.flowLayoutPanel1.Controls.Add(this.rBtnClass);
-            this.flowLayoutPanel1.Controls.Add(this.rBtnAnnounce);
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 42);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(65, 726);
-            this.flowLayoutPanel1.TabIndex = 1;
+            this.pnlAllRbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(35)))), ((int)(((byte)(102)))));
+            this.pnlAllRbtn.Controls.Add(this.rBtnDashboard);
+            this.pnlAllRbtn.Controls.Add(this.rBtnUsers);
+            this.pnlAllRbtn.Controls.Add(this.rBtnAttendance);
+            this.pnlAllRbtn.Controls.Add(this.rBtnClass);
+            this.pnlAllRbtn.Controls.Add(this.rBtnAnnounce);
+            this.pnlAllRbtn.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnlAllRbtn.Location = new System.Drawing.Point(0, 42);
+            this.pnlAllRbtn.Name = "pnlAllRbtn";
+            this.pnlAllRbtn.Size = new System.Drawing.Size(123, 726);
+            this.pnlAllRbtn.TabIndex = 1;
             // 
             // rBtnDashboard
             // 
@@ -199,12 +199,14 @@
             this.rBtnDashboard.Location = new System.Drawing.Point(0, 0);
             this.rBtnDashboard.Margin = new System.Windows.Forms.Padding(0);
             this.rBtnDashboard.Name = "rBtnDashboard";
-            this.rBtnDashboard.Size = new System.Drawing.Size(65, 60);
+            this.rBtnDashboard.Size = new System.Drawing.Size(123, 80);
             this.rBtnDashboard.TabIndex = 7;
-            this.rBtnDashboard.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.rBtnDashboard.Text = "Dashboard";
+            this.rBtnDashboard.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.rBtnDashboard.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.rBtnDashboard.UseVisualStyleBackColor = false;
             this.rBtnDashboard.Click += new System.EventHandler(this.rBtnDashboard_Click);
+            this.rBtnDashboard.MouseHover += new System.EventHandler(this.rBtnDashboard_MouseHover);
             // 
             // rBtnUsers
             // 
@@ -219,15 +221,17 @@
             this.rBtnUsers.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rBtnUsers.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(41)))), ((int)(((byte)(69)))));
             this.rBtnUsers.Image = global::Student_management_system.Properties.Resources.Users;
-            this.rBtnUsers.Location = new System.Drawing.Point(0, 60);
+            this.rBtnUsers.Location = new System.Drawing.Point(0, 80);
             this.rBtnUsers.Margin = new System.Windows.Forms.Padding(0);
             this.rBtnUsers.Name = "rBtnUsers";
-            this.rBtnUsers.Size = new System.Drawing.Size(65, 60);
+            this.rBtnUsers.Size = new System.Drawing.Size(123, 80);
             this.rBtnUsers.TabIndex = 8;
-            this.rBtnUsers.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.rBtnUsers.Text = "Users";
+            this.rBtnUsers.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.rBtnUsers.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.rBtnUsers.UseVisualStyleBackColor = false;
             this.rBtnUsers.Click += new System.EventHandler(this.rBtnUsers_Click);
+            this.rBtnUsers.MouseHover += new System.EventHandler(this.rBtnDashboard_MouseHover);
             // 
             // rBtnAttendance
             // 
@@ -242,15 +246,17 @@
             this.rBtnAttendance.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rBtnAttendance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(41)))), ((int)(((byte)(69)))));
             this.rBtnAttendance.Image = global::Student_management_system.Properties.Resources.attendance;
-            this.rBtnAttendance.Location = new System.Drawing.Point(0, 120);
+            this.rBtnAttendance.Location = new System.Drawing.Point(0, 160);
             this.rBtnAttendance.Margin = new System.Windows.Forms.Padding(0);
             this.rBtnAttendance.Name = "rBtnAttendance";
-            this.rBtnAttendance.Size = new System.Drawing.Size(65, 60);
+            this.rBtnAttendance.Size = new System.Drawing.Size(123, 80);
             this.rBtnAttendance.TabIndex = 9;
-            this.rBtnAttendance.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.rBtnAttendance.Text = "Attendance";
+            this.rBtnAttendance.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.rBtnAttendance.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.rBtnAttendance.UseVisualStyleBackColor = false;
             this.rBtnAttendance.Click += new System.EventHandler(this.rBtnAttendance_Click);
+            this.rBtnAttendance.MouseHover += new System.EventHandler(this.rBtnDashboard_MouseHover);
             // 
             // rBtnClass
             // 
@@ -265,15 +271,17 @@
             this.rBtnClass.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rBtnClass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(41)))), ((int)(((byte)(69)))));
             this.rBtnClass.Image = global::Student_management_system.Properties.Resources.Class;
-            this.rBtnClass.Location = new System.Drawing.Point(0, 180);
+            this.rBtnClass.Location = new System.Drawing.Point(0, 240);
             this.rBtnClass.Margin = new System.Windows.Forms.Padding(0);
             this.rBtnClass.Name = "rBtnClass";
-            this.rBtnClass.Size = new System.Drawing.Size(65, 60);
+            this.rBtnClass.Size = new System.Drawing.Size(123, 80);
             this.rBtnClass.TabIndex = 10;
-            this.rBtnClass.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.rBtnClass.Text = "Class";
+            this.rBtnClass.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.rBtnClass.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.rBtnClass.UseVisualStyleBackColor = false;
             this.rBtnClass.Click += new System.EventHandler(this.rBtnClass_Click);
+            this.rBtnClass.MouseHover += new System.EventHandler(this.rBtnDashboard_MouseHover);
             // 
             // rBtnAnnounce
             // 
@@ -288,21 +296,23 @@
             this.rBtnAnnounce.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rBtnAnnounce.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(41)))), ((int)(((byte)(69)))));
             this.rBtnAnnounce.Image = global::Student_management_system.Properties.Resources.announcements;
-            this.rBtnAnnounce.Location = new System.Drawing.Point(0, 240);
+            this.rBtnAnnounce.Location = new System.Drawing.Point(0, 320);
             this.rBtnAnnounce.Margin = new System.Windows.Forms.Padding(0);
             this.rBtnAnnounce.Name = "rBtnAnnounce";
-            this.rBtnAnnounce.Size = new System.Drawing.Size(65, 60);
+            this.rBtnAnnounce.Size = new System.Drawing.Size(123, 80);
             this.rBtnAnnounce.TabIndex = 11;
-            this.rBtnAnnounce.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.rBtnAnnounce.Text = "Annoucements";
+            this.rBtnAnnounce.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.rBtnAnnounce.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.rBtnAnnounce.UseVisualStyleBackColor = false;
             this.rBtnAnnounce.Click += new System.EventHandler(this.rBtnAnnounce_Click);
+            this.rBtnAnnounce.MouseHover += new System.EventHandler(this.rBtnDashboard_MouseHover);
             // 
             // pnlMainWindow
             // 
             this.pnlMainWindow.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlMainWindow.Location = new System.Drawing.Point(109, 42);
+            this.pnlMainWindow.Location = new System.Drawing.Point(147, 42);
             this.pnlMainWindow.Margin = new System.Windows.Forms.Padding(10);
             this.pnlMainWindow.Name = "pnlMainWindow";
             this.pnlMainWindow.Size = new System.Drawing.Size(865, 726);
@@ -314,7 +324,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1024, 768);
             this.Controls.Add(this.pnlMainWindow);
-            this.Controls.Add(this.flowLayoutPanel1);
+            this.Controls.Add(this.pnlAllRbtn);
             this.Controls.Add(this.pnlTopBar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "formMain";
@@ -331,7 +341,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.picBoxMinimize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxClose)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.flowLayoutPanel1.ResumeLayout(false);
+            this.pnlAllRbtn.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -339,7 +349,7 @@
         #endregion
 
         private System.Windows.Forms.Panel pnlTopBar;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.FlowLayoutPanel pnlAllRbtn;
         private System.Windows.Forms.Panel pnlMainWindow;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.RadioButton rBtnDashboard;
