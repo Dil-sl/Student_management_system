@@ -60,6 +60,9 @@
   <PropertyGroup>
     <SignManifests>true</SignManifests>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Logo3.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Guna.UI2">
       <HintPath>..\..\..\Documents\App360\POS360\POS360_Client\Pos360\bin\Debug\Guna.UI2.dll</HintPath>
@@ -353,6 +356,7 @@
     <None Include="Resources\icons8-back-arrow-32.png" />
     <None Include="Resources\Delette.png" />
     <None Include="Resources\Edit.png" />
+    <Content Include="Logo3.ico" />
     <Content Include="SMS_SIS.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

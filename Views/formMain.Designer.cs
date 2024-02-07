@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formMain));
             this.pnlTopBar = new System.Windows.Forms.Panel();
             this.lblMainTitle = new System.Windows.Forms.Label();
             this.pnlTimeInfo = new System.Windows.Forms.Panel();
@@ -327,6 +328,7 @@
             this.Controls.Add(this.pnlAllRbtn);
             this.Controls.Add(this.pnlTopBar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "formMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "formMain";
