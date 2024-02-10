@@ -228,6 +228,8 @@
     <EmbeddedResource Include="Views\Users\formUsers.resx">
       <DependentUpon>formUsers.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="External_Resources\DB.zip" />
+    <None Include="External_Resources\Images.zip" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -347,6 +349,7 @@
     <None Include="Resources\icons8-back-arrow-32.png" />
     <None Include="Resources\Delette.png" />
     <None Include="Resources\Edit.png" />
+    <Content Include="External_Resources\Guna.UI2.dll" />
     <Content Include="Logo3.ico" />
     <Content Include="SMS_SIS.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
