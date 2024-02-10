@@ -15,7 +15,6 @@ using Student_management_system.Views.Users;
 using Student_management_system.Views.Attendance_Mark;
 using Student_management_system.Views.Classes;
 using Student_management_system.Views.Announcements;
-using Student_management_system.Views.Settings;
 
 namespace Student_management_system.Views
 {
